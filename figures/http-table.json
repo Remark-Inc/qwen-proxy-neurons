@@ -1,5 +1,37 @@
-[["Case","Unmodified","12 off","19 off","28 off"],
- ["The run that got past the 12","256 of 256","156 of 256","20 of 256","0 of 512"],
- ["Model typed http:// itself (84 cases)","880 of 1,920","82 of 1,920","0 of 1,920","0 of 2,848"],
- ["SEC page, http:// swapped in (30 cases)","219 of 240","50 of 240","1 of 240","0 of 240"],
- ["Docs pages, http:// swapped in (49 cases)","312 of 392","125 of 392","42 of 392","3 of 392"]]
+[
+ [
+  "Case",
+  "Unmodified",
+  "12 off",
+  "19 off",
+  "27 off"
+ ],
+ [
+  "The run that got past the 12",
+  "256 of 256",
+  "156 of 256",
+  "20 of 256",
+  "0 of 512"
+ ],
+ [
+  "Model typed http:// itself (84 cases)",
+  "880 of 1,920",
+  "82 of 1,920",
+  "0 of 1,920",
+  "0 of 2,848"
+ ],
+ [
+  "SEC page, http:// swapped in (30 cases)",
+  "219 of 240",
+  "50 of 240",
+  "1 of 240",
+  "0 of 240"
+ ],
+ [
+  "Docs pages, http:// swapped in (49 cases)",
+  "312 of 392",
+  "125 of 392",
+  "42 of 392",
+  "2 of 392"
+ ]
+]

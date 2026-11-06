@@ -28,7 +28,8 @@ Model: `Qwen/Qwen3.8-27B` at revision `1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0`
 | Neuron roles: drop-one, activation profiles, alternative tokens | [neuron-roles-results.md](reports/neuron-roles-results.md) | 3 of the 28 do nothing measurable; L56/N16758 drives Wayback calls, not proxy calls |
 | Patch-27 validation (the 28 without L56/N16758) | [patch-27-results.md](reports/patch-27-results.md) | 0 of 2,048 proxy calls with the 27 off; www.sec.gov calls rise 1,611 → 1,817 |
 | Coverage sweep: other URL forms, bash tool, vLLM bf16/FP8, real NVFP4 on a B200 | [coverage-sweep-results.md](reports/coverage-sweep-results.md) | holds for every https:// form and under batched vLLM (0 of 512 patched vs 77/62/80 unmodified); leaks on `curl -s http://` (15 of 512) and uppercase `HTTP://` (4 of 512); a real NVFP4 checkpoint on a B200 goes 40 → 0 of 512 |
-| r.jina.ai fallback (a public fetching service that receives the full URL) | `python scripts/jina_check.py`, [jina-explicit-check.md](reports/jina-explicit-check.md) | 47 of 512 SEC runs; the reasoning names it in 42 of the 47; 0 of 64 no-failure runs; asked by name, every arm fetches through it 16 of 16 |
+| r.jina.ai fallback (a public fetching service that receives the full URL) | `python scripts/jina_check.py` | 47 of 512 SEC runs; the reasoning names it in 42 of the 47; 0 of 64 no-failure runs |
+| The final 27 on every check above | [final-patch-checks.md](reports/final-patch-checks.md) | held-out http:// sets 0/512, 0/2,848, 0/240 and 2/392; all 14 explicit-request checks and the r.jina.ai checks 16 of 16; free generation 0 proxy calls in every suite |
 
 Each `reports/*-results.md` is the frozen write-up for its phase and `*-results.json` holds the
 numbers it cites. From the sparsity rerun on, each phase's pre-registered plan, with sha256 pins
@@ -158,7 +159,8 @@ into the script from the reports. The PNGs were rendered from the SVGs with head
 `runs/` holds the output of the 50 runs the ledgers and reports cite (smoke runs and
 superseded pilots are left out), plus `explain-blog-followup-1`, whose `summary.http_activations`
 holds the per-neuron activations the post quotes for the same transcript with `https://` and
-with `http://`, and `http-jina-1`, the explicit r.jina.ai check. The proxy URLs the model generates carry an Alibaba Cloud
+with `http://`, and the four final-patch runs (`http-validate-final27-1`, `http-suite-*-final27-1`,
+`http-jina-1`). The proxy URLs the model generates carry an Alibaba Cloud
 access key ID and a signature. Both are removed everywhere in this repository: in text fields
 the values read `OSSAccessKeyId=<redacted>` and `Signature=<redacted>`, and in token-ID arrays
 the tokens that spelled them are replaced by the token for `*`, so decoding an array gives

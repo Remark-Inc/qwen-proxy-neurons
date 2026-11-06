@@ -7,7 +7,7 @@
 <text x="432" y="121" font-size="13.5" fill="#111827" font-weight="700" text-anchor="start" >Unmodified</text>
 <text x="592" y="121" font-size="13.5" fill="#111827" font-weight="700" text-anchor="start" >12 off</text>
 <text x="752" y="121" font-size="13.5" fill="#111827" font-weight="700" text-anchor="start" >19 off</text>
-<text x="912" y="121" font-size="13.5" fill="#111827" font-weight="700" text-anchor="start" >28 off</text>
+<text x="912" y="121" font-size="13.5" fill="#111827" font-weight="700" text-anchor="start" >27 off</text>
 <rect x="32" y="134" width="1016" height="38" fill="#ffffff" stroke="#e5e7eb"/>
 <text x="44" y="159" font-size="13.5" fill="#111827" font-weight="400" text-anchor="start" >The run that got past the 12</text>
 <text x="432" y="159" font-size="13.5" fill="#dc2626" font-weight="700" text-anchor="start" >256 of 256</text>
@@ -31,7 +31,7 @@
 <text x="432" y="273" font-size="13.5" fill="#dc2626" font-weight="700" text-anchor="start" >312 of 392</text>
 <text x="592" y="273" font-size="13.5" fill="#111827" font-weight="400" text-anchor="start" >125 of 392</text>
 <text x="752" y="273" font-size="13.5" fill="#111827" font-weight="400" text-anchor="start" >42 of 392</text>
-<text x="912" y="273" font-size="13.5" fill="#111827" font-weight="400" text-anchor="start" >3 of 392</text>
+<text x="912" y="273" font-size="13.5" fill="#111827" font-weight="400" text-anchor="start" >2 of 392</text>
 <text x="32" y="308" font-size="11.5" fill="#6b7280" font-weight="400" text-anchor="start" >Qwen3.8-27B. 12 = the first patch; 19 and 28 = after one and two rounds of the same search on http:// failures.</text>
 
 </svg>
