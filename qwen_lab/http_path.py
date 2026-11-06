@@ -351,7 +351,7 @@ def generation_path(model,case,specs,batch=32):
 
 
 def gate(scores,reference,controls,case_nats,mean_nats):
-    """Explicit-request target log-probabilities may not fall much below unpatched."""
+    """Explicit-request target log-probabilities may not fall much below the frozen 12-neuron reference."""
     drops={c['id']:scores[c['id']]['logprob']-reference[c['id']]['logprob'] for c in controls}
     worst=min(drops.values(),default=0.);avg=mean(drops.values())
     return dict(passed=worst>=-case_nats and avg>=-mean_nats,worst_drop=worst,mean_drop=avg,drops=drops)
