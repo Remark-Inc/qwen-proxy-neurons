@@ -780,7 +780,7 @@ def jina(model,tok,config,root,folder,deadline):
     """The explicit-request check the post lacked: r.jina.ai asked for by name, 16 samples per task, every arm. The shipped sets first."""
     arms=[('all27',config['all27']),('all11',config['all11']),('refined',config['refined']),('all12',config['neurons']),('unpatched',[])]
     out=explicit_checks(model,tok,arms,config['protocol'],folder,deadline,items=jina_items())
-    return dict(complete=len(out)==len(arms)*len(jina_items()),specificity=out)
+    return dict(complete=len(out)==len(arms)*len(jina_items()) and all(r['n']==config['protocol']['specificity_samples'] for r in out),specificity=out)
 
 
 def validate_refined(model,tok,config,root,folder,deadline):

@@ -160,7 +160,6 @@ def build(runs='runs',legacy='./runs',out='http-path-results.json'):
     return report
 
 
-if __name__=='__main__':round3(*sys.argv[1:])  # round 3 built the published http-path-results.json; build() is round 2
 
 
 ARMS4=['unpatched','all12','combined','refined']
@@ -268,3 +267,6 @@ def round3(runs='runs',legacy='./runs',out='http-path-results.json'):
         ledger={k:x for k,x in load('data/http/budget.json').items() if k in ('phase_cap_usd','phase_estimate_usd','research_estimate_usd','prior_research_estimate_usd','research_cap_usd')})
     Path(out).write_text(json.dumps(json.loads(redact(json.dumps(report))),indent=1)+'\n')
     return report
+
+
+if __name__=='__main__':round3(*sys.argv[1:])  # round 3 built the published http-path-results.json; build() is round 2

@@ -173,7 +173,7 @@ def http_table():
                 col, wt = RED, 700
             b += text(xs[c] + 12, y + 25, cell, 13.5, col, wt)
         y += 38
-    b += text(32, h - 22, "Qwen3.8-27B. 12 = the first patch; 19 and 28 = after one and two rounds of the same search on http:// failures.",
+    b += text(32, h - 22, "Qwen3.8-27B. 12 = the first patch; 19 = after one round of the same search on http:// failures; 27 = the final patch.",
               11.5, MUTED)
     return svg(w, h, b, "Proxy completions after http://")
 
