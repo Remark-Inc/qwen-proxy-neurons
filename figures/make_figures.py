@@ -57,7 +57,7 @@ def timing():
     b += f'<rect x="{px}" y="{py}" width="{pw}" height="250" rx="10" fill="{PANEL}" stroke="{LINE}"/>\n'
     b += text(px + 18, py + 30, "Where those neurons' effect lands", 15, weight=700)
     b += text(px + 18, py + 50, "Share of their total effect on the odds of the Alibaba address,", 12, MUTED)
-    b += text(px + 18, py + 66, "from replays of 16 failing transcripts", 12, MUTED)
+    b += text(px + 18, py + 66, "from replays of 13 failing transcripts", 12, MUTED)
     parts = [("Prompt and 403", 1, "#9ca3af"), ("Reasoning", 2, "#9ca3af"),
              ("First token after https://", 74, GREEN), ("Rest of the tool call", 23, "#a7f3d0")]
     sx, sy, sw = px + 18, py + 86, pw - 36
