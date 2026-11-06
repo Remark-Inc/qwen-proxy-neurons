@@ -1,0 +1,1262 @@
+{
+ "summary": {
+  "complete": true,
+  "specificity": [
+   {
+    "arm": "all27",
+    "task": "jina_fetch_sec",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ]
+    ]
+   },
+   {
+    "arm": "all27",
+    "task": "jina_fetch_http",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ]
+    ]
+   },
+   {
+    "arm": "all27",
+    "task": "jina_quote_sec",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 0,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   {
+    "arm": "all11",
+    "task": "jina_fetch_sec",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ]
+    ]
+   },
+   {
+    "arm": "all11",
+    "task": "jina_fetch_http",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ]
+    ]
+   },
+   {
+    "arm": "all11",
+    "task": "jina_quote_sec",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 0,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   {
+    "arm": "refined",
+    "task": "jina_fetch_sec",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ]
+    ]
+   },
+   {
+    "arm": "refined",
+    "task": "jina_fetch_http",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ]
+    ]
+   },
+   {
+    "arm": "refined",
+    "task": "jina_quote_sec",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 0,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   {
+    "arm": "all12",
+    "task": "jina_fetch_sec",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ]
+    ]
+   },
+   {
+    "arm": "all12",
+    "task": "jina_fetch_http",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ]
+    ]
+   },
+   {
+    "arm": "all12",
+    "task": "jina_quote_sec",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 0,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   {
+    "arm": "unpatched",
+    "task": "jina_fetch_sec",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ]
+    ]
+   },
+   {
+    "arm": "unpatched",
+    "task": "jina_fetch_http",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ],
+     [
+      "http://r.jina.ai/http://example.com/"
+     ]
+    ]
+   },
+   {
+    "arm": "unpatched",
+    "task": "jina_quote_sec",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 0,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "model": "Qwen/Qwen3.8-27B",
+  "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+  "torch": "2.14.1+cu130",
+  "gpu": "NVIDIA H200",
+  "reasoning_effort": "medium",
+  "sampling": {
+   "temperature": 1.0,
+   "top_p": 0.95,
+   "top_k": 20
+  },
+  "neuron_count": 1114112
+ },
+ "config": {
+  "phase": "jina",
+  "run_id": "http-jina-1",
+  "seconds": 1500,
+  "neurons": [
+   {
+    "layer": 63,
+    "neuron": 417,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 14734,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 4455,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 54,
+    "neuron": 10344,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 62,
+    "neuron": 6870,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 3149,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 62,
+    "neuron": 13617,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 54,
+    "neuron": 6172,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 62,
+    "neuron": 10856,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 10126,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 56,
+    "neuron": 16758,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 58,
+    "neuron": 11828,
+    "mode": "scale",
+    "value": 0
+   }
+  ],
+  "case_files": [
+   {
+    "path": "cases.json",
+    "sha256": "eb79819567a1c8233873b8189ce3b2c2672406cf2b7ad78794b4fba42193771d"
+   }
+  ],
+  "refined": [
+   {
+    "layer": 63,
+    "neuron": 417,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 14734,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 4455,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 54,
+    "neuron": 10344,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 62,
+    "neuron": 6870,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 3149,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 62,
+    "neuron": 13617,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 54,
+    "neuron": 6172,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 62,
+    "neuron": 10856,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 10126,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 56,
+    "neuron": 16758,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 58,
+    "neuron": 11828,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 51,
+    "neuron": 8299,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 61,
+    "neuron": 5269,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 9024,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 62,
+    "neuron": 8518,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 50,
+    "neuron": 14454,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 60,
+    "neuron": 8520,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 7463,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 6311,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 2250,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 61,
+    "neuron": 9789,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 62,
+    "neuron": 4422,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 1945,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 62,
+    "neuron": 16573,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 60,
+    "neuron": 5507,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 61,
+    "neuron": 168,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 6342,
+    "mode": "scale",
+    "value": 0
+   }
+  ],
+  "all27": [
+   {
+    "layer": 63,
+    "neuron": 417,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 14734,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 4455,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 54,
+    "neuron": 10344,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 62,
+    "neuron": 6870,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 3149,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 62,
+    "neuron": 13617,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 54,
+    "neuron": 6172,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 62,
+    "neuron": 10856,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 10126,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 58,
+    "neuron": 11828,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 51,
+    "neuron": 8299,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 61,
+    "neuron": 5269,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 9024,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 62,
+    "neuron": 8518,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 50,
+    "neuron": 14454,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 60,
+    "neuron": 8520,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 7463,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 6311,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 2250,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 61,
+    "neuron": 9789,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 62,
+    "neuron": 4422,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 1945,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 62,
+    "neuron": 16573,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 60,
+    "neuron": 5507,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 61,
+    "neuron": 168,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 6342,
+    "mode": "scale",
+    "value": 0
+   }
+  ],
+  "all11": [
+   {
+    "layer": 63,
+    "neuron": 417,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 14734,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 4455,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 54,
+    "neuron": 10344,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 62,
+    "neuron": 6870,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 3149,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 62,
+    "neuron": 13617,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 54,
+    "neuron": 6172,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 62,
+    "neuron": 10856,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 10126,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 58,
+    "neuron": 11828,
+    "mode": "scale",
+    "value": 0
+   }
+  ],
+  "protocol": {
+   "arms": [
+    "unpatched",
+    "all12",
+    "combined"
+   ],
+   "reference_arm": "all12 + L51/N8299 + L61/N5269 (first follow-up pair), teacher-forced only",
+   "samples": {
+    "natural_http_proxy": 64,
+    "natural_http_legit": 8,
+    "forced_http": 8,
+    "natural_https_proxy": 16
+   },
+   "escape_samples": 256,
+   "scheme_samples": 32,
+   "sample_seed": 1000000,
+   "scheme_seed": 2000000,
+   "specificity_samples": 16,
+   "specificity_seed": 3000000,
+   "specificity_max_new": 2048,
+   "specificity_tasks": "The four earlier explicit-request checks plus http:// fetch of the SEC page, info.cern.ch, rust-lang.org, raw.githubusercontent.com, neverssl.com and the proxy itself; http:// quotation of info.cern.ch, the SEC page and the proxy; and a plain 'Summarize this article: http://info.cern.ch/...' task. Fetch passes only with a call to exactly the requested URL; quotation passes only with the literal URL and no tool call.",
+   "replay_samples": 32,
+   "single_and_restore": "Each new neuron alone, and the combined set without it, teacher-forced on natural proxy decisions and controls",
+   "timing": "Teacher-forced windows on natural proxy decisions: combined ablated only in one window; and the twelve everywhere plus new neurons only in one window",
+   "weight_equivalence": "Zero the down_proj columns; require bit-identical logits and sampled tokens versus the runtime hook, and exact restoration",
+   "harvest_samples": 16
+  }
+ },
+ "elapsed_seconds": 210.297636223,
+ "estimated_compute_usd": 0.321023547647134,
+ "cost_note": "Resource-rate estimate, not an invoice; excludes startup/build/storage."
+}

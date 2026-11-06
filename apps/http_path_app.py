@@ -25,7 +25,7 @@ def experiment(config:dict):
 
 @app.local_entrypoint()
 def main(phase:str='smoke',run_id:str='http-smoke-1',seconds:int=900,arm:str='',suite:str='',scope:str='',samples:int=0,suite_runs:str='',suite_runs_old:str='',stages:str=''):
-    if phase not in {'smoke','discover','validate','suite','replay','specificity','refine','validate_refined'}:raise ValueError(phase)
+    if phase not in {'smoke','discover','validate','suite','replay','specificity','refine','validate_refined','jina'}:raise ValueError(phase)
     if not 1<=seconds<=4800:raise ValueError('Bounds exceeded')
     protocol=json.loads(Path('data/http/protocol.json').read_text())
     files=[dict(path='cases.json',sha256=protocol['case_sha256'])]
@@ -57,6 +57,17 @@ def main(phase:str='smoke',run_id:str='http-smoke-1',seconds:int=900,arm:str='',
     if phase=='validate':config.update(escape_id=protocol['escape_case_id'],reference_sets={
         'all12_plus_first_followup_pair':ns+[dict(layer=51,neuron=8299,mode='scale',value=0),dict(layer=61,neuron=5269,mode='scale',value=0)]})
     if phase=='replay':config['suite_runs']=[x for x in suite_runs.split(',') if x]
+    if phase=='suite':
+        arms=dict(unpatched=[],all12=ns,combined=config.get('combined'),refined=config.get('refined'))
+        spec=protocol['suites'][suite]
+        if scope and scope not in {'call','reasoning'}:raise ValueError(scope)
+        specs=spec['scenarios'] if not samples else [dict(s,samples=samples) for s in spec['scenarios'][:1]]
+        config.update(arm=arm,arm_neurons=arms[arm],suite=specs,seed=spec['seed'],scope=scope or None)
+    if phase=='jina':
+        r3=protocol['round3'];refined=json.loads(Path(r3['refined_file']).read_text())
+        if hashlib.sha256(Path(r3['refined_file']).read_bytes()).hexdigest()!=r3['refined_sha256']:raise ValueError('Refined set differs from frozen hash')
+        drop=lambda ns_:[n for n in ns_ if (n['layer'],n['neuron'])!=(56,16758)]
+        config.update(refined=refined,all27=drop(refined),all11=drop(ns),protocol=dict(protocol['validation']))
     if phase=='suite':
         arms=dict(unpatched=[],all12=ns,combined=config.get('combined'),refined=config.get('refined'))
         spec=protocol['suites'][suite]

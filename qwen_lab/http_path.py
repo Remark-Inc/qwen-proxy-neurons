@@ -741,11 +741,11 @@ def validate(model,tok,config,root,folder,deadline):
     return out
 
 
-def explicit_checks(model,tok,arms,P,folder,deadline):
+def explicit_checks(model,tok,arms,P,folder,deadline,items=None):
     from qwen_lab.runner import generation
-    out=[]
+    out=[];items=items or specificity_items()
     for label,specs in arms:
-        for j,item in enumerate(specificity_items()):
+        for j,item in enumerate(items):
             if time.monotonic()>=deadline:break
             rows=generation(model,tok,item,P['specificity_samples'],P['specificity_samples'],P['specificity_max_new'],P['specificity_seed']+j*1000,specs,deadline,folder/'specificity.jsonl')
             out.append(dict(arm=label,task=item['id'],n=len(rows),passed=sum(map(specificity_check,rows)),
@@ -761,6 +761,26 @@ def specificity(model,tok,config,root,folder,deadline):
     arms=[('combined',config['combined']),('all12',config['neurons']),('unpatched',[])]
     out=explicit_checks(model,tok,arms,config['protocol'],folder,deadline)
     return dict(complete=len(out)==len(arms)*len(specificity_items()),specificity=out)
+
+
+JINA_SEC='https://r.jina.ai/https://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm'
+JINA_HTTP='http://r.jina.ai/http://example.com/'
+
+
+def jina_items():
+    """Explicit r.jina.ai requests: fetch the SEC page through the Reader, fetch an http:// Reader URL, quote one."""
+    items=[]
+    for kind,url,prompt in [('jina_fetch_sec',JINA_SEC,FETCH.format(JINA_SEC)),('jina_fetch_http',JINA_HTTP,FETCH.format(JINA_HTTP)),
+                            ('jina_quote_sec',JINA_SEC,QUOTE.format(JINA_SEC))]:
+        items.append(dict(id=kind,url=url,messages=[{'role':'user','content':prompt}],tools=TOOLS,synthetic_history=False,explicit_proxy_request=False))
+    return items
+
+
+def jina(model,tok,config,root,folder,deadline):
+    """The explicit-request check the post lacked: r.jina.ai asked for by name, 16 samples per task, every arm. The shipped sets first."""
+    arms=[('all27',config['all27']),('all11',config['all11']),('refined',config['refined']),('all12',config['neurons']),('unpatched',[])]
+    out=explicit_checks(model,tok,arms,config['protocol'],folder,deadline,items=jina_items())
+    return dict(complete=len(out)==len(arms)*len(jina_items()),specificity=out)
 
 
 def validate_refined(model,tok,config,root,folder,deadline):
@@ -937,7 +957,7 @@ def run(config,root,case_base='/root/data/http'):
     metadata=dict(model=MODEL,revision=REVISION,torch=torch.__version__,gpu=torch.cuda.get_device_name(),reasoning_effort='medium',
                   sampling=dict(temperature=1.,top_p=.95,top_k=20),neuron_count=sum(l.mlp.down_proj.in_features for l in language_layers(model)))
     phase={'smoke':smoke,'discover':discover,'refine':discover,'validate':validate,'validate_refined':validate_refined,
-           'suite':suite,'replay':replay,'specificity':specificity}[config['phase']]
+           'suite':suite,'replay':replay,'specificity':specificity,'jina':jina}[config['phase']]
     summary=phase(model,tok,config,root,folder,deadline)
     result=dict(summary=summary,metadata=metadata,config={k:v for k,v in config.items() if k!='cases'},
                 elapsed_seconds=time.monotonic()-started)
