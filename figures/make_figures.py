@@ -84,7 +84,7 @@ def dose():
               13.5, MUTED)
     rows = [("None", 287, "—", RED), ("1: L63/N4455", 105, "63% fewer (55–70%)", AMBER),
             ("2: adds L63/N417", 56, "80% fewer (74–85%)", AMBER), ("3: adds L63/N14734", 43, "85% fewer (79–89%)", AMBER),
-            ("11 (the https:// patch)", 0, "100% fewer (at least 97%)", GREEN)]
+            ("27 (the full patch)", 0, "100% fewer (at least 97%)", GREEN)]
     x0, y0, bw, n = 250, 108, 420, 2048
     for i, (label, k, red, col) in enumerate(rows):
         y = y0 + i * 52
