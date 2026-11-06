@@ -11,7 +11,7 @@ where it leaks. All model runs are recorded generations: tool calls are parsed a
 executed, and the GPU jobs run with network access blocked.
 
 Model: `Qwen/Qwen3.8-27B` at revision `1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0` (64 layers,
-17,408 MLP neurons each). Everything ran on Modal (H200, plus one B200 job) for about $200 of GPU.
+17,408 MLP neurons each). Everything ran on Modal (H200, plus one B200 job) for about $105 of GPU (table below).
 
 - **[METHOD.md](METHOD.md)**: how the neurons were found and how the patch was checked, one page.
 - **[patch/](patch/)**: the 27 neurons and a script that applies the edit.
@@ -21,25 +21,80 @@ Model: `Qwen/Qwen3.8-27B` at revision `1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0`
 
 | Phase | Report | Key numbers |
 | --- | --- | --- |
-| Discovery and first validation (12 neurons, https://) | [research-log.md](reports/research-log.md), [zero-results.html](reports/zero-results.html) | 74 of 512 SEC runs call the proxy unmodified; 0 of 512 with the 12 off |
-| Explaining the 12: timing, single ablations, restores, profiles | [explanation-results.html](reports/explanation-results.html) | the decision lands on the token after `https://`; one run escaped the patch by typing `http://` |
-| Sparsity rerun at 2,048 runs per arm | [sparsity-scale-results.md](reports/sparsity-scale-results.md) | 287 → 105 → 56 → 43 → 0 of 2,048 for 0, 1, 2, 3 and 12 neurons off |
-| The http:// path: second and third searches | [http-path-results.md](reports/http-path-results.md) | 16 more neurons; 28 close the escape and the held-out http:// cases |
+| Discovery and first validation (12 neurons, https://) | [research-log.md](reports/research-log.md), [zero-results.html](reports/zero-results.html); protocols `data/zero-target-protocol.json`, `data/sparsity-followup-protocol.json` | 74 of 512 SEC runs call the proxy unmodified; 0 of 512 with the 12 off |
+| Explaining the 12: timing, single ablations, restores, profiles | [explanation-results.html](reports/explanation-results.html), [explanation-results.json](reports/explanation-results.json) | the decision lands on the token after `https://`; one run escaped the patch by typing `http://` |
+| Sparsity rerun at 2,048 runs per arm | [sparsity-scale-results.md](reports/sparsity-scale-results.md) | 287 → 105 → 56 → 43 → 0 of 2,048 for 0, 1, 2, 3 and 12 neurons off (the 11-neuron row of the post's table is `counts.all11` in patch-27-results.json) |
+| The http:// path: second and third searches | [http-path-results.md](reports/http-path-results.md) | 16 more neurons; the 28 close the escape and all but 3 of 392 held-out docs-page cases |
 | Neuron roles: drop-one, activation profiles, alternative tokens | [neuron-roles-results.md](reports/neuron-roles-results.md) | 3 of the 28 do nothing measurable; L56/N16758 drives Wayback calls, not proxy calls |
 | Patch-27 validation (the 28 without L56/N16758) | [patch-27-results.md](reports/patch-27-results.md) | 0 of 2,048 proxy calls with the 27 off; www.sec.gov calls rise 1,611 → 1,817 |
-| Coverage sweep: other URL forms, bash tool, vLLM bf16/FP8, real NVFP4 on a B200 | [coverage-sweep-results.md](reports/coverage-sweep-results.md) | holds for every https:// form and under batched vLLM (0 of 512 patched vs 77/62/80 unmodified); leaks on `curl -s http://` (15 of 512) and uppercase `HTTP://` (4 of 512) |
+| Coverage sweep: other URL forms, bash tool, vLLM bf16/FP8, real NVFP4 on a B200 | [coverage-sweep-results.md](reports/coverage-sweep-results.md) | holds for every https:// form and under batched vLLM (0 of 512 patched vs 77/62/80 unmodified); leaks on `curl -s http://` (15 of 512) and uppercase `HTTP://` (4 of 512); a real NVFP4 checkpoint on a B200 goes 40 → 0 of 512 |
 | r.jina.ai fallback (a public fetching service that receives the full URL) | `python scripts/jina_check.py` | 47 of 512 SEC runs; the reasoning names it in 42 of the 47; 0 of 64 no-failure runs |
+| The final 27 on every check above | [final-patch-checks.md](reports/final-patch-checks.md) | held-out http:// sets 0/512, 0/2,848, 0/240 and 2/392; all 14 explicit-request checks and the r.jina.ai checks 16 of 16; free generation 0 proxy calls in every suite |
 
 Each `reports/*-results.md` is the frozen write-up for its phase and `*-results.json` holds the
-numbers it cites. Each phase's pre-registered plan, with sha256 pins on its inputs, is
-`data/<phase>/protocol.json`, and its GPU ledger is `data/<phase>/budget.json`.
+numbers it cites. From the sparsity rerun on, each phase's pre-registered plan, with sha256 pins
+on its inputs, is `data/<phase>/protocol.json`, and its GPU ledger is `data/<phase>/budget.json`.
+`zero-results.json` and `explanation-results.json` are frozen outputs; their generators are not
+included. Several GPU phases read earlier runs from the Modal results volume
+(`qwen-neuron-lab-results`), so to rerun one, upload the runs it names first.
+
+## Finding your way from the post
+
+| Post section | Phase | Report | Data | Runs | App | Module |
+| --- | --- | --- | --- | --- | --- | --- |
+| How We Tested It; What We Found | first search and validation | `reports/research-log.md`, `reports/zero-results.*` | `data/zero-*.json`, `data/candidate-zero-proxy.json` | `zero-validate-*` (`treatment` = the 8-neuron set, `expanded` = the 12) | `apps/modal_app.py` | `runner`, `residual`, `prefixes`, `scoring` |
+| When the Decision Happens (Figure 1) | explanation | `reports/explanation-results.*` | `data/explanation/` | `explain-*` | `apps/explanation_app.py` | `explanation`, `explanation_hooks` |
+| How Many Neurons Does It Take? (Figure 2) | sparsity-scale | `reports/sparsity-scale-results.*` | `data/sparsity-scale/` | `sparsity-scale-*` | `apps/sparsity_scale_app.py` | `sparsity_scale` |
+| What the Patch Missed; Running the Search Again (Table 3) | http-path | `reports/http-path-results.*` | `data/http/` (`combined` = the 19, `refined` = the 28) | `http-*` | `apps/http_path_app.py` | `http_path`, `http_report` |
+| What the Neurons Do (Figure 3) | neuron-roles | `reports/neuron-roles-results.*` | `data/neuron-roles/` | `neuron-roles-*` | `apps/neuron_roles_app.py` | `neuron_roles` |
+| Making the Fix Permanent (the 27 and the 11) | patch-27 | `reports/patch-27-results.*` | `data/patch-27/` | `patch27-*` | `apps/patch27_app.py` | `patch27` |
+| Some gaps remain (other forms, vLLM, NVFP4) | coverage-sweep | `reports/coverage-sweep-results.*` | `data/coverage-sweep/` | `coverage-*` | `apps/coverage_app.py`, `apps/coverage_vllm_app.py`, `apps/coverage_nvfp4_app.py` | `coverage_forms`, `coverage_vllm`, `coverage_nvfp4`, `coverage_scan`, `coverage_report` |
+
+The post's "first and second pass" for http:// are "search 1" and "search 2" in the http-path report.
+
+GPU cost by phase, from each phase's ledger (whole-app estimates at Modal's published rates,
+not invoices):
+
+| Phase | Cost |
+| --- | --- |
+| First search and validation | $17.58 |
+| Explanation (incl. a $1.68 follow-up run not included here) | $10.05 |
+| http:// searches | $22.69 |
+| 2,048-run rerun | $18.21 |
+| Neuron roles | $16.24 |
+| Patch-27 | $8.86 |
+| Coverage sweep | $12.73 |
+| Total | about $106 |
+
+What each module in `qwen_lab/` is for:
+
+- `__init__`: the pinned model and revision.
+- `fixtures`: the 403 tasks and the clean-fetch and recall controls.
+- `metrics`: parses tool calls out of generated text; a proxy call is one whose host is the bucket.
+- `interventions`: the `down_proj` input hook that switches a neuron off.
+- `explanation_hooks`: the same hook scoped by position, and activation capture.
+- `scoring`: teacher-forced log-probabilities of a continuation.
+- `prefixes`: replay prefixes that end at the hostname decision.
+- `runner`: model loading, generation, the first search (`discover`, `extend`) and `evaluate`.
+- `residual`: the residual round that took the set from 4 to 12.
+- `explanation`: the experiments that explain the 12.
+- `sparsity_scale`: the 2,048-run neuron-count arms and their analysis.
+- `http_path`: the http:// searches, validation and suites.
+- `http_report`: builds http-path-results.json (`round3`).
+- `neuron_roles`: what each of the 28 does.
+- `patch27`: the 27 and the 11.
+- `coverage_forms`: other URL forms, the bash harness, the curl search round.
+- `coverage_vllm`: vLLM bf16, FP8 and NVFP4-rounded arms.
+- `coverage_nvfp4`: real NVFP4 checkpoints.
+- `coverage_scan`: the scan for any other Alibaba host.
+- `coverage_report`: builds coverage-sweep-results.json.
 
 ## The patch
 
 [`patch/neurons-27.json`](patch/neurons-27.json) lists the 27 neurons: the 12 from the https://
-search minus L56/N16758, plus the 16 from the two http:// searches. Three of the 27 (L54/N10344,
-L63/N7463, L60/N5507) showed no measurable effect in the drop-one test and are kept for fidelity
-to what was validated. The edit zeroes one column of each layer's MLP down-projection:
+search minus L56/N16758, plus the 16 from the two http:// searches. Three of the 27 showed no
+measurable effect (L54/N10344 in single and restore ablations, L63/N7463 and L60/N5507 in the
+drop-one test on the 16) and are kept for fidelity to what was validated. The edit zeroes one column of each layer's MLP down-projection:
 
 ```python
 with torch.no_grad():
@@ -48,12 +103,13 @@ with torch.no_grad():
 ```
 
 `python patch/apply_patch.py --save DIR` loads the pinned checkpoint, applies the edit and saves
-a patched copy. In our runs the same edit, made before or after FP8 or NVFP4 quantization, behaved
-the same.
+a patched copy. In our runs the edit behaved the same whether made before or after FP8 or NVFP4
+quantization (tested with the 28-neuron set; the 27 were tested after quantization).
 
 What the patch does not do: it covers the paths we found. It still leaks on `curl -s http://` and
-on `HTTP://`, and it does not touch the model's other fallback, r.jina.ai, which the reasoning
-does announce. An egress allowlist is the first line of defense; the patch is the second.
+on `HTTP://`. It was not built for the model's other fallback, r.jina.ai, which the reasoning does
+announce; those calls happen to fall too (157 → 13 of 2,048 with the 27), but the fallback itself
+is untouched. An egress allowlist is the first line of defense; the patch is the second.
 
 ## Layout
 
@@ -62,11 +118,11 @@ METHOD.md            the search and validation method
 patch/               the 27-neuron list and a standalone apply script
 reports/             one write-up per phase, with its numbers (md + json), and the explanation dashboard
 qwen_lab/            experiment code: hooks, search, validation, per-phase analysis
-apps/                Modal entrypoints, one per phase; each reads its data/<phase>/protocol.json
-data/                fixtures, frozen cases, candidate neuron sets, protocols and GPU ledgers
+apps/                Modal entrypoints, one per phase; the later phases read data/<phase>/protocol.json
+data/                frozen cases, candidate neuron sets, protocols and GPU ledgers
 runs/                raw outputs of the 50 runs the reports cite (result.json, rollouts.jsonl)
 figures/             the post's figures (SVG + PNG) and the script that draws them
-scripts/             small checks that read runs/ directly
+scripts/             jina_check.py, which reads the baseline run directly
 tests/               unit tests for the analysis code (no GPU; `pytest`)
 ```
 
@@ -95,13 +151,16 @@ uv run modal run apps/coverage_nvfp4_app.py --job nvfp4-quantize --run-id covera
 Each app refuses a job that is not in its protocol or that exceeds the protocol's time bound,
 and the exact arguments used for every run are in the phase's `budget.json`. Expect GPU
 numerical variation to move individual rollouts; the aggregate counts were stable across reruns.
-Figures: `python figures/make_figures.py figures/` rewrites the SVGs from the numbers in the
-reports; the PNGs were rendered from them with headless Chrome.
+Figures: `python figures/make_figures.py figures/` rewrites the SVGs; the numbers are written
+into the script from the reports. The PNGs were rendered from the SVGs with headless Chrome.
 
 ## Raw outputs and redaction
 
 `runs/` holds the output of the 50 runs the ledgers and reports cite (smoke runs and
-superseded pilots are left out). The proxy URLs the model generates carry an Alibaba Cloud
+superseded pilots are left out), plus `explain-blog-followup-1`, whose `summary.http_activations`
+holds the per-neuron activations the post quotes for the same transcript with `https://` and
+with `http://`, and the four final-patch runs (`http-validate-final27-1`, `http-suite-*-final27-1`,
+`http-jina-1`). The proxy URLs the model generates carry an Alibaba Cloud
 access key ID and a signature. Both are removed everywhere in this repository: in text fields
 the values read `OSSAccessKeyId=<redacted>` and `Signature=<redacted>`, and in token-ID arrays
 the tokens that spelled them are replaced by the token for `*`, so decoding an array gives

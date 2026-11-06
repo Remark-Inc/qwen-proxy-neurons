@@ -1,4 +1,4 @@
-"""Write the blog figures as SVG. Numbers are the ones already verified in the draft (27-neuron framing).
+"""Write the post's figures as SVG. The numbers are copied from the reports (27-neuron framing).
 
 usage: make_figures.py OUT_DIR
 """
@@ -57,7 +57,7 @@ def timing():
     b += f'<rect x="{px}" y="{py}" width="{pw}" height="250" rx="10" fill="{PANEL}" stroke="{LINE}"/>\n'
     b += text(px + 18, py + 30, "Where those neurons' effect lands", 15, weight=700)
     b += text(px + 18, py + 50, "Share of their total effect on the odds of the Alibaba address,", 12, MUTED)
-    b += text(px + 18, py + 66, "from replays of 16 failing transcripts", 12, MUTED)
+    b += text(px + 18, py + 66, "from replays of 13 failing transcripts", 12, MUTED)
     parts = [("Prompt and 403", 1, "#9ca3af"), ("Reasoning", 2, "#9ca3af"),
              ("First token after https://", 74, GREEN), ("Rest of the tool call", 23, "#a7f3d0")]
     sx, sy, sw = px + 18, py + 86, pw - 36
@@ -84,7 +84,7 @@ def dose():
               13.5, MUTED)
     rows = [("None", 287, "—", RED), ("1: L63/N4455", 105, "63% fewer (55–70%)", AMBER),
             ("2: adds L63/N417", 56, "80% fewer (74–85%)", AMBER), ("3: adds L63/N14734", 43, "85% fewer (79–89%)", AMBER),
-            ("11 (the https:// patch)", 0, "100% fewer (at least 97%)", GREEN)]
+            ("27 (the full patch)", 0, "100% fewer (at least 97%)", GREEN)]
     x0, y0, bw, n = 250, 108, 420, 2048
     for i, (label, k, red, col) in enumerate(rows):
         y = y0 + i * 52
@@ -104,7 +104,7 @@ def dose():
         xx = x0 + bw * t / 16
         b += f'<line x1="{xx:.1f}" y1="{y0 + 5 * 52}" x2="{xx:.1f}" y2="{y0 + 5 * 52 + 5}" stroke="{MUTED}"/>\n'
         b += text(xx, y0 + 5 * 52 + 20, f"{t}%", 11.5, MUTED, anchor="middle")
-    b += text(32, h - 22, "Zero in 2,048 runs puts the 11-neuron rate below about 0.19% with 95% confidence. "
+    b += text(32, h - 22, "Zero in 2,048 runs puts the 27-neuron rate below about 0.19% with 95% confidence. "
               "Calls to sec.gov rose from 78.7% to 88.7% of runs.", 11.5, MUTED)
     return svg(w, h, b, "Proxy calls by number of neurons switched off")
 
@@ -155,7 +155,7 @@ def roles():
 
 # ---------------------------------------------------------------- 4. http table
 def http_table():
-    rows = json.load(open(Path(__file__).with_name("table_v2.json")))
+    rows = json.load(open(Path(__file__).with_name("http-table.json")))
     w, h = 1080, 330
     b = text(32, 44, "Proxy completions after http://, by patch", 22, weight=700)
     b += text(32, 68, "Sampled from the point where the model had just typed http://. Apart from the first row, no case was used to choose neurons.",
@@ -173,7 +173,7 @@ def http_table():
                 col, wt = RED, 700
             b += text(xs[c] + 12, y + 25, cell, 13.5, col, wt)
         y += 38
-    b += text(32, h - 22, "Qwen3.8-27B. 12 = the first patch; 19 and 28 = after one and two rounds of the same search on http:// failures.",
+    b += text(32, h - 22, "Qwen3.8-27B. 12 = the first patch; 19 = after one round of the same search on http:// failures; 27 = the final patch.",
               11.5, MUTED)
     return svg(w, h, b, "Proxy completions after http://")
 

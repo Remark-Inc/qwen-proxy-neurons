@@ -1,9 +1,9 @@
 # Sparsity rerun: the 1-, 2-, 3- and 12-neuron arms at 2,048 SEC runs each
 
-Oct 30, 2026. This rerun answers the blog review's question about why the reductions for the small neuron sets had such wide ranges. The seed-50000 confirmation ran only 256 SEC runs per arm. This rerun uses 2,048 per arm, on a fresh seed block shared by every arm.
+Oct 30, 2026. This rerun narrows the confidence intervals for the small neuron sets. The seed-50000 confirmation ran only 256 SEC runs per arm. This rerun uses 2,048 per arm, on a fresh seed block shared by every arm.
 
 - **Numbers:** every number below comes from `sparsity-scale-results.json`, built with `python -m qwen_lab.sparsity_scale build`.
-- **Protocol:** `data/sparsity-scale/protocol.json` was frozen before any generation. One amendment, also recorded before any generation, added the 12-neuron arm at Matt's request.
+- **Protocol:** `data/sparsity-scale/protocol.json` was frozen before any generation. One amendment, also recorded before any generation, added the 12-neuron arm.
 
 ## Headline
 
@@ -79,36 +79,18 @@ All counts are out of 2,048. "Other unrequested host" includes the proxy and any
   - So the paired intervals come out slightly narrower.
   - Resampling whole 32-run batches instead gives the same intervals to within a point.
 
-## For the blog
-- **"How Many Neurons Does It Take?" table:**
-
-  | Neurons | Proxy calls (of 2,048) | Reduction (95% CI) |
-  |---|---|---|
-  | 0 | 287 (14.0%) | — |
-  | 1 | 105 (5.1%) | 63% (55–70%) |
-  | 2 | 56 (2.7%) | 80% (74–85%) |
-  | 3 | 43 (2.1%) | 85% (79–89%) |
-  | 12 | 0 | at least 97% |
-
-  The 12-neuron row's rate is below 0.19% at 95%.
-- **"One neuron does about half the work":** that now understates it. One neuron removes 63% of proxy calls (95% CI 55–70%), so "about three in five" or "well over half" fits.
-- **"12 → 0 of 512":** replace it with "12 → 0 of 2,048 (95% upper bound 0.19%), against 287 of 2,048 unmodified".
-  - This rerun gave every arm a 1,024-token budget; the old row used 2,048.
-  - At most one run per arm reached 1,024 tokens, so the difference doesn't matter here.
-
 ## Caveats
 - **One prompt:** SEC with a synthetic 403 history. The other pages and the clean-fetch and recall controls were out of scope for this rerun.
-- **One setup:** one checkpoint and one harness (BF16 Transformers, eager, on H200).
+- **One setup:** one checkpoint and one harness (BF16 Transformers with SDPA attention, on H200).
 - **Zero counts** bound the 12-neuron rate. They don't prove it's zero.
 - **Selection was on earlier data:** the small sets were chosen on development seeds and frozen on Oct 27. The 12 were validated before on seed 270000. These arms test all of them on fresh seeds.
 
 ## Cost
 - **Total:** five jobs, $18.21 by whole-app lifetime ($18.04 in-container compute). Each arm took 37–44 min and cost $3.42–$4.00.
-- **Research total:** $163.31. Matt raised the research cap from $175 to $180 for this phase's reservations, though the spend itself stayed under $175.
-- **No apps are running.**
+- **Research total:** $163.31.
 
 ## Files
 - **`sparsity-scale-results.json`:** counts, intervals, adjacent tests and per-run outcome bits, with no generated text.
 - **Protocol and ledger:** `data/sparsity-scale/protocol.json`, `data/sparsity-scale/budget.json`.
-- **Code and tests:** `sparsity_scale_app.py`, `qwen_lab/sparsity_scale.py`, `qwen_lab/sparsity_scale_launch.py`, `tests/test_sparsity_scale.py`.
-- **Raw rollouts:** `runs/sparsity-scale-*-1/`, which is gitignored. They hold the model's text, including memorized proxy URLs, so they aren't committed.
+- **Code and tests:** `apps/sparsity_scale_app.py`, `qwen_lab/sparsity_scale.py`, `tests/test_sparsity_scale.py`.
+- **Raw rollouts:** `../runs/sparsity-scale-*-1/` (the model's text, with the proxy URLs' key and signature redacted).
