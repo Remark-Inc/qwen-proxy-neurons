@@ -104,7 +104,7 @@ def dose():
         xx = x0 + bw * t / 16
         b += f'<line x1="{xx:.1f}" y1="{y0 + 5 * 52}" x2="{xx:.1f}" y2="{y0 + 5 * 52 + 5}" stroke="{MUTED}"/>\n'
         b += text(xx, y0 + 5 * 52 + 20, f"{t}%", 11.5, MUTED, anchor="middle")
-    b += text(32, h - 22, "Zero in 2,048 runs puts the 11-neuron rate below about 0.19% with 95% confidence. "
+    b += text(32, h - 22, "Zero in 2,048 runs puts the 27-neuron rate below about 0.19% with 95% confidence. "
               "Calls to sec.gov rose from 78.7% to 88.7% of runs.", 11.5, MUTED)
     return svg(w, h, b, "Proxy calls by number of neurons switched off")
 
