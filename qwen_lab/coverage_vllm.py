@@ -10,7 +10,7 @@ Calls stay text; results carry counts, probabilities and hostnames.
 import json,math,re,subprocess,sys,time
 from pathlib import Path
 
-MODEL='Qwen/Qwen3.8-27B';REVISION='1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0'
+from qwen_lab import MODEL,REVISION
 HIDDEN,INTER=5120,17408
 RATE=.001261+4*.0000131+96*.00000222
 

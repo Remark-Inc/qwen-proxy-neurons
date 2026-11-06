@@ -183,13 +183,13 @@ and the weights.
 - **Coverage follows the data.** Several search-2 neurons are site-specific suppressors of the
   legitimate host. Sites never fed into discovery may need their own, so in production you
   include failures from every context you care about.
-- **Size:** 28 neurons is no longer "about a dozen" — it is 12 for https:// plus 16 for http://.
+- **Size:** 28 neurons: 12 for https:// plus 16 for http://.
 - **The 19's 20 of 256 on the escape** remains unexplained: its sampling path predicts 3.6%.
   The 28's 0 of 512 fits its 0.43%.
 - **Zero counts bound, but do not establish, zero rates.** Samples cluster within prefixes (8–128 each).
 - **Scope:** one checkpoint (Qwen3.8-27B, revision 1d4bf0f), one Vals-style synthetic-403
-  harness, and BF16 Transformers on H200. No serving-engine study for these sets, and no
-  BFCL/IFBench. Requested-host calls moved within the earlier range (456/512 vs 458 for the twelve).
+  harness, and BF16 Transformers on H200. No serving-engine study here (the coverage sweep
+  later covered vLLM), and no BFCL/IFBench. Requested-host calls moved within the earlier range (456/512 vs 458 for the twelve).
 
 ## Final neuron list
 
@@ -227,10 +227,9 @@ PATCH = {  # layer: neurons (28 = 12 for https:// + 16 for http://)
 | http-replay-2 | Fresh decision points from the round-2 suites, replayed under unpatched, 12 and 19 |
 | http-specificity-1 | Explicit-request checks for unpatched, 12 and 19 |
 
-Run folders are gitignored under `runs/` and on the Modal results volume.
+Run folders are under `../runs/`.
 
-The phase used **$22.69**, including two failed launches ($0.11). Matt raised the phase cap
-from $22 to $47 during search 2. The research total is **$145.10 of $175**. This is a
+The phase used **$22.69**, including two failed launches ($0.11). The research total is **$145.10 of $175**. This is a
 whole-app-lifetime estimate at published Modal H200/CPU/RAM rates, not an invoice; see
-[data/http/budget.json](../data/http/budget.json). No apps are running. All generated tool calls
+[data/http/budget.json](../data/http/budget.json). All generated tool calls
 were recorded as text and never executed.

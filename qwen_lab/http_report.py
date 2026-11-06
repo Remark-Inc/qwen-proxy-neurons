@@ -160,7 +160,7 @@ def build(runs='runs',legacy='./runs',out='http-path-results.json'):
     return report
 
 
-if __name__=='__main__':build(*sys.argv[1:])
+if __name__=='__main__':round3(*sys.argv[1:])  # round 3 built the published http-path-results.json; build() is round 2
 
 
 ARMS4=['unpatched','all12','combined','refined']

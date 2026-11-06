@@ -1,6 +1,6 @@
 # Coverage sweep: where the patch holds and where it leaks
 
-Nov 2, 2026. The draft's bullet says "A patch only covers the paths you've found, and we found two." Every neuron in the patch sits at the token after `scheme://` inside a webfetch call, on one checkpoint, under one engine. This sweep tests the patch in the contexts a deployment would actually hit. It covers Matt's three priority items:
+Nov 2, 2026. Every neuron in the patch sits at the token after `scheme://` inside a webfetch call, on one checkpoint, under one engine. This sweep tests the patch in the contexts a deployment would actually hit. It covers Matt's three priority items:
 - **Item 1:** other ways of writing a URL.
 - **Item 3:** a wider host detector over every saved run.
 - **Item 7:** batched vLLM, FP8 and NVFP4.
@@ -8,8 +8,7 @@ Nov 2, 2026. The draft's bullet says "A patch only covers the paths you've found
 Items 2, 4, 5 and 6 (other failure types, a Chinese prompt, reasoning off, a late failure) were not run.
 
 **Setup:**
-- **Protocol:** `data/coverage-sweep/protocol.json`. Its design and decision rules were frozen at ce2eacc, before any sweep generation, and the amendments are listed under "What ran".
-- **Approval:** Matt approved "Approve $30" in the side session, recorded at a848c83.
+- **Protocol:** `data/coverage-sweep/protocol.json`. Its design and decision rules were frozen before any sweep generation, and the amendments are listed under "What ran".
 - **Numbers:** every number below comes from `coverage-sweep-results.json`, built with `python -m qwen_lab.coverage_report build`. Item 3's raw scan is `data/coverage-sweep/host-scan.json`.
 - **Arms:** "28 off" is the 28-neuron patch. "27 off" is the 28 without L56/N16758, which the patch-27 report recommends shipping.
 
@@ -168,7 +167,7 @@ The forms rule found leaks under both patches, which met the frozen trigger. The
   - **What it does not test:** a real NVFP4 checkpoint, the Marlin kernel, or the FP4 activations of Blackwell builds. The B200 run below covers the first and the last.
   - **EXL3:** not covered.
 ### Real NVFP4 on a Blackwell B200
-Matt asked for this run instead of relying on the emulation. A B200 runs NVFP4 natively, with FP4 weights and FP4 activations, which is the path in-the-wild NVFP4 builds use.
+This run replaces the emulation. A B200 runs NVFP4 natively, with FP4 weights and FP4 activations, which is the path in-the-wild NVFP4 builds use.
 
 **Checkpoints.** These were built here with llm-compressor 0.15.0 and nothing was downloaded.
 - **Scheme:** `NVFP4` (E2M1 weights and activations in groups of 16, E4M3 group scales, FP32 global scales), calibrated on 256 of our own unmodified transcripts.
@@ -198,12 +197,12 @@ Matt asked for this run instead of relying on the emulation. A B200 runs NVFP4 n
 - **Cost and storage.**
   - **Building the four checkpoints:** about $1.27, across one H200 job and two CPU jobs.
   - **Serving them:** $2.14 of whole-app time on the B200. Most of that is startup; the in-container work was 615 s.
-  - **Storage:** the four checkpoints (28.6 GB each, about 114 GB in all) were deleted from the Modal models volume on Nov 3; Matt ran the delete. The committed code, protocol and calibration set can rebuild them for about $1.27. The run results and rollouts are unaffected.
+  - **Storage:** the four checkpoints (28.6 GB each, about 114 GB in all) were deleted from the Modal models volume on Nov 3. The committed code, protocol and calibration set can rebuild them for about $1.27. The run results and rollouts are unaffected.
 
 - **Side effect.** The Wayback rise found in the patch-27 report shows up here too. The 27 make 27–49 Wayback calls (31 on the B200), against 5–13 for the 28 and 5–18 unmodified.
 
 ## Item 3: wider host detector over every saved run
-- **Scope:** 99,914 generated records in 61 run folders across both checkouts, from the MoE, vLLM and dense phases. That is 30,578 full rollouts and 69,336 decision-point samples.
+- **Scope:** 99,914 generated records in 61 run folders across both checkouts, from the dense phases, the vLLM runs and the Flash-Next (mixture-of-experts) runs that are not included in this repository. That is 30,578 full rollouts and 69,336 decision-point samples.
   - **Hosts matched:** \*.aliyuncs.com, \*.alibaba-inc.com, \*.aliyun.com, oss-cn-\*, dashscope, routify and sanmaohe.
   - **Not scanned:** the other 28 folders hold no saved generations.
 - **The routify proxy is the only memorized Alibaba address.** The only other matches are:
@@ -214,15 +213,6 @@ Matt asked for this run instead of relying on the emulation. A B200 runs NVFP4 n
 - **No patched arm substitutes another Alibaba host.**
   - **The 28, the 27 and the 11:** 0 proxy calls in all their saved rollouts (1,408, 2,048 and 2,112).
   - **The 12:** 17 in 3,920 rollouts. Sixteen of those are requested proxy fetches in a control, and one is from the timing experiment.
-
-## What this changes in the post
-- **The coverage bullet now has a third path.** Suggested text: "We tried nine other ways of writing the retry. The patch held for every https:// form. But an http:// retry written as a curl command still reached the proxy 3.5% of the time with the 27 (from 96% unmodified), and an uppercase HTTP:// webfetch URL 1.4%. One more search round found four more neurons that closed the curl path on held-out transcripts but not the uppercase one."
-- **Engines and quantization.** Suggested text: "Under batched vLLM, in bf16, FP8 and a real NVFP4 build served natively on a Blackwell B200, the patch stopped every proxy call in 512 SEC runs per variant, edited before or after quantization. Unpatched, vLLM bf16 matched our eager numbers (15.0% vs 14.0%), and the NVFP4 build still called the proxy in 7.8% of runs."
-  - **Caveat:** the NVFP4 build is our own, made with llm-compressor's recipe and calibrated on our transcripts, not a published one.
-  - **Before versus after quantization:** the edit holds either way. Editing before FP8 changes one layer's scale, because a patched neuron holds that tensor's largest weight.
-- **Memorized addresses.** Suggested text: "Across about 100,000 saved generations, the only memorized Alibaba address is the routify proxy, and the patched model never swaps in another."
-- **Bash harness.** Suggested text: "With bash as the only tool, the unmodified model never reached for the proxy in 512 SEC runs." Zenity's 2.7% from a bare bash call doesn't reproduce in this harness.
-- **On "how do we know when we're done".** The leaks follow the patch's training contexts. The https:// neurons generalize across forms, and the http:// neurons don't fully cover http:// outside webfetch. A deployment would need its own sweep of the forms it emits. This sweep is a list of contexts checked, not a guarantee.
 
 ## What ran
 | Job | What | App time | Estimate |
@@ -248,7 +238,7 @@ Matt asked for this run instead of relying on the emulation. A B200 runs NVFP4 n
 - **Host detector:** e-mail domains no longer count as hosts. Most bash retries add a User-Agent contact address, which put example.com under "other host". No proxy count changed.
 - **27-arm top-up:** the forms job's sampled 27 arm stopped at its time limit after 100 of 144 prefixes. A second job sampled the other 44 with the same seeds, and its teacher forcing matched the first job exactly.
 - **1c search:** its design was recorded once the forms result met the trigger.
-- **Real NVFP4 on a B200:** after Matt's request, this added the checkpoint and B200 jobs, each billed at its own hardware rate. Two follow-up fixes were recorded before any B200 generation:
+- **Real NVFP4 on a B200:** added after the emulated rows, this added the checkpoint and B200 jobs, each billed at its own hardware rate. Two follow-up fixes were recorded before any B200 generation:
   - the after-quantization variants moved to a CPU job, after an import path changed in compressed-tensors 0.20.1;
   - that job completes partial folders left by the failed step.
 
@@ -262,4 +252,3 @@ Matt asked for this run instead of relying on the emulation. A B200 runs NVFP4 n
 ## Cost
 - **This phase:** $12.73 of the $30 cap. That is the whole-app estimate at each job's hardware rate.
 - **Research total:** $201.15 of the $280 cap.
-- **No apps are running.**

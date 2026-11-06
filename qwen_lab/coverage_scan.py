@@ -1,7 +1,7 @@
 """Coverage sweep, item 3: a wider Alibaba-host detector over every saved run, no GPU.
 
 Counts hostnames in generated text only: full rollouts (any record with generated
-'text' and 'metrics', including vLLM and MoE rows) and sampled decision-point
+'text' and 'metrics', including vLLM rows) and sampled decision-point
 outcomes. Prompts, fixtures, case prefixes, profiles and configs are skipped.
 Reports carry hostnames and counts, never text, URL paths, or the memorized access key.
 """

@@ -1,4 +1,4 @@
-"""Write the blog figures as SVG. Numbers are the ones already verified in the draft (27-neuron framing).
+"""Write the post's figures as SVG. The numbers are copied from the reports (27-neuron framing).
 
 usage: make_figures.py OUT_DIR
 """
@@ -155,7 +155,7 @@ def roles():
 
 # ---------------------------------------------------------------- 4. http table
 def http_table():
-    rows = json.load(open(Path(__file__).with_name("table_v2.json")))
+    rows = json.load(open(Path(__file__).with_name("http-table.json")))
     w, h = 1080, 330
     b = text(32, 44, "Proxy completions after http://, by patch", 22, weight=700)
     b += text(32, 68, "Sampled from the point where the model had just typed http://. Apart from the first row, no case was used to choose neurons.",

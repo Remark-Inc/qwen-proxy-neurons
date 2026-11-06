@@ -3,8 +3,7 @@
 Nov 2, 2026. The neuron-roles follow-up found that L56/N16758 drives Wayback calls and does nothing measurable to proxy calls. This run asks whether the post can ship the other 27 neurons and say the Wayback side effect is gone.
 
 **How the run was set up:**
-- **Protocol:** `data/patch-27/protocol.json` holds the protocol and its decision rules. Both were frozen at 94cc163, before any generation.
-- **Approval:** Matt approved the spend in this session ("Approve $16"), recorded at 58343d2.
+- **Protocol:** `data/patch-27/protocol.json` holds the protocol and its decision rules. Both were frozen before any generation.
 - **Numbers:** every number comes from `patch-27-results.json`, built with `python -m qwen_lab.patch27 build`. The tables come from `python -m qwen_lab.patch27 tables`.
 
 ## Headline
@@ -109,19 +108,6 @@ At the run level, more runs reach a Wayback decision under the 27, because the e
   - **efts.sec.gov and r.jina.ai:** these fall further, to 68 from 141 and to 13 from 44.
   - **Fit with earlier findings:** this matches item 3 of the neuron-roles follow-up, where L62/N8518, L60/N8520 and L63/N2250 push down `web`.
 
-## What this changes in the post
-- **Replace the hedge.** The draft says leaving L56/N16758 out "would probably cost little" and that the validation hasn't been re-run without it. That can now be replaced with: "Without L56/N16758, the other 27 still stopped every proxy call in 2,048 SEC runs, and Wayback calls rose to 221 (from 103) instead of falling to 20."
-- **Wayback wording.** The suppression is gone, but "Wayback calls are unchanged" would be wrong.
-  - **Safe wording:** "no longer suppressed".
-  - **Fuller version:** with the 27, the model falls back to the Wayback Machine about twice as often. Usually it does so next to a retry of www.sec.gov.
-- **Reroutes the post may want to name.** Both the 12 and the 27 move calls from efts.sec.gov and r.jina.ai toward www.sec.gov.
-  - **efts.sec.gov:** 798 → 151 with the 12, and 68 with the 27.
-  - **r.jina.ai:** 157 → 48 with the 12, and 13 with the 27.
-  - **Shape of the change:** this is a rerouting rather than a suppression. Item 3 of the neuron-roles follow-up found no neuron that pushes down efts.sec.gov's first token.
-- **http:// pages.** L56/N16758 adds no sampled protection on the held-out http:// sets. Its only measured cost is the 0.05-point exact-rate rise on SEC substituted pages.
-- **The https:// count.** If the post keeps an https://-only count, "11 stopped every call in 2,048 runs" also holds, and the 11 leave Wayback calls unchanged (100 vs 103).
-- **Patch description.** If the post ships the 27, the patch is 11 https:// neurons plus 16 http:// neurons. The neuron-roles count line becomes: 27 neurons, of which 3 appear to do nothing (L54/N10344, L63/N7463, L60/N5507) and 24 do measurable work.
-
 ## What ran
 | Job | What | App time | Estimate |
 |---|---|---|---|
@@ -130,7 +116,7 @@ At the run level, more runs reach a Wayback decision under the 27, because the e
 | `patch27-all11-runs-1` | 11 off, 2,048 SEC 403 runs | 2,631 s | $4.02 |
 
 - **Rollout arms:** `qwen_lab.sparsity_scale.run` and `runner.generation`, unchanged.
-- **Restore job:** `qwen_lab.neuron_roles.phase_restore`. Two changes, both recorded at 94cc163 before generation:
+- **Restore job:** `qwen_lab.neuron_roles.phase_restore`. Two changes, both recorded before generation:
   - an optional Wayback teacher-forced stage that runs after sampling;
   - a `patch27-` run-ID prefix.
 - **Neuron-roles results:** they rebuild byte for byte after the code change.
@@ -145,6 +131,5 @@ At the run level, more runs reach a Wayback decision under the 27, because the e
 ## Cost
 - **This phase:** $8.86 of the $16 cap. That is the whole-app estimate; measured in-container compute was $8.80.
 - **Research total:** $188.42 of the $280 cap.
-- **No apps are running.**
 
-**Recommendation:** Yes: ship the 27 and say the Wayback side effect is gone (0 proxy calls in 2,048 runs); Wayback calls rose (RR 2.15, 95% CI 1.71–2.69 against unmodified), so 'gone' means no longer suppressed, not unchanged.
+**Verdict (from the frozen decision rules):** the 27 can be used without L56/N16758; its Wayback suppression is gone (0 proxy calls in 2,048 runs), and Wayback calls rose (RR 2.15, 95% CI 1.71–2.69 against unmodified), so 'gone' means no longer suppressed, not unchanged.

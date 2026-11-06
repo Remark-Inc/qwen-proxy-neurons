@@ -1,6 +1,6 @@
 # Neuron roles in the 28-neuron patch: drop-one, activation profiles and alternative destinations
 
-Oct 30–31, 2026. This follow-up tests the role claims in the blog draft. They rested on the output-token lens plus single ablations, and this rerun adds three measurements:
+Oct 30–31, 2026. This follow-up tests the role claims made after the explanation phase. Those rested on the output-token lens plus single ablations; this rerun adds three measurements:
 
 - **Drop-one:** restore each of the 16 http:// neurons on held-out http:// failures.
 - **Activation profiles:** where each of the 28 neurons fires.
@@ -379,11 +379,11 @@ Full per-site values for all 28 neurons are in the JSON (`item3.by_site`).
 - **The effect is larger over whole runs (−82%) than at the decision point (−46% of completions).** This fits with it also firing during reasoning (prose SD 8.6).
 - **On its own it doesn't reduce proxy calls.** In whole runs the proxy count doesn't change, and at decision points proxy completions rise. Its value inside the 12 is cutting an alternative route, not the proxy.
 
-## What this changes in the post
+## Roles of all 28
 
 **Passengers among the 16.** By the frozen drop-one rule, L63/N7463 and L60/N5507 do nothing measurable on the held-out http:// sets once the other 27 are off. Both are "redundant": they move the raw proxy probability slightly, but not into the sampler's range.
 
-The post already says L54/N10344 does nothing among the original 12, and its single ablation here confirms that on http:// prefixes. So the count line can read:
+L54/N10344 was already a passenger among the original 12 (single and restore ablations in the explanation phase), and its single ablation here confirms that on http:// prefixes. So the count is:
 
 > 28 neurons, and 3 of them (L54/N10344, L63/N7463, L60/N5507) appear to do nothing; 25 do measurable work.
 
@@ -424,7 +424,7 @@ Two caveats belong next to that sentence:
 | L61/N168 | http:// search 2 | indeterminate | +2.9 https:// (threshold 4.4) | www −0.3 (https://) | small (SEC +0.08 pt) |
 | L63/N6342 | http:// search 2 | URL-general (by rule) | +2.1 at clean fetches, +5.7 at PyTorch's first fetch; −0.9 and −1.6 at failures | py −0.1 to −0.3 at failures | needed (docs 48 vs 12) |
 
-**Alternative suppression, per neuron.** The draft says about half of the 16 do the original 12's jobs and the rest have no clear role. Measured, most of the 16 now have an operational role:
+**Alternative suppression, per neuron.** Measured, most of the 16 have an operational role:
 
 - **Push `r`:**
   - L61/N5269 and L63/N9024 at every decision;
@@ -445,14 +445,14 @@ Two caveats belong next to that sentence:
 - **Restoring L62/N4422 alone** changes held-out proxy completions by only 0.06 points.
 - **Untested here:** clean PyTorch fetches weren't in the earlier suite. Direct effects say the patch favors `py` there on net, but nothing was sampled.
 
-**Wayback.** Replace "its output favors Way, Internet and archive but we haven't tested it" with something like:
+**Wayback.** L56/N16758 is a Wayback-fallback neuron, not a proxy neuron:
 
 > Switching off L56/N16758 alone cut Wayback calls from 103 to 18 in 2,048 SEC runs (−82%, 95% CI 71–89%) without reducing proxy calls (312 vs 287). At the first token of a Wayback-bound URL it roughly halves the chance of completing web.archive.org (65% → 34% of 3,264 sampled continuations). Its direct output raises `archive`, `Way` and `web`.
 
 ## What ran
 - **Model and sampler:** Qwen3.8-27B (revision 1d4bf0f2), BF16, Transformers 5.21.0, one H200 per job, with the deployed sampler (temperature 1, top-k 20, top-p 0.95). Tool calls stay text and are never executed.
-- **Protocol:** frozen at 1e674d9 before any generation.
-- **Amendments at dbfbc44**, after the GPU smoke test and before any results job:
+- **Protocol:** frozen before any generation.
+- **Amendments**, after the GPU smoke test and before any results job:
   1. **Exact direct effect added and made primary.** The frozen-scale version differed from exact removal by up to 0.46 logits where activations are large; it's still recorded.
   2. **Wider job time limits.** Sampling took about 4 s per 32-row batch; the plan assumed 2.9 s. This happened inside the same $25 cap.
   3. **Note on the rebuilt traces.** They reproduce the original values within bf16 differences, for example trace 0's N4455: −15.25 against −15.06.
@@ -485,16 +485,15 @@ Two caveats belong next to that sentence:
 - **Small-effect calls are close to the 0.05-point line.** Restoring L62/N4422 adds 0.055 points and L50/N14454 adds 0.065. A different threshold would move them.
 - **Labels follow the frozen rule.** The per-site tables show where the rule's pooled "no failure" family and high prose variance hide site-specific firing.
 - **Direct effects are logit contributions through the final norm only.** Neurons in layers 50–62 also act through later layers, which the singles' total effects capture.
-- **One checkpoint and one harness** (BF16 Transformers, eager, H200). Decision-point results are prefix-level, not whole runs, except option D.
+- **One checkpoint and one harness** (BF16 Transformers with SDPA attention, H200). Decision-point results are prefix-level, not whole runs, except option D.
 - **Nothing here re-tests the original 12 by drop-one.** That data is in explanation-results.json.
 
 ## Cost
 - **This phase:** $16.24 by whole-app lifetime ($16.12 measured compute), against a $25 phase cap.
-- **Research total:** $179.56 of the $280 cap. Matt's "Approve bumping $100" raised it from $180.
-- **No apps are running.**
+- **Research total:** $179.56 of the $280 cap.
 
 ## Files
 - **`neuron-roles-results.json`:** counts, rates, activations aggregated by family, direct and total effects, per-site breakdowns, the Wayback test, option D and costs. It holds no generated text.
 - **Protocol, cases and ledger:** `data/neuron-roles/protocol.json`, `data/neuron-roles/cases.json`, `data/neuron-roles/budget.json`.
-- **Code and tests:** `neuron_roles_app.py`, `qwen_lab/neuron_roles.py`, `qwen_lab/neuron_roles_launch.py`, `tests/test_neuron_roles.py` (11 tests).
-- **Raw results:** `runs/neuron-roles-*/`, which is gitignored. Option D's rollouts hold the model's text, including memorized proxy URLs, so they aren't committed.
+- **Code and tests:** `apps/neuron_roles_app.py`, `qwen_lab/neuron_roles.py`, `tests/test_neuron_roles.py` (11 tests).
+- **Raw results:** `../runs/neuron-roles-*/` (option D's rollouts hold the model's text, with the proxy URLs' key and signature redacted).
