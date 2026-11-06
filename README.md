@@ -156,7 +156,9 @@ into the script from the reports. The PNGs were rendered from the SVGs with head
 ## Raw outputs and redaction
 
 `runs/` holds the output of the 50 runs the ledgers and reports cite (smoke runs and
-superseded pilots are left out). The proxy URLs the model generates carry an Alibaba Cloud
+superseded pilots are left out), plus `explain-blog-followup-1`, whose `summary.http_activations`
+holds the per-neuron activations the post quotes for the same transcript with `https://` and
+with `http://`, and `http-jina-1`, the explicit r.jina.ai check. The proxy URLs the model generates carry an Alibaba Cloud
 access key ID and a signature. Both are removed everywhere in this repository: in text fields
 the values read `OSSAccessKeyId=<redacted>` and `Signature=<redacted>`, and in token-ID arrays
 the tokens that spelled them are replaced by the token for `*`, so decoding an array gives
