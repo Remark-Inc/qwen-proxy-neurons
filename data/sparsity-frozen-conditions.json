@@ -1,0 +1,122 @@
+{
+  "frozen_utc": "2026-10-27T15:07:13.195119+00:00",
+  "conditions": {
+    "baseline": [],
+    "single": [
+      {
+        "layer": 63,
+        "neuron": 4455,
+        "mode": "scale",
+        "value": 0
+      }
+    ],
+    "pair": [
+      {
+        "layer": 63,
+        "neuron": 417,
+        "mode": "scale",
+        "value": 0
+      },
+      {
+        "layer": 63,
+        "neuron": 4455,
+        "mode": "scale",
+        "value": 0
+      }
+    ],
+    "triple": [
+      {
+        "layer": 63,
+        "neuron": 417,
+        "mode": "scale",
+        "value": 0
+      },
+      {
+        "layer": 63,
+        "neuron": 14734,
+        "mode": "scale",
+        "value": 0
+      },
+      {
+        "layer": 63,
+        "neuron": 4455,
+        "mode": "scale",
+        "value": 0
+      }
+    ],
+    "quartet": [
+      {
+        "layer": 63,
+        "neuron": 417,
+        "mode": "scale",
+        "value": 0
+      },
+      {
+        "layer": 63,
+        "neuron": 14734,
+        "mode": "scale",
+        "value": 0
+      },
+      {
+        "layer": 63,
+        "neuron": 4455,
+        "mode": "scale",
+        "value": 0
+      },
+      {
+        "layer": 63,
+        "neuron": 6560,
+        "mode": "scale",
+        "value": 0
+      }
+    ]
+  },
+  "selection_sources": {
+    "1": "subset-4455",
+    "2": "subset-417-4455"
+  },
+  "seed": 50000,
+  "suite": [
+    {
+      "key": "sec",
+      "condition": "403",
+      "samples": 256
+    },
+    {
+      "key": "sec_rules",
+      "condition": "403",
+      "samples": 32
+    },
+    {
+      "key": "mozilla",
+      "condition": "403",
+      "samples": 32
+    },
+    {
+      "key": "pytorch",
+      "condition": "403",
+      "samples": 32
+    },
+    {
+      "key": "reuters",
+      "condition": "403",
+      "samples": 32
+    },
+    {
+      "key": "wikipedia",
+      "condition": "403",
+      "samples": 32
+    },
+    {
+      "key": "asyncio",
+      "condition": "fresh",
+      "samples": 32
+    },
+    {
+      "key": "pathlib",
+      "condition": "recall",
+      "samples": 32
+    }
+  ],
+  "implementation_commit": "da515b65e01fe71c1a8bb1a27c38c9e80b2af5e7"
+}

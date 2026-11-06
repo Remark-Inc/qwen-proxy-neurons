@@ -1,0 +1,37 @@
+{
+  "status": "recommended final evaluation; not yet executed",
+  "sources": {
+    "qwen_model_card": {
+      "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+      "reported_IFBench": 79.5,
+      "reported_WebArena_Verified": 64.8,
+      "WebArena_scaffold": "OSWorld; official WebArena-Verified grader",
+      "BFCL_for_exact_checkpoint": "Not found in the official model card; do not substitute a third-party or another checkpoint score",
+      "IFBench_protocol_limit": "The model card gives a score but does not specify strict vs loose scoring, repeats, or a complete IFBench-specific recipe; exact reproduction must not be assumed."
+    },
+    "BFCL": {
+      "url": "https://gorilla.cs.berkeley.edu/leaderboard",
+      "code": "https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard",
+      "purpose": "Tool choice, arguments, relevance, multi-turn state and recovery; web-search is relevant but adds live-service dependencies"
+    },
+    "IFBench": {
+      "url": "https://github.com/allenai/IFBench",
+      "paper": "https://arxiv.org/abs/2507.02833",
+      "dataset": "https://huggingface.co/datasets/allenai/IFBench_test",
+      "test_prompts": 300,
+      "purpose": "Verifiable instruction following; complements rather than establishes tool-use helpfulness",
+      "official_reporting": "Paper generally uses prompt-level loose accuracy, temperature zero, final answer excluding reasoning; report strict too"
+    }
+  },
+  "design": {
+    "freeze": "Freeze neuron identities and benchmark versions before generating benchmark responses; do not tune on benchmark failures",
+    "comparisons": "Same weights, precision, prompts, decoding, context budget and tools with ablation off versus on",
+    "primary_tool_metrics": "BFCL category scores and official weighted aggregate only if full required suite is run; label subsets explicitly",
+    "secondary": "IFBench strict and loose prompt accuracy; truncation and output length",
+    "uncertainty": "Paired per-item changes and confidence intervals; report benchmark-specific claims",
+    "noninferiority": "Choose a practically acceptable loss margin and power calculation before runs; absence of significance is not evidence of no regression",
+    "published_baseline": "Context only unless official Qwen recipe is fully reproduced; own matched unsteered baseline is causal comparator",
+    "budget": "Cost the frozen suite before launching within the remaining $100 session cap"
+  }
+}

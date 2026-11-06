@@ -1,0 +1,40 @@
+{
+  "recorded_utc": "2026-10-27T15:15:13.469920+00:00",
+  "status": "exploratory addition; original frozen conditions unchanged",
+  "reason": "Mean-score fourth N6560 has almost all benefit on Rust; add a robustness-selected fourth to distinguish mean-objective overfitting from the usefulness of a fourth neuron",
+  "selection": "Maximize minimum log-odds reduction across the same original six discovery prefixes; mean breaks ties; no generation outcome used to rank these candidates",
+  "source": "fourth-discovery-1",
+  "neurons": [
+    {
+      "layer": 63,
+      "neuron": 417,
+      "mode": "scale",
+      "value": 0
+    },
+    {
+      "layer": 63,
+      "neuron": 14734,
+      "mode": "scale",
+      "value": 0
+    },
+    {
+      "layer": 63,
+      "neuron": 4455,
+      "mode": "scale",
+      "value": 0
+    },
+    {
+      "layer": 54,
+      "neuron": 10344,
+      "mode": "scale",
+      "value": 0
+    }
+  ],
+  "minimum_discovery_gain": 0.13627399504184723,
+  "mean_discovery_gain": 0.3143599367079635,
+  "run_id": "confirm-quartet-robust",
+  "seed": 50000,
+  "suite_file": "data/sparsity-confirmation-suite.json",
+  "timing": "After baseline/single/pair confirmation generation had started; before either quartet had generated any confirmation outputs",
+  "caveat": "Additional adaptive comparison, not part of the original frozen five-condition protocol; report separately and account for multiple comparisons"
+}

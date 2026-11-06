@@ -1,0 +1,362 @@
+{
+ "recorded_utc": "2026-10-31T02:57:03.840109+00:00",
+ "question": "Which of the 28 neurons does measurable work on held-out http:// failures, where do they fire, and which first tokens do they push or suppress at the decision position?",
+ "brief": "Parent session \"Qwen neuron lab document editing\", Oct 30. Item 1 (priority): drop-one on the 16 http:// neurons. Item 2: activation profiles for all 28. Item 3: effects on alternative destinations, with the Wayback check for L56/N16758. Role statements stay operational.",
+ "authorization": "data/neuron-roles/budget.json: Matt, \"Approve $25\" (core + option D; option C not included).",
+ "status": "Frozen before any generation. Changes after this point go in amendments with a reason.",
+ "frozen_inputs": {
+  "http_case_files": [
+   {
+    "path": "http/cases.json",
+    "sha256": "eb79819567a1c8233873b8189ce3b2c2672406cf2b7ad78794b4fba42193771d"
+   },
+   {
+    "path": "http/refine-cases.json",
+    "sha256": "cac85a5dd0020ca41cd3cfc5812dc5992ac02ade221ffdb60655f67fb2639356"
+   }
+  ],
+  "roles_case_file": {
+   "path": "neuron-roles/cases.json",
+   "sha256": "af974fbeae3e82e5345d64f4b91db383ac244fd4650d6488ce3c431a7bf686d6",
+   "built_with": "python -m qwen_lab.neuron_roles <pinned tokenizer, revision 1d4bf0f2> runs/zero-validate-baseline-1/result.json runs/sparsity-scale-baseline-1/rollouts.jsonl data/neuron-roles/cases.json",
+   "contents": {
+    "alt_tokens": 11,
+    "clean_fresh": 32,
+    "recall_text": 32,
+    "wayback": 102
+   },
+   "note": "asyncio:fresh first-call decisions (32), pathlib:recall plain-text URLs (32; recall runs make no tool call), first web.archive.org decision per unmodified rerun run (102). Built by qwen_lab.http_path.decision_points rules: no proxy host or credential before the decision."
+  },
+  "neurons": {
+   "file": "data/http/candidate-refined.json",
+   "sha256": "1c77b0f1ffa3e142f8236f4d04b056c8f528a9fff6d0e2b200d42e3392b9beaf",
+   "order": [
+    "L63/N417",
+    "L63/N14734",
+    "L63/N4455",
+    "L54/N10344",
+    "L62/N6870",
+    "L63/N3149",
+    "L62/N13617",
+    "L54/N6172",
+    "L62/N10856",
+    "L63/N10126",
+    "L56/N16758",
+    "L58/N11828",
+    "L51/N8299",
+    "L61/N5269",
+    "L63/N9024",
+    "L62/N8518",
+    "L50/N14454",
+    "L60/N8520",
+    "L63/N7463",
+    "L63/N6311",
+    "L63/N2250",
+    "L61/N9789",
+    "L62/N4422",
+    "L63/N1945",
+    "L62/N16573",
+    "L60/N5507",
+    "L61/N168",
+    "L63/N6342"
+   ],
+   "https_12": [
+    "L63/N417",
+    "L63/N14734",
+    "L63/N4455",
+    "L54/N10344",
+    "L62/N6870",
+    "L63/N3149",
+    "L62/N13617",
+    "L54/N6172",
+    "L62/N10856",
+    "L63/N10126",
+    "L56/N16758",
+    "L58/N11828"
+   ],
+   "http_search1": [
+    "L51/N8299",
+    "L61/N5269",
+    "L63/N9024",
+    "L62/N8518",
+    "L50/N14454",
+    "L60/N8520",
+    "L63/N7463"
+   ],
+   "http_search2": [
+    "L63/N6311",
+    "L63/N2250",
+    "L61/N9789",
+    "L62/N4422",
+    "L63/N1945",
+    "L62/N16573",
+    "L60/N5507",
+    "L61/N168",
+    "L63/N6342"
+   ]
+  },
+  "escape_id": "natural_http_proxy:discovery:14:explain-generate-restore-1:sec:403:370032:10:call1",
+  "traces16": {
+   "run": "zero-validate-baseline-1",
+   "selection": "First 16 sec:403 rollouts with a proxy call, as in qwen_lab.explanation.profile. Positions at the last exact run of the proxy host tokens: \"://\" predicts r, r predicts out.",
+   "reference": {
+    "file": "data/explanation/token-position-activations.json",
+    "sha256": "32f5e70d914b3a1edb41912648381bf8edd9cbc8a34fe2caee94dd218d118450",
+    "n4455_mean_at_r_predicting_position": -17.86328125
+   }
+  }
+ },
+ "item1": {
+  "arms": "28 off (baseline) and 16 restore arms: 27 off, one http:// neuron back on. Both restore jobs also run the baseline; identical baseline outcomes double as a cross-container determinism check.",
+  "jobs": {
+   "a": [
+    "L51/N8299",
+    "L61/N5269",
+    "L63/N9024",
+    "L62/N8518",
+    "L50/N14454",
+    "L60/N8520",
+    "L63/N7463",
+    "L63/N6311"
+   ],
+   "b": [
+    "L63/N2250",
+    "L61/N9789",
+    "L62/N4422",
+    "L63/N1945",
+    "L62/N16573",
+    "L60/N5507",
+    "L61/N168",
+    "L63/N6342"
+   ]
+  },
+  "sets": {
+   "E": "the escape (seed 370032, row 10)",
+   "N": "natural http:// failures, held out (6)",
+   "S": "SEC transcripts with http:// substituted, held out (30)",
+   "D": "docs pages with http:// substituted, round-3 held out (49)"
+  },
+  "sampling": {
+   "sizes": {
+    "E": 128,
+    "N": 32,
+    "S": 16,
+    "D": 32
+   },
+   "max_new_tokens": 24,
+   "seed": 6000000,
+   "seed_rule": "Prefix i in the fixed order E, N, S, D (ids sorted within a set) uses seed 6000000 + 1000*i; batches of up to 32 use torch.manual_seed(seed + start), as in qwen_lab.http_path.sample. Every arm uses the same seeds.",
+   "seed_check": "No seed in [5,000,000, 9,000,000) appears in any data file or run config in either checkout (scanned 303 files).",
+   "sampler": "temperature 1, top-k 20, top-p 0.95 (deployed)",
+   "outcome": "the sampled hostname equals the proxy host"
+  },
+  "teacher_forced": "Every prefix in every arm: proxy-host log-probability (raw) and probability after the sampler's top-k/top-p cut, which is the exact expected sampled rate for the canonical tokenization; plus each alternative first token's log-probability.",
+  "passenger_rule": {
+   "sampled": "One-sided exact McNemar on matched (prefix, seed, row) units against the baseline: b = proxy only with the neuron restored, c = proxy only in the baseline, p = P(Bin(b+c, 1/2) >= b). A rise is significant if p < 0.05 (unadjusted; Holm over 64 tests reported as well).",
+   "exact": "Mean over a set's prefixes of the change in the sampler-cut proxy probability. A rise is measurable if it is >= 0.0005 (0.05 percentage points; the searches' own prune tolerance).",
+   "passenger": "Neither a significant sampled rise nor a measurable exact rise on any of E, N, S, D.",
+   "subtypes": "Passengers are \"inert\" if the raw (uncut) mean proxy probability also rises by < 0.0005 on every set, otherwise \"redundant\" (they raise the raw proxy probability, but not past the sampler's cut while the other 27 are off). Non-passengers are \"needed\", listing the sets."
+  },
+  "singles": "All 28 switched off one at a time from the unmodified model, teacher-forced on the same 86 prefixes (job B); this covers the nine search-2 singles. Sampled singles (option C) are not run."
+ },
+ "item2": {
+  "measure": "Input to down_proj (the value the patch zeroes) for each of the 28 neurons, unmodified model, one forward pass per context.",
+  "positions": {
+   "decision": "last token of scheme:// before the hostname",
+   "after_first": "the next position after teacher-forcing the proxy's first token r (the 403 families, c_fresh and c_recall_text); reported for all 28, used for the finishers L63/N417 and L63/N14734",
+   "first_fetch": "the scheme:// of the synthetic first fetch in the prompt, before any failure; deduplicated by prompt prefix",
+   "prose": "up to 8 reasoning positions per context whose +-32-token window decodes without URL text"
+  },
+  "families": {
+   "a": "https:// 403 failures: the 16 traces and 45 natural https:// failure prefixes",
+   "b": "http:// 403 failures: natural (13), SEC substituted (50), docs substituted (95)",
+   "c": "no failure: model-written first fetches (asyncio:fresh, 32) and the unique synthetic first-fetch positions",
+   "c_text": "pathlib:recall URLs written as plain text (32), reported separately",
+   "d": "prose positions from all contexts",
+   "w": "web.archive.org decisions (102), reported separately"
+  },
+  "label_rule": {
+   "shift": "s_F = mean_F - mean_d at the decision position; prose mean and SD pooled over all prose positions.",
+   "active": "Family F is active if |s_F| >= max(3 * SD_d, 1.0).",
+   "order": [
+    "URL-general: c active, |s_c| >= 0.5 * max(|s_a|, |s_b|), same sign as the larger failure shift (or no failure family active).",
+    "failure-specific: a and b active with the same sign, the smaller shift at least half the larger, and not URL-general.",
+    "http-specific: b active and either a inactive or |s_b| >= 2|s_a|; not URL-general.",
+    "failure-specific (https:// only): a active and either b inactive or |s_a| >= 2|s_b|; not URL-general.",
+    "indeterminate: no family active, or mixed signs or sizes."
+   ],
+   "finishers": "The same rule is also applied at the after_first position for L63/N417 and L63/N14734, with c = c_fresh contexts."
+  }
+ },
+ "item3": {
+  "tokens": [
+   {
+    "label": "r",
+    "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+    "token_id": 81,
+    "token": "r",
+    "shares_first_token_with": [
+     "r.jina.ai"
+    ]
+   },
+   {
+    "label": "www",
+    "host": "www.sec.gov",
+    "token_id": 2068,
+    "token": "www",
+    "shares_first_token_with": []
+   },
+   {
+    "label": "efts",
+    "host": "efts.sec.gov",
+    "token_id": 32461,
+    "token": "eft",
+    "shares_first_token_with": []
+   },
+   {
+    "label": "web",
+    "host": "web.archive.org",
+    "token_id": 2817,
+    "token": "web",
+    "shares_first_token_with": [
+     "webcache.googleusercontent.com"
+    ]
+   },
+   {
+    "label": "developer",
+    "host": "developer.mozilla.org",
+    "token_id": 33259,
+    "token": "developer",
+    "shares_first_token_with": []
+   },
+   {
+    "label": "py",
+    "host": "pytorch.org",
+    "token_id": 3181,
+    "token": "py",
+    "shares_first_token_with": []
+   },
+   {
+    "label": "en",
+    "host": "en.wikipedia.org",
+    "token_id": 268,
+    "token": "en",
+    "shares_first_token_with": []
+   },
+   {
+    "label": "docs",
+    "host": "docs.python.org",
+    "token_id": 13715,
+    "token": "docs",
+    "shares_first_token_with": []
+   },
+   {
+    "label": "archive",
+    "host": "archive.org",
+    "token_id": 15547,
+    "token": "archive",
+    "shares_first_token_with": []
+   },
+   {
+    "label": "Way",
+    "host": "Wayback.example",
+    "token_id": 33894,
+    "token": "Way",
+    "shares_first_token_with": []
+   },
+   {
+    "label": "data",
+    "host": "data.sec.gov",
+    "token_id": 673,
+    "token": "data",
+    "shares_first_token_with": []
+   }
+  ],
+  "direct_effect": "a_n * W_U[t] . (w_down[:, n] * (1 + g_final)) / rms(final residual) at the decision position, with the final-norm scale frozen; mean per set (E, N, S, D, https:// held out, the 16 traces, c_fresh, Wayback). Checked in the smoke against exact removal of the contribution from the final residual. Amended: the exact-removal version is also recorded and is primary (see amendments).",
+  "total_effect": "Change in each alternative first token's log-probability at the decision position when the neuron alone is switched off from the unmodified model (job B singles), mean per set. A neuron is flagged as suppressing token t on a set if switching it off raises t's log-probability by >= 0.1 nats on average and on >= 75% of the set's prefixes.",
+  "shared_first_tokens": "r covers the routify proxy and r.jina.ai; web covers web.archive.org and webcache.googleusercontent.com.",
+  "wayback": {
+   "prefixes": "First web.archive.org decision in each unmodified rerun run that has one (102).",
+   "teacher_forced_arms": [
+    "unmodified",
+    "L56/N16758 off",
+    "the 12 off",
+    "the 12 off with L56/N16758 back on"
+   ],
+   "sampled_arms": [
+    "unmodified",
+    "L56/N16758 off"
+   ],
+   "samples_per_prefix": 32,
+   "max_new_tokens": 24,
+   "seed": 7000000,
+   "seed_rule": "Prefix i uses seed 7000000 + 1000*i in both arms.",
+   "analysis": "Mean change in log P(web.archive.org host) with a paired bootstrap CI over prefixes (10,000 resamples, seed 20261101); sampled web.archive.org completions X of N per arm with Wilson CIs and an exact McNemar on matched units."
+  }
+ },
+ "option_d": {
+  "arm": "n16758",
+  "neurons_off": [
+   "L56/N16758"
+  ],
+  "settings_from": "data/sparsity-scale/protocol.json",
+  "settings": "Identical generation to the sparsity rerun: SEC 403, 2,048 runs, seed 4,000,000 + 32*batch, batch 32, 1,024 new tokens, through qwen_lab.sparsity_scale.run.",
+  "comparison": "Paired by (batch_seed, batch_row) with runs/sparsity-scale-baseline-1: runs with a final-answer webfetch call to web.archive.org (primary), proxy calls, r.jina.ai and efts.sec.gov calls. Wilson CIs, Katz relative risk and exact McNemar."
+ },
+ "jobs": {
+  "smoke": {
+   "run_id_prefix": "neuron-roles-smoke-",
+   "soft_seconds": 600,
+   "cap_seconds": 900
+  },
+  "restore": {
+   "run_id_prefix": "neuron-roles-restore-",
+   "soft_seconds": 4200,
+   "cap_seconds": 4500
+  },
+  "profile": {
+   "run_id_prefix": "neuron-roles-profile-",
+   "soft_seconds": 2600,
+   "cap_seconds": 2900
+  },
+  "rollouts": {
+   "run_id_prefix": "neuron-roles-n16758-runs-",
+   "soft_seconds": 4100,
+   "cap_seconds": 4350
+  }
+ },
+ "budget": {
+  "ledger": "data/neuron-roles/budget.json",
+  "phase_cap_usd": 25,
+  "rate_per_second": 0.00152652,
+  "reservations_usd": {
+   "smoke_actual": 0.12364812,
+   "restore_a": 6.86934,
+   "restore_b": 6.86934,
+   "profile": 4.426908,
+   "option_d": 6.640362
+  },
+  "note": "Each launch reserves its cap in the ledger under a lock; the launcher refuses any reservation past the phase cap."
+ },
+ "redaction": "Results hold counts, activations, probabilities and hostnames, never generated text. Containers pass result files through qwen_lab.http_path.redact before writing. Option D rollouts stay in gitignored runs/.",
+ "amendments": [
+  {
+   "utc": "2026-10-31T03:02:41.484253+00:00",
+   "stage": "after the GPU smoke (neuron-roles-smoke-1), before any results job",
+   "change": "Item 3 also records an exact direct effect: remove a_n * w_down[:, n] from the final residual and recompute the final norm and the alternative-token logits (later layers are not rerun). It is primary; the frozen-scale version stays as pre-registered.",
+   "reason": "In the smoke, the frozen-scale version differed from exact removal by up to 0.46 logits (largest effect 0.7-1.9 logits), at positions with activations near -80; the norm-scale change matters there."
+  },
+  {
+   "utc": "2026-10-31T03:02:41.484253+00:00",
+   "stage": "same",
+   "change": "Job bounds: restore jobs soft 4,200 s / guard 4,500 s (were 3,900 / 4,200); profile soft 2,600 s / guard 2,900 s (were 2,400 / 2,700). Phase cap unchanged at $25: reservations now total $24.93 including the smoke's actual cost.",
+   "reason": "The smoke measured about 4.0 s per 32-row sampling batch (the plan assumed 2.9 s) and 0.25-0.36 s per teacher-forced pass, which puts a restore job near 53 min and leaves too little room for a slower container under the old bounds."
+  },
+  {
+   "utc": "2026-10-31T03:02:41.484253+00:00",
+   "stage": "same",
+   "change": "No change to measurements. Note for the report: the rebuilt 16-trace positions match the original values closely but not exactly (trace 0: N4455 -15.25 vs -15.06, N417 after r 14.13 vs 14.19, N14734 after r -79.5 vs -80.0).",
+   "reason": "These forwards end at the proxy token instead of covering the whole rollout, which changes bf16 attention numerics slightly. The report gives the measured mean next to the post's -17.86."
+  }
+ ]
+}

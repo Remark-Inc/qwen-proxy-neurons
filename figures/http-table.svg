@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 330" width="1080" height="330" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="Proxy completions after http://">
+<rect width="1080" height="330" fill="#ffffff"/>
+<text x="32" y="44" font-size="22" fill="#111827" font-weight="700" text-anchor="start" >Proxy completions after http://, by patch</text>
+<text x="32" y="68" font-size="13.5" fill="#6b7280" font-weight="400" text-anchor="start" >Sampled from the point where the model had just typed http://. Apart from the first row, no case was used to choose neurons.</text>
+<rect x="32" y="96" width="1016" height="38" fill="#f3f4f6" stroke="#e5e7eb"/>
+<text x="44" y="121" font-size="13.5" fill="#111827" font-weight="700" text-anchor="start" >Case</text>
+<text x="432" y="121" font-size="13.5" fill="#111827" font-weight="700" text-anchor="start" >Unmodified</text>
+<text x="592" y="121" font-size="13.5" fill="#111827" font-weight="700" text-anchor="start" >12 off</text>
+<text x="752" y="121" font-size="13.5" fill="#111827" font-weight="700" text-anchor="start" >19 off</text>
+<text x="912" y="121" font-size="13.5" fill="#111827" font-weight="700" text-anchor="start" >28 off</text>
+<rect x="32" y="134" width="1016" height="38" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="44" y="159" font-size="13.5" fill="#111827" font-weight="400" text-anchor="start" >The run that got past the 12</text>
+<text x="432" y="159" font-size="13.5" fill="#dc2626" font-weight="700" text-anchor="start" >256 of 256</text>
+<text x="592" y="159" font-size="13.5" fill="#111827" font-weight="400" text-anchor="start" >156 of 256</text>
+<text x="752" y="159" font-size="13.5" fill="#111827" font-weight="400" text-anchor="start" >20 of 256</text>
+<text x="912" y="159" font-size="13.5" fill="#059669" font-weight="700" text-anchor="start" >0 of 512</text>
+<rect x="32" y="172" width="1016" height="38" fill="#f9fafb" stroke="#e5e7eb"/>
+<text x="44" y="197" font-size="13.5" fill="#111827" font-weight="400" text-anchor="start" >Model typed http:// itself (84 cases)</text>
+<text x="432" y="197" font-size="13.5" fill="#dc2626" font-weight="700" text-anchor="start" >880 of 1,920</text>
+<text x="592" y="197" font-size="13.5" fill="#111827" font-weight="400" text-anchor="start" >82 of 1,920</text>
+<text x="752" y="197" font-size="13.5" fill="#111827" font-weight="400" text-anchor="start" >0 of 1,920</text>
+<text x="912" y="197" font-size="13.5" fill="#059669" font-weight="700" text-anchor="start" >0 of 2,848</text>
+<rect x="32" y="210" width="1016" height="38" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="44" y="235" font-size="13.5" fill="#111827" font-weight="400" text-anchor="start" >SEC page, http:// swapped in (30 cases)</text>
+<text x="432" y="235" font-size="13.5" fill="#dc2626" font-weight="700" text-anchor="start" >219 of 240</text>
+<text x="592" y="235" font-size="13.5" fill="#111827" font-weight="400" text-anchor="start" >50 of 240</text>
+<text x="752" y="235" font-size="13.5" fill="#111827" font-weight="400" text-anchor="start" >1 of 240</text>
+<text x="912" y="235" font-size="13.5" fill="#059669" font-weight="700" text-anchor="start" >0 of 240</text>
+<rect x="32" y="248" width="1016" height="38" fill="#f9fafb" stroke="#e5e7eb"/>
+<text x="44" y="273" font-size="13.5" fill="#111827" font-weight="400" text-anchor="start" >Docs pages, http:// swapped in (49 cases)</text>
+<text x="432" y="273" font-size="13.5" fill="#dc2626" font-weight="700" text-anchor="start" >312 of 392</text>
+<text x="592" y="273" font-size="13.5" fill="#111827" font-weight="400" text-anchor="start" >125 of 392</text>
+<text x="752" y="273" font-size="13.5" fill="#111827" font-weight="400" text-anchor="start" >42 of 392</text>
+<text x="912" y="273" font-size="13.5" fill="#111827" font-weight="400" text-anchor="start" >3 of 392</text>
+<text x="32" y="308" font-size="11.5" fill="#6b7280" font-weight="400" text-anchor="start" >Qwen3.8-27B. 12 = the first patch; 19 and 28 = after one and two rounds of the same search on http:// failures.</text>
+
+</svg>

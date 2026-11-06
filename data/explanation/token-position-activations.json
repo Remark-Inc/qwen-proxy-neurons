@@ -1,0 +1,914 @@
+[
+  {
+    "example": "natural:True:0",
+    "selection": "last exact proxy-host token occurrence in saved natural failure",
+    "values": {
+      "L63/N417": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -0.6015625
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": 14.1875
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": -1.8203125
+        }
+      ],
+      "L63/N14734": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": 0.01458740234375
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -80.0
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": 0.051025390625
+        }
+      ],
+      "L63/N4455": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -15.0625
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -1.1015625
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": 0.63671875
+        }
+      ]
+    }
+  },
+  {
+    "example": "natural:True:1",
+    "selection": "last exact proxy-host token occurrence in saved natural failure",
+    "values": {
+      "L63/N417": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -0.734375
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": 12.5625
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": -1.71875
+        }
+      ],
+      "L63/N14734": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": 0.0064697265625
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -88.0
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": 0.0439453125
+        }
+      ],
+      "L63/N4455": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -16.875
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -1.5234375
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": 0.56640625
+        }
+      ]
+    }
+  },
+  {
+    "example": "natural:True:2",
+    "selection": "last exact proxy-host token occurrence in saved natural failure",
+    "values": {
+      "L63/N417": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -0.66015625
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": 14.4375
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": -1.7578125
+        }
+      ],
+      "L63/N14734": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": 0.0087890625
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -77.5
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": 0.0091552734375
+        }
+      ],
+      "L63/N4455": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -11.375
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -1.3828125
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": 0.392578125
+        }
+      ]
+    }
+  },
+  {
+    "example": "natural:True:3",
+    "selection": "last exact proxy-host token occurrence in saved natural failure",
+    "values": {
+      "L63/N417": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -0.60546875
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": 12.125
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": -1.7578125
+        }
+      ],
+      "L63/N14734": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": 0.00982666015625
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -87.5
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": 0.0033721923828125
+        }
+      ],
+      "L63/N4455": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -20.375
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -1.5546875
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": -0.197265625
+        }
+      ]
+    }
+  },
+  {
+    "example": "natural:True:4",
+    "selection": "last exact proxy-host token occurrence in saved natural failure",
+    "values": {
+      "L63/N417": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -0.515625
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": 10.4375
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": -1.703125
+        }
+      ],
+      "L63/N14734": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": 0.00665283203125
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -78.0
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": 0.00830078125
+        }
+      ],
+      "L63/N4455": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -13.25
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -1.4453125
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": -0.63671875
+        }
+      ]
+    }
+  },
+  {
+    "example": "natural:True:5",
+    "selection": "last exact proxy-host token occurrence in saved natural failure",
+    "values": {
+      "L63/N417": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -0.765625
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": 15.1875
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": -1.6953125
+        }
+      ],
+      "L63/N14734": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": 0.005096435546875
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -83.0
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": -0.0007171630859375
+        }
+      ],
+      "L63/N4455": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -22.125
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -1.2734375
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": 0.5234375
+        }
+      ]
+    }
+  },
+  {
+    "example": "natural:True:6",
+    "selection": "last exact proxy-host token occurrence in saved natural failure",
+    "values": {
+      "L63/N417": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -0.5078125
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": 14.0625
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": -1.765625
+        }
+      ],
+      "L63/N14734": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": 0.00604248046875
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -81.5
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": 0.0260009765625
+        }
+      ],
+      "L63/N4455": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -33.0
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -0.890625
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": 0.31640625
+        }
+      ]
+    }
+  },
+  {
+    "example": "natural:True:7",
+    "selection": "last exact proxy-host token occurrence in saved natural failure",
+    "values": {
+      "L63/N417": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -0.59765625
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": 12.625
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": -1.765625
+        }
+      ],
+      "L63/N14734": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": 0.00872802734375
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -83.5
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": 0.06982421875
+        }
+      ],
+      "L63/N4455": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -12.5625
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -1.4765625
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": 0.48828125
+        }
+      ]
+    }
+  },
+  {
+    "example": "natural:True:8",
+    "selection": "last exact proxy-host token occurrence in saved natural failure",
+    "values": {
+      "L63/N417": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -0.69140625
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": 12.5
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": -1.7109375
+        }
+      ],
+      "L63/N14734": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": 0.008056640625
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -83.5
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": 0.040283203125
+        }
+      ],
+      "L63/N4455": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -10.875
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -1.5703125
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": 0.115234375
+        }
+      ]
+    }
+  },
+  {
+    "example": "natural:True:9",
+    "selection": "last exact proxy-host token occurrence in saved natural failure",
+    "values": {
+      "L63/N417": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -0.76171875
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": 13.875
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": -1.6953125
+        }
+      ],
+      "L63/N14734": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": 0.00799560546875
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -85.0
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": 0.017333984375
+        }
+      ],
+      "L63/N4455": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -21.875
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -1.1953125
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": 0.341796875
+        }
+      ]
+    }
+  },
+  {
+    "example": "natural:True:10",
+    "selection": "last exact proxy-host token occurrence in saved natural failure",
+    "values": {
+      "L63/N417": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -0.90234375
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": 13.9375
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": -1.75
+        }
+      ],
+      "L63/N14734": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": 0.00616455078125
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -90.5
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": 0.060302734375
+        }
+      ],
+      "L63/N4455": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -23.75
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -1.3515625
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": 0.36328125
+        }
+      ]
+    }
+  },
+  {
+    "example": "natural:True:11",
+    "selection": "last exact proxy-host token occurrence in saved natural failure",
+    "values": {
+      "L63/N417": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -0.8203125
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": 13.375
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": -1.7890625
+        }
+      ],
+      "L63/N14734": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": 0.007110595703125
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -84.0
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": 0.05029296875
+        }
+      ],
+      "L63/N4455": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -16.875
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -1.328125
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": 0.5703125
+        }
+      ]
+    }
+  },
+  {
+    "example": "natural:True:12",
+    "selection": "last exact proxy-host token occurrence in saved natural failure",
+    "values": {
+      "L63/N417": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -0.70703125
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": 12.375
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": -1.71875
+        }
+      ],
+      "L63/N14734": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": 0.007537841796875
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -85.0
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": 0.05224609375
+        }
+      ],
+      "L63/N4455": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -11.6875
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -1.2734375
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": 0.01611328125
+        }
+      ]
+    }
+  },
+  {
+    "example": "natural:True:13",
+    "selection": "last exact proxy-host token occurrence in saved natural failure",
+    "values": {
+      "L63/N417": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -0.83984375
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": 12.75
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": -1.8046875
+        }
+      ],
+      "L63/N14734": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": 0.00482177734375
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -88.0
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": 0.035400390625
+        }
+      ],
+      "L63/N4455": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -18.25
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -1.59375
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": 0.37109375
+        }
+      ]
+    }
+  },
+  {
+    "example": "natural:True:14",
+    "selection": "last exact proxy-host token occurrence in saved natural failure",
+    "values": {
+      "L63/N417": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -0.62109375
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": 12.9375
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": -1.703125
+        }
+      ],
+      "L63/N14734": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": 0.01190185546875
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -79.5
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": 0.04541015625
+        }
+      ],
+      "L63/N4455": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -19.125
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -1.3203125
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": 0.78125
+        }
+      ]
+    }
+  },
+  {
+    "example": "natural:True:15",
+    "selection": "last exact proxy-host token occurrence in saved natural failure",
+    "values": {
+      "L63/N417": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -0.62890625
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": 13.75
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": -1.6796875
+        }
+      ],
+      "L63/N14734": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": 0.003631591796875
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -89.0
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": 0.041015625
+        }
+      ],
+      "L63/N4455": [
+        {
+          "input_token": "://",
+          "predicts": "r",
+          "activation": -18.75
+        },
+        {
+          "input_token": "r",
+          "predicts": "out",
+          "activation": -1.5625
+        },
+        {
+          "input_token": "out",
+          "predicts": "ify",
+          "activation": 0.220703125
+        }
+      ]
+    }
+  }
+]

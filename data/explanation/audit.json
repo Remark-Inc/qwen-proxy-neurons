@@ -1,0 +1,60 @@
+{
+  "checked_utc": "2026-10-27T18:00:59.395185+00:00",
+  "passed": true,
+  "candidate_unchanged": true,
+  "model": "Qwen/Qwen3.8-27B",
+  "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+  "runs": {
+    "conditional": {
+      "sha256": "bd574c8490fc0d4c15f1645c7b72580f675297e7980693a9bc4f32841dd27a5b",
+      "complete": true,
+      "compute_estimate_usd": 0.9033380718112284
+    },
+    "contexts": {
+      "sha256": "467ffa96f741c386b9a5c95cbb01dde65be65f629b991c36e5495f0a6df7e785",
+      "complete": true,
+      "compute_estimate_usd": 0.6423033736649596
+    },
+    "timing": {
+      "sha256": "b1db431c68c0d48cc75cf3b51c03cfaf14399d9e70d839683c8b64d2d3e626fa",
+      "complete": true,
+      "compute_estimate_usd": 0.7070736957479323
+    },
+    "patches": {
+      "sha256": "436c158cf4cc719d2966049d734324708b0916e35698bbc31fbe9d3a56e6cc00",
+      "complete": true,
+      "compute_estimate_usd": 0.35516467427467174
+    },
+    "profile": {
+      "sha256": "3a17776a73b0c4df5ea78ade100b1b3b155c596d7e119e01cfc035d133bb2e73",
+      "complete": true,
+      "compute_estimate_usd": 0.07615602635468807
+    },
+    "generate_restore": {
+      "sha256": "753339f84fb719c47fe046b92bf1ee590060868bba3bd48287d03f8ef9051b55",
+      "complete": true,
+      "compute_estimate_usd": 2.169427933733159,
+      "generations": 896
+    },
+    "generate_single": {
+      "sha256": "6cce53b2a991bfcae158e9e6d9c8a36996e88d9b14b67661860c046e975ca79a",
+      "complete": true,
+      "compute_estimate_usd": 1.5549252277672274,
+      "generations": 896
+    },
+    "generate_timing": {
+      "sha256": "ef8241f6d59868bd3aecb7010ca50dacec95d6f54eb736f3230772938185d90b",
+      "complete": true,
+      "compute_estimate_usd": 1.7669529385742324,
+      "generations": 992
+    },
+    "failure_probe": {
+      "sha256": "61bb423d58d421fc7038a556d83e49022b196686402b2996fc77d5370998c032",
+      "complete": true,
+      "compute_estimate_usd": 0.12903812844722315
+    }
+  },
+  "generations": 2784,
+  "full12_timing_proxy_failures": 1,
+  "full12_timing_trials": 128
+}

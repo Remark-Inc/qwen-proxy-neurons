@@ -1,0 +1,10 @@
+{
+  "frozen_utc": "2026-10-27T17:31:27.227597+00:00",
+  "phase": "profile, not yet launched",
+  "addition": "For each fixed neuron, project normalized positive and negative down-projection columns through the output head; save sixteen highest-scoring tokens per sign.",
+  "status": "Exploratory static-weight readout added after conditional results. No new neuron selection.",
+  "interpretation": "Heuristic output direction only, ignoring the actual contextual residual stream. Not a probability, causal measurement, or semantic label.",
+  "budget": "Within the existing profile invocation; no additional GPU job.",
+  "token_dictionary_addition_utc": "2026-10-27T17:37:25.865830+00:00",
+  "token_dictionary": "Decode the existing scored continuation token IDs for reporting exact per-token effects. No new scoring or neuron selection."
+}

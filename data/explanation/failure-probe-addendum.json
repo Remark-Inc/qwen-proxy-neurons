@@ -1,0 +1,10 @@
+{
+  "frozen_utc": "2026-10-27T17:50:52.645322+00:00",
+  "trigger": "One full12 proxy failure in the new timing run uses http://; all13 natural explanatory prefixes used https://.",
+  "source_sha256": "f53dc2358d9b83948527aa1641372521cc906db89a68dc4f61ba8b0b58acd724",
+  "design": "Pair the new exact-replay failure and13 earlier natural prefixes with synthetic swaps of only the final URL scheme. Score baseline,all12,single4455,and restore4455. Capture decision activations and verify all twelve are exactly zero under the intervention on the new failure prefix.",
+  "case_count": 28,
+  "new_neuron_selection": false,
+  "interpretation": "Exploratory explanation; no new repair or zero-rate claim.",
+  "budget": "One additional invocation, soft deadline600seconds, $9 reservation; excess reservations from stopped jobs released using full app-wallclock cost bounds. Total additional spending authorization remains $100."
+}

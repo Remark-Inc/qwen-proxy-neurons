@@ -1,0 +1,74 @@
+[
+  {
+    "layer": 63,
+    "neuron": 417,
+    "mode": "scale",
+    "value": 0
+  },
+  {
+    "layer": 63,
+    "neuron": 14734,
+    "mode": "scale",
+    "value": 0
+  },
+  {
+    "layer": 63,
+    "neuron": 4455,
+    "mode": "scale",
+    "value": 0
+  },
+  {
+    "layer": 54,
+    "neuron": 10344,
+    "mode": "scale",
+    "value": 0
+  },
+  {
+    "layer": 62,
+    "neuron": 6870,
+    "mode": "scale",
+    "value": 0
+  },
+  {
+    "layer": 63,
+    "neuron": 3149,
+    "mode": "scale",
+    "value": 0
+  },
+  {
+    "layer": 62,
+    "neuron": 13617,
+    "mode": "scale",
+    "value": 0
+  },
+  {
+    "layer": 54,
+    "neuron": 6172,
+    "mode": "scale",
+    "value": 0
+  },
+  {
+    "layer": 62,
+    "neuron": 10856,
+    "mode": "scale",
+    "value": 0
+  },
+  {
+    "layer": 63,
+    "neuron": 10126,
+    "mode": "scale",
+    "value": 0
+  },
+  {
+    "layer": 56,
+    "neuron": 16758,
+    "mode": "scale",
+    "value": 0
+  },
+  {
+    "layer": 58,
+    "neuron": 11828,
+    "mode": "scale",
+    "value": 0
+  }
+]

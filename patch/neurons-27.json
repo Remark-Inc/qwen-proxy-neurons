@@ -1,0 +1,115 @@
+{
+ "model": "Qwen/Qwen3.8-27B",
+ "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+ "description": "The 27 MLP neurons zeroed by the patch: the 12 from the https:// search minus L56/N16758 (a Wayback-fallback neuron), plus the 16 from the two http:// searches. Source: data/http/candidate-refined.json in frozen order.",
+ "neurons": [
+  {
+   "layer": 63,
+   "neuron": 417
+  },
+  {
+   "layer": 63,
+   "neuron": 14734
+  },
+  {
+   "layer": 63,
+   "neuron": 4455
+  },
+  {
+   "layer": 54,
+   "neuron": 10344
+  },
+  {
+   "layer": 62,
+   "neuron": 6870
+  },
+  {
+   "layer": 63,
+   "neuron": 3149
+  },
+  {
+   "layer": 62,
+   "neuron": 13617
+  },
+  {
+   "layer": 54,
+   "neuron": 6172
+  },
+  {
+   "layer": 62,
+   "neuron": 10856
+  },
+  {
+   "layer": 63,
+   "neuron": 10126
+  },
+  {
+   "layer": 58,
+   "neuron": 11828
+  },
+  {
+   "layer": 51,
+   "neuron": 8299
+  },
+  {
+   "layer": 61,
+   "neuron": 5269
+  },
+  {
+   "layer": 63,
+   "neuron": 9024
+  },
+  {
+   "layer": 62,
+   "neuron": 8518
+  },
+  {
+   "layer": 50,
+   "neuron": 14454
+  },
+  {
+   "layer": 60,
+   "neuron": 8520
+  },
+  {
+   "layer": 63,
+   "neuron": 7463
+  },
+  {
+   "layer": 63,
+   "neuron": 6311
+  },
+  {
+   "layer": 63,
+   "neuron": 2250
+  },
+  {
+   "layer": 61,
+   "neuron": 9789
+  },
+  {
+   "layer": 62,
+   "neuron": 4422
+  },
+  {
+   "layer": 63,
+   "neuron": 1945
+  },
+  {
+   "layer": 62,
+   "neuron": 16573
+  },
+  {
+   "layer": 60,
+   "neuron": 5507
+  },
+  {
+   "layer": 61,
+   "neuron": 168
+  },
+  {
+   "layer": 63,
+   "neuron": 6342
+  }
+ ]
+}

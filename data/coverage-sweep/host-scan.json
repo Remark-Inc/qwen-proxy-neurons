@@ -1,0 +1,2668 @@
+{
+ "roots": [
+  "./runs",
+  "runs"
+ ],
+ "scanned": [
+  {
+   "run": "confirm-baseline",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "unmodified",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 480,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 41
+   }
+  },
+  {
+   "run": "confirm-pair",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "2",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 480,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 8
+   }
+  },
+  {
+   "run": "confirm-quartet",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "4 neurons (other set)",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 480,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 7
+   }
+  },
+  {
+   "run": "confirm-quartet-robust",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "4 neurons (other set)",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 480,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 5
+   }
+  },
+  {
+   "run": "confirm-single",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "1 (L63/N4455)",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 480,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 18
+   }
+  },
+  {
+   "run": "confirm-triple",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "3",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 480,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 6
+   }
+  },
+  {
+   "run": "continuation-smoke",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "unmodified",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 4,
+   "hosts": {}
+  },
+  {
+   "run": "explain-generate-restore-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "unmodified",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 64,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 8
+   }
+  },
+  {
+   "run": "explain-generate-restore-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "12",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 64,
+   "hosts": {}
+  },
+  {
+   "run": "explain-generate-restore-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "11 neurons (other set)",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 704,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 1
+   }
+  },
+  {
+   "run": "explain-generate-restore-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "11",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 64,
+   "hosts": {}
+  },
+  {
+   "run": "explain-generate-single-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "unmodified",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 64,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 7
+   }
+  },
+  {
+   "run": "explain-generate-single-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "12",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 64,
+   "hosts": {}
+  },
+  {
+   "run": "explain-generate-single-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "1 neurons (other set)",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 640,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 78
+   }
+  },
+  {
+   "run": "explain-generate-single-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "1 (L63/N4455)",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 64,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 1
+   }
+  },
+  {
+   "run": "explain-generate-single-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "L56/N16758 alone",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 64,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 9
+   }
+  },
+  {
+   "run": "explain-generate-timing-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "unmodified",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 208,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 30,
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|final_text": 16,
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|reasoning": 3,
+    "routify-file-proxy-sg.example.com|reasoning": 1,
+    "routify-file-proxy-sg.example.com|call": 16
+   }
+  },
+  {
+   "run": "explain-generate-timing-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "12",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 208,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 17,
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|final_text": 16,
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|reasoning": 3,
+    "routify-file-proxy-sg.example.com|reasoning": 1,
+    "routify-file-proxy-sg.example.com|call": 16
+   }
+  },
+  {
+   "run": "explain-generate-timing-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "12 (prompt positions only)",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 144,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 19
+   }
+  },
+  {
+   "run": "explain-generate-timing-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "12 (reasoning positions only)",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 144,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 17
+   }
+  },
+  {
+   "run": "explain-generate-timing-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "12 (call positions only)",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 144,
+   "hosts": {}
+  },
+  {
+   "run": "explain-generate-timing-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "12 (generated positions only)",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 144,
+   "hosts": {}
+  },
+  {
+   "run": "free-holdout-baseline",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "unmodified",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 64,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 2
+   }
+  },
+  {
+   "run": "free-holdout-lexical",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "3",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 64,
+   "hosts": {}
+  },
+  {
+   "run": "free-holdout-triple",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "3 neurons (other set)",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 64,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 1
+   }
+  },
+  {
+   "run": "moe-behavior-http-https-3",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "none",
+   "model": null,
+   "records": 20,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|final_text": 8,
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|reasoning": 4
+   }
+  },
+  {
+   "run": "moe-behavior-http-https-3",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "AC",
+   "model": null,
+   "records": 20,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|final_text": 8,
+    "aliyuncs.com|reasoning": 4,
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|reasoning": 2
+   }
+  },
+  {
+   "run": "moe-behavior-http-https-3",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "ABC",
+   "model": null,
+   "records": 18,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|final_text": 6,
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|reasoning": 2
+   }
+  },
+  {
+   "run": "moe-broader-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "unmodified",
+   "model": "Qwen/Qwen3.8-Flash-Next",
+   "records": 8,
+   "hosts": {}
+  },
+  {
+   "run": "moe-broader-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "3 neurons (other set)",
+   "model": "Qwen/Qwen3.8-Flash-Next",
+   "records": 8,
+   "hosts": {
+    "routify-file-proxy-sg.oss|reasoning": 1
+   }
+  },
+  {
+   "run": "moe-crawl-http-https-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "none",
+   "model": null,
+   "records": 16,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 4
+   }
+  },
+  {
+   "run": "moe-minimal-followup-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "none",
+   "model": null,
+   "records": 10,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 6
+   }
+  },
+  {
+   "run": "moe-minimal-followup-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "AB",
+   "model": null,
+   "records": 6,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 2
+   }
+  },
+  {
+   "run": "moe-minimal-followup-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "ABC",
+   "model": null,
+   "records": 6,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 2
+   }
+  },
+  {
+   "run": "moe-minimal-validation-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "none",
+   "model": null,
+   "records": 4,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 4
+   }
+  },
+  {
+   "run": "moe-minimal-validation-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "B",
+   "model": null,
+   "records": 2,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 2
+   }
+  },
+  {
+   "run": "moe-minimal-validation-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "A",
+   "model": null,
+   "records": 2,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 2
+   }
+  },
+  {
+   "run": "moe-minimal-validation-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "C",
+   "model": null,
+   "records": 2,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 2
+   }
+  },
+  {
+   "run": "moe-minimal-validation-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "AB",
+   "model": null,
+   "records": 2,
+   "hosts": {}
+  },
+  {
+   "run": "moe-minimal-validation-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "BC",
+   "model": null,
+   "records": 2,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 2
+   }
+  },
+  {
+   "run": "moe-minimal-validation-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "AC",
+   "model": null,
+   "records": 2,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 2
+   }
+  },
+  {
+   "run": "moe-minimal-validation-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "ABC",
+   "model": null,
+   "records": 2,
+   "hosts": {}
+  },
+  {
+   "run": "moe-pilot-3",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "unmodified",
+   "model": "Qwen/Qwen3.8-Flash-Next",
+   "records": 8,
+   "hosts": {}
+  },
+  {
+   "run": "moe-refine-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "unmodified",
+   "model": "Qwen/Qwen3.8-Flash-Next",
+   "records": 5,
+   "hosts": {}
+  },
+  {
+   "run": "moe-refine-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "3 neurons (other set)",
+   "model": "Qwen/Qwen3.8-Flash-Next",
+   "records": 5,
+   "hosts": {}
+  },
+  {
+   "run": "moe-retry-replay-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "none",
+   "model": null,
+   "records": 2,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 2
+   }
+  },
+  {
+   "run": "moe-retry-replay-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "AC",
+   "model": null,
+   "records": 2,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 2
+   }
+  },
+  {
+   "run": "moe-retry-replay-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "ABC",
+   "model": null,
+   "records": 2,
+   "hosts": {}
+  },
+  {
+   "run": "moe-scheme-diagnostic-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "none",
+   "model": null,
+   "records": 12,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 4
+   }
+  },
+  {
+   "run": "moe-scheme-diagnostic-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "AB",
+   "model": null,
+   "records": 12,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 2
+   }
+  },
+  {
+   "run": "moe-scheme-diagnostic-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "ABC",
+   "model": null,
+   "records": 12,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 2
+   }
+  },
+  {
+   "run": "pilot-16",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "unmodified",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 16,
+   "hosts": {}
+  },
+  {
+   "run": "sec-replication-baseline",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "unmodified",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 128,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 22
+   }
+  },
+  {
+   "run": "sec-replication-lexical",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "3",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 128,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 1
+   }
+  },
+  {
+   "run": "sec-replication-random",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "3 neurons (other set)",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 128,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 17
+   }
+  },
+  {
+   "run": "sec-replication-triple",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "3 neurons (other set)",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 128,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 8
+   }
+  },
+  {
+   "run": "subset-14734",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "1 neurons (other set)",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 128,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 22
+   }
+  },
+  {
+   "run": "subset-14734-4455",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "2 neurons (other set)",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 128,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 7
+   }
+  },
+  {
+   "run": "subset-417",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "1 neurons (other set)",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 128,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 11
+   }
+  },
+  {
+   "run": "subset-417-14734",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "2 neurons (other set)",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 128,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 8
+   }
+  },
+  {
+   "run": "subset-417-4455",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "2",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 128,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 5
+   }
+  },
+  {
+   "run": "subset-4455",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "1 (L63/N4455)",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 128,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 3
+   }
+  },
+  {
+   "run": "vllm-h200-6",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "none",
+   "model": "Qwen/Qwen3.8-Flash-Next",
+   "records": 32,
+   "hosts": {}
+  },
+  {
+   "run": "vllm-h200-6",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "AC",
+   "model": "Qwen/Qwen3.8-Flash-Next",
+   "records": 32,
+   "hosts": {}
+  },
+  {
+   "run": "vllm-h200-6",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "ABC",
+   "model": "Qwen/Qwen3.8-Flash-Next",
+   "records": 32,
+   "hosts": {}
+  },
+  {
+   "run": "zero-pilot-12-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "12",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 128,
+   "hosts": {}
+  },
+  {
+   "run": "zero-pilot-8-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "8 neurons (other set)",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 128,
+   "hosts": {}
+  },
+  {
+   "run": "zero-pilot-baseline-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "unmodified",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 128,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 17
+   }
+  },
+  {
+   "run": "zero-validate-baseline-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "unmodified",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 736,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 77
+   }
+  },
+  {
+   "run": "zero-validate-expanded-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "12",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 736,
+   "hosts": {}
+  },
+  {
+   "run": "zero-validate-treatment-1",
+   "root": "./runs",
+   "kind": "rollout",
+   "arm": "8 neurons (other set)",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 736,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 1
+   }
+  },
+  {
+   "run": "http-suite-http-all12-1",
+   "root": "runs",
+   "kind": "rollout",
+   "arm": "12",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 672,
+   "hosts": {}
+  },
+  {
+   "run": "http-suite-http-combined-1",
+   "root": "runs",
+   "kind": "rollout",
+   "arm": "19 neurons (other set)",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 672,
+   "hosts": {}
+  },
+  {
+   "run": "http-suite-http-refined-1",
+   "root": "runs",
+   "kind": "rollout",
+   "arm": "28",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 672,
+   "hosts": {}
+  },
+  {
+   "run": "http-suite-http-unpatched-1",
+   "root": "runs",
+   "kind": "rollout",
+   "arm": "unmodified",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 672,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 14
+   }
+  },
+  {
+   "run": "http-suite-https-combined-1",
+   "root": "runs",
+   "kind": "rollout",
+   "arm": "19 neurons (other set)",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 736,
+   "hosts": {}
+  },
+  {
+   "run": "http-suite-https-refined-1",
+   "root": "runs",
+   "kind": "rollout",
+   "arm": "28",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 736,
+   "hosts": {}
+  },
+  {
+   "run": "http-validate-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/sampled/unpatched",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 2696,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 1517
+   }
+  },
+  {
+   "run": "http-validate-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/sampled/all12",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 2696,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 398
+   }
+  },
+  {
+   "run": "http-validate-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/sampled/combined",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 2696,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 30
+   }
+  },
+  {
+   "run": "http-validate-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/scheme_sampled/unpatched",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 448,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 100
+   }
+  },
+  {
+   "run": "http-validate-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/scheme_sampled/all12",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 448,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 10
+   }
+  },
+  {
+   "run": "http-validate-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/scheme_sampled/combined",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 448,
+   "hosts": {}
+  },
+  {
+   "run": "http-validate-refined-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/sampled_refined",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 4328,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 6
+   }
+  },
+  {
+   "run": "http-validate-refined-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/sampled_heldout_r3/unpatched",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 392,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 312
+   }
+  },
+  {
+   "run": "http-validate-refined-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/sampled_heldout_r3/all12",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 392,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 125,
+    "www.routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 1
+   }
+  },
+  {
+   "run": "http-validate-refined-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/sampled_heldout_r3/combined",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 392,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 42
+   }
+  },
+  {
+   "run": "http-validate-refined-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/scheme_sampled",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 448,
+   "hosts": {}
+  },
+  {
+   "run": "neuron-roles-n16758-runs-2",
+   "root": "runs",
+   "kind": "rollout",
+   "arm": "L56/N16758 alone",
+   "model": null,
+   "records": 2048,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 312
+   }
+  },
+  {
+   "run": "neuron-roles-profile-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/wayback_sampled/unmodified",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 3264,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 262
+   }
+  },
+  {
+   "run": "neuron-roles-profile-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/wayback_sampled/L56/N16758",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 3264,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 438
+   }
+  },
+  {
+   "run": "neuron-roles-restore-a-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/sampled:28",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 2368,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 12
+   }
+  },
+  {
+   "run": "neuron-roles-restore-a-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/sampled:L51/N8299",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 2368,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 43
+   }
+  },
+  {
+   "run": "neuron-roles-restore-a-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/sampled:L61/N5269",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 2368,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 22
+   }
+  },
+  {
+   "run": "neuron-roles-restore-a-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/sampled:L63/N9024",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 2368,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 15
+   }
+  },
+  {
+   "run": "neuron-roles-restore-a-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/sampled:L62/N8518",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 2368,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 23
+   }
+  },
+  {
+   "run": "neuron-roles-restore-a-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/sampled:L50/N14454",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 2368,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 11
+   }
+  },
+  {
+   "run": "neuron-roles-restore-a-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/sampled:L60/N8520",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 2368,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 14
+   }
+  },
+  {
+   "run": "neuron-roles-restore-a-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/sampled:L63/N7463",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 2368,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 12
+   }
+  },
+  {
+   "run": "neuron-roles-restore-a-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/sampled:L63/N6311",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 2368,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 40
+   }
+  },
+  {
+   "run": "neuron-roles-restore-b-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/sampled:28",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 2368,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 12
+   }
+  },
+  {
+   "run": "neuron-roles-restore-b-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/sampled:L63/N2250",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 2368,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 14
+   }
+  },
+  {
+   "run": "neuron-roles-restore-b-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/sampled:L61/N9789",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 2368,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 15
+   }
+  },
+  {
+   "run": "neuron-roles-restore-b-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/sampled:L62/N4422",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 2368,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 12
+   }
+  },
+  {
+   "run": "neuron-roles-restore-b-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/sampled:L63/N1945",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 2368,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 24
+   }
+  },
+  {
+   "run": "neuron-roles-restore-b-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/sampled:L62/N16573",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 2368,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 52
+   }
+  },
+  {
+   "run": "neuron-roles-restore-b-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/sampled:L60/N5507",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 2368,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 13
+   }
+  },
+  {
+   "run": "neuron-roles-restore-b-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/sampled:L61/N168",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 2368,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 13
+   }
+  },
+  {
+   "run": "neuron-roles-restore-b-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/sampled:L63/N6342",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 2368,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 48
+   }
+  },
+  {
+   "run": "neuron-roles-smoke-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/sample_28/result",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 32,
+   "hosts": {}
+  },
+  {
+   "run": "neuron-roles-smoke-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/sample_28_repeat/result",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 32,
+   "hosts": {}
+  },
+  {
+   "run": "patch27-all11-runs-1",
+   "root": "runs",
+   "kind": "rollout",
+   "arm": "11",
+   "model": null,
+   "records": 2048,
+   "hosts": {}
+  },
+  {
+   "run": "patch27-all27-runs-1",
+   "root": "runs",
+   "kind": "rollout",
+   "arm": "27",
+   "model": null,
+   "records": 2048,
+   "hosts": {}
+  },
+  {
+   "run": "patch27-restore-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/sampled:28",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 2368,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 12
+   }
+  },
+  {
+   "run": "patch27-restore-1",
+   "root": "runs",
+   "kind": "sample",
+   "arm": "summary/sampled:L56/N16758",
+   "model": "Qwen/Qwen3.8-27B",
+   "records": 2368,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 9
+   }
+  },
+  {
+   "run": "sparsity-scale-all12-1",
+   "root": "runs",
+   "kind": "rollout",
+   "arm": "12",
+   "model": null,
+   "records": 2048,
+   "hosts": {}
+  },
+  {
+   "run": "sparsity-scale-baseline-1",
+   "root": "runs",
+   "kind": "rollout",
+   "arm": "unmodified",
+   "model": null,
+   "records": 2048,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 287
+   }
+  },
+  {
+   "run": "sparsity-scale-pair-1",
+   "root": "runs",
+   "kind": "rollout",
+   "arm": "2",
+   "model": null,
+   "records": 2048,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 56
+   }
+  },
+  {
+   "run": "sparsity-scale-single-1",
+   "root": "runs",
+   "kind": "rollout",
+   "arm": "1 (L63/N4455)",
+   "model": null,
+   "records": 2048,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 105
+   }
+  },
+  {
+   "run": "sparsity-scale-triple-1",
+   "root": "runs",
+   "kind": "rollout",
+   "arm": "3",
+   "model": null,
+   "records": 2048,
+   "hosts": {
+    "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 43
+   }
+  }
+ ],
+ "other_hosts": [
+  "aliyuncs.com",
+  "routify-file-proxy-sg.example.com",
+  "routify-file-proxy-sg.oss",
+  "www.routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com"
+ ],
+ "by_host": {
+  "aliyuncs.com": [
+   {
+    "run": "moe-behavior-http-https-3",
+    "kind": "rollout",
+    "arm": "AC",
+    "model": null,
+    "host": "aliyuncs.com",
+    "place": "reasoning",
+    "records_with_host": 4,
+    "records": 20
+   }
+  ],
+  "routify-file-proxy-sg.example.com": [
+   {
+    "run": "explain-generate-timing-1",
+    "kind": "rollout",
+    "arm": "12",
+    "model": "Qwen/Qwen3.8-27B",
+    "host": "routify-file-proxy-sg.example.com",
+    "place": "call",
+    "records_with_host": 16,
+    "records": 208
+   },
+   {
+    "run": "explain-generate-timing-1",
+    "kind": "rollout",
+    "arm": "12",
+    "model": "Qwen/Qwen3.8-27B",
+    "host": "routify-file-proxy-sg.example.com",
+    "place": "reasoning",
+    "records_with_host": 1,
+    "records": 208
+   },
+   {
+    "run": "explain-generate-timing-1",
+    "kind": "rollout",
+    "arm": "unmodified",
+    "model": "Qwen/Qwen3.8-27B",
+    "host": "routify-file-proxy-sg.example.com",
+    "place": "call",
+    "records_with_host": 16,
+    "records": 208
+   },
+   {
+    "run": "explain-generate-timing-1",
+    "kind": "rollout",
+    "arm": "unmodified",
+    "model": "Qwen/Qwen3.8-27B",
+    "host": "routify-file-proxy-sg.example.com",
+    "place": "reasoning",
+    "records_with_host": 1,
+    "records": 208
+   }
+  ],
+  "routify-file-proxy-sg.oss": [
+   {
+    "run": "moe-broader-1",
+    "kind": "rollout",
+    "arm": "3 neurons (other set)",
+    "model": "Qwen/Qwen3.8-Flash-Next",
+    "host": "routify-file-proxy-sg.oss",
+    "place": "reasoning",
+    "records_with_host": 1,
+    "records": 8
+   }
+  ],
+  "www.routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com": [
+   {
+    "run": "http-validate-refined-1",
+    "kind": "sample",
+    "arm": "summary/sampled_heldout_r3/all12",
+    "model": "Qwen/Qwen3.8-27B",
+    "host": "www.routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+    "place": "decision_sample",
+    "records_with_host": 1,
+    "records": 392
+   }
+  ]
+ },
+ "totals": [
+  {
+   "kind": "rollout",
+   "arm": "1 (L63/N4455)",
+   "records": 2720,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 127
+  },
+  {
+   "kind": "rollout",
+   "arm": "1 neurons (other set)",
+   "records": 896,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 111
+  },
+  {
+   "kind": "rollout",
+   "arm": "11",
+   "records": 2112
+  },
+  {
+   "kind": "rollout",
+   "arm": "11 neurons (other set)",
+   "records": 704,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 1
+  },
+  {
+   "kind": "rollout",
+   "arm": "12",
+   "records": 3920,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 17,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|final_text": 16,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|reasoning": 3,
+   "routify-file-proxy-sg.example.com|reasoning": 1,
+   "routify-file-proxy-sg.example.com|call": 16
+  },
+  {
+   "kind": "rollout",
+   "arm": "12 (call positions only)",
+   "records": 144
+  },
+  {
+   "kind": "rollout",
+   "arm": "12 (generated positions only)",
+   "records": 144
+  },
+  {
+   "kind": "rollout",
+   "arm": "12 (prompt positions only)",
+   "records": 144,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 19
+  },
+  {
+   "kind": "rollout",
+   "arm": "12 (reasoning positions only)",
+   "records": 144,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 17
+  },
+  {
+   "kind": "rollout",
+   "arm": "19 neurons (other set)",
+   "records": 1408
+  },
+  {
+   "kind": "rollout",
+   "arm": "2",
+   "records": 2656,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 69
+  },
+  {
+   "kind": "rollout",
+   "arm": "2 neurons (other set)",
+   "records": 256,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 15
+  },
+  {
+   "kind": "rollout",
+   "arm": "27",
+   "records": 2048
+  },
+  {
+   "kind": "rollout",
+   "arm": "28",
+   "records": 1408
+  },
+  {
+   "kind": "rollout",
+   "arm": "3",
+   "records": 2720,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 50
+  },
+  {
+   "kind": "rollout",
+   "arm": "3 neurons (other set)",
+   "records": 333,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 26,
+   "routify-file-proxy-sg.oss|reasoning": 1
+  },
+  {
+   "kind": "rollout",
+   "arm": "4 neurons (other set)",
+   "records": 960,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 12
+  },
+  {
+   "kind": "rollout",
+   "arm": "8 neurons (other set)",
+   "records": 864,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 1
+  },
+  {
+   "kind": "rollout",
+   "arm": "A",
+   "records": 2,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 2
+  },
+  {
+   "kind": "rollout",
+   "arm": "AB",
+   "records": 20,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 4
+  },
+  {
+   "kind": "rollout",
+   "arm": "ABC",
+   "records": 72,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|final_text": 6,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|reasoning": 2,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 4
+  },
+  {
+   "kind": "rollout",
+   "arm": "AC",
+   "records": 56,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|final_text": 8,
+   "aliyuncs.com|reasoning": 4,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|reasoning": 2,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 4
+  },
+  {
+   "kind": "rollout",
+   "arm": "B",
+   "records": 2,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 2
+  },
+  {
+   "kind": "rollout",
+   "arm": "BC",
+   "records": 2,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 2
+  },
+  {
+   "kind": "rollout",
+   "arm": "C",
+   "records": 2,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 2
+  },
+  {
+   "kind": "rollout",
+   "arm": "L56/N16758 alone",
+   "records": 2112,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 321
+  },
+  {
+   "kind": "rollout",
+   "arm": "none",
+   "records": 96,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|final_text": 8,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|reasoning": 4,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 20
+  },
+  {
+   "kind": "rollout",
+   "arm": "unmodified",
+   "records": 4633,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|call": 505,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|final_text": 16,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|reasoning": 3,
+   "routify-file-proxy-sg.example.com|reasoning": 1,
+   "routify-file-proxy-sg.example.com|call": 16
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/sample_28/result",
+   "records": 32
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/sample_28_repeat/result",
+   "records": 32
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/sampled/all12",
+   "records": 2696,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 398
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/sampled/combined",
+   "records": 2696,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 30
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/sampled/unpatched",
+   "records": 2696,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 1517
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/sampled:28",
+   "records": 7104,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 36
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/sampled:L50/N14454",
+   "records": 2368,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 11
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/sampled:L51/N8299",
+   "records": 2368,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 43
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/sampled:L56/N16758",
+   "records": 2368,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 9
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/sampled:L60/N5507",
+   "records": 2368,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 13
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/sampled:L60/N8520",
+   "records": 2368,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 14
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/sampled:L61/N168",
+   "records": 2368,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 13
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/sampled:L61/N5269",
+   "records": 2368,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 22
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/sampled:L61/N9789",
+   "records": 2368,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 15
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/sampled:L62/N16573",
+   "records": 2368,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 52
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/sampled:L62/N4422",
+   "records": 2368,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 12
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/sampled:L62/N8518",
+   "records": 2368,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 23
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/sampled:L63/N1945",
+   "records": 2368,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 24
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/sampled:L63/N2250",
+   "records": 2368,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 14
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/sampled:L63/N6311",
+   "records": 2368,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 40
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/sampled:L63/N6342",
+   "records": 2368,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 48
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/sampled:L63/N7463",
+   "records": 2368,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 12
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/sampled:L63/N9024",
+   "records": 2368,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 15
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/sampled_heldout_r3/all12",
+   "records": 392,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 125,
+   "www.routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 1
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/sampled_heldout_r3/combined",
+   "records": 392,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 42
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/sampled_heldout_r3/unpatched",
+   "records": 392,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 312
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/sampled_refined",
+   "records": 4328,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 6
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/scheme_sampled",
+   "records": 448
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/scheme_sampled/all12",
+   "records": 448,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 10
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/scheme_sampled/combined",
+   "records": 448
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/scheme_sampled/unpatched",
+   "records": 448,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 100
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/wayback_sampled/L56/N16758",
+   "records": 3264,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 438
+  },
+  {
+   "kind": "sample",
+   "arm": "summary/wayback_sampled/unmodified",
+   "records": 3264,
+   "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com|decision_sample": 262
+  }
+ ],
+ "proxy": [
+  {
+   "run": "confirm-baseline",
+   "kind": "rollout",
+   "arm": "unmodified",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 41,
+   "records": 480
+  },
+  {
+   "run": "confirm-pair",
+   "kind": "rollout",
+   "arm": "2",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 8,
+   "records": 480
+  },
+  {
+   "run": "confirm-quartet",
+   "kind": "rollout",
+   "arm": "4 neurons (other set)",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 7,
+   "records": 480
+  },
+  {
+   "run": "confirm-quartet-robust",
+   "kind": "rollout",
+   "arm": "4 neurons (other set)",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 5,
+   "records": 480
+  },
+  {
+   "run": "confirm-single",
+   "kind": "rollout",
+   "arm": "1 (L63/N4455)",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 18,
+   "records": 480
+  },
+  {
+   "run": "confirm-triple",
+   "kind": "rollout",
+   "arm": "3",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 6,
+   "records": 480
+  },
+  {
+   "run": "explain-generate-restore-1",
+   "kind": "rollout",
+   "arm": "unmodified",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 8,
+   "records": 64
+  },
+  {
+   "run": "explain-generate-restore-1",
+   "kind": "rollout",
+   "arm": "11 neurons (other set)",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 1,
+   "records": 704
+  },
+  {
+   "run": "explain-generate-single-1",
+   "kind": "rollout",
+   "arm": "unmodified",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 7,
+   "records": 64
+  },
+  {
+   "run": "explain-generate-single-1",
+   "kind": "rollout",
+   "arm": "1 neurons (other set)",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 78,
+   "records": 640
+  },
+  {
+   "run": "explain-generate-single-1",
+   "kind": "rollout",
+   "arm": "1 (L63/N4455)",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 1,
+   "records": 64
+  },
+  {
+   "run": "explain-generate-single-1",
+   "kind": "rollout",
+   "arm": "L56/N16758 alone",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 9,
+   "records": 64
+  },
+  {
+   "run": "explain-generate-timing-1",
+   "kind": "rollout",
+   "arm": "unmodified",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 30,
+   "records": 208
+  },
+  {
+   "run": "explain-generate-timing-1",
+   "kind": "rollout",
+   "arm": "unmodified",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "final_text",
+   "records_with_host": 16,
+   "records": 208
+  },
+  {
+   "run": "explain-generate-timing-1",
+   "kind": "rollout",
+   "arm": "unmodified",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "reasoning",
+   "records_with_host": 3,
+   "records": 208
+  },
+  {
+   "run": "explain-generate-timing-1",
+   "kind": "rollout",
+   "arm": "12",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 17,
+   "records": 208
+  },
+  {
+   "run": "explain-generate-timing-1",
+   "kind": "rollout",
+   "arm": "12",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "final_text",
+   "records_with_host": 16,
+   "records": 208
+  },
+  {
+   "run": "explain-generate-timing-1",
+   "kind": "rollout",
+   "arm": "12",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "reasoning",
+   "records_with_host": 3,
+   "records": 208
+  },
+  {
+   "run": "explain-generate-timing-1",
+   "kind": "rollout",
+   "arm": "12 (prompt positions only)",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 19,
+   "records": 144
+  },
+  {
+   "run": "explain-generate-timing-1",
+   "kind": "rollout",
+   "arm": "12 (reasoning positions only)",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 17,
+   "records": 144
+  },
+  {
+   "run": "free-holdout-baseline",
+   "kind": "rollout",
+   "arm": "unmodified",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 2,
+   "records": 64
+  },
+  {
+   "run": "free-holdout-triple",
+   "kind": "rollout",
+   "arm": "3 neurons (other set)",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 1,
+   "records": 64
+  },
+  {
+   "run": "moe-behavior-http-https-3",
+   "kind": "rollout",
+   "arm": "none",
+   "model": null,
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "final_text",
+   "records_with_host": 8,
+   "records": 20
+  },
+  {
+   "run": "moe-behavior-http-https-3",
+   "kind": "rollout",
+   "arm": "none",
+   "model": null,
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "reasoning",
+   "records_with_host": 4,
+   "records": 20
+  },
+  {
+   "run": "moe-behavior-http-https-3",
+   "kind": "rollout",
+   "arm": "AC",
+   "model": null,
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "final_text",
+   "records_with_host": 8,
+   "records": 20
+  },
+  {
+   "run": "moe-behavior-http-https-3",
+   "kind": "rollout",
+   "arm": "AC",
+   "model": null,
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "reasoning",
+   "records_with_host": 2,
+   "records": 20
+  },
+  {
+   "run": "moe-behavior-http-https-3",
+   "kind": "rollout",
+   "arm": "ABC",
+   "model": null,
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "final_text",
+   "records_with_host": 6,
+   "records": 18
+  },
+  {
+   "run": "moe-behavior-http-https-3",
+   "kind": "rollout",
+   "arm": "ABC",
+   "model": null,
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "reasoning",
+   "records_with_host": 2,
+   "records": 18
+  },
+  {
+   "run": "moe-crawl-http-https-1",
+   "kind": "rollout",
+   "arm": "none",
+   "model": null,
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 4,
+   "records": 16
+  },
+  {
+   "run": "moe-minimal-followup-1",
+   "kind": "rollout",
+   "arm": "none",
+   "model": null,
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 6,
+   "records": 10
+  },
+  {
+   "run": "moe-minimal-followup-1",
+   "kind": "rollout",
+   "arm": "AB",
+   "model": null,
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 2,
+   "records": 6
+  },
+  {
+   "run": "moe-minimal-followup-1",
+   "kind": "rollout",
+   "arm": "ABC",
+   "model": null,
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 2,
+   "records": 6
+  },
+  {
+   "run": "moe-minimal-validation-1",
+   "kind": "rollout",
+   "arm": "none",
+   "model": null,
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 4,
+   "records": 4
+  },
+  {
+   "run": "moe-minimal-validation-1",
+   "kind": "rollout",
+   "arm": "B",
+   "model": null,
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 2,
+   "records": 2
+  },
+  {
+   "run": "moe-minimal-validation-1",
+   "kind": "rollout",
+   "arm": "A",
+   "model": null,
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 2,
+   "records": 2
+  },
+  {
+   "run": "moe-minimal-validation-1",
+   "kind": "rollout",
+   "arm": "C",
+   "model": null,
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 2,
+   "records": 2
+  },
+  {
+   "run": "moe-minimal-validation-1",
+   "kind": "rollout",
+   "arm": "BC",
+   "model": null,
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 2,
+   "records": 2
+  },
+  {
+   "run": "moe-minimal-validation-1",
+   "kind": "rollout",
+   "arm": "AC",
+   "model": null,
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 2,
+   "records": 2
+  },
+  {
+   "run": "moe-retry-replay-1",
+   "kind": "rollout",
+   "arm": "none",
+   "model": null,
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 2,
+   "records": 2
+  },
+  {
+   "run": "moe-retry-replay-1",
+   "kind": "rollout",
+   "arm": "AC",
+   "model": null,
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 2,
+   "records": 2
+  },
+  {
+   "run": "moe-scheme-diagnostic-1",
+   "kind": "rollout",
+   "arm": "none",
+   "model": null,
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 4,
+   "records": 12
+  },
+  {
+   "run": "moe-scheme-diagnostic-1",
+   "kind": "rollout",
+   "arm": "AB",
+   "model": null,
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 2,
+   "records": 12
+  },
+  {
+   "run": "moe-scheme-diagnostic-1",
+   "kind": "rollout",
+   "arm": "ABC",
+   "model": null,
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 2,
+   "records": 12
+  },
+  {
+   "run": "sec-replication-baseline",
+   "kind": "rollout",
+   "arm": "unmodified",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 22,
+   "records": 128
+  },
+  {
+   "run": "sec-replication-lexical",
+   "kind": "rollout",
+   "arm": "3",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 1,
+   "records": 128
+  },
+  {
+   "run": "sec-replication-random",
+   "kind": "rollout",
+   "arm": "3 neurons (other set)",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 17,
+   "records": 128
+  },
+  {
+   "run": "sec-replication-triple",
+   "kind": "rollout",
+   "arm": "3 neurons (other set)",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 8,
+   "records": 128
+  },
+  {
+   "run": "subset-14734",
+   "kind": "rollout",
+   "arm": "1 neurons (other set)",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 22,
+   "records": 128
+  },
+  {
+   "run": "subset-14734-4455",
+   "kind": "rollout",
+   "arm": "2 neurons (other set)",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 7,
+   "records": 128
+  },
+  {
+   "run": "subset-417",
+   "kind": "rollout",
+   "arm": "1 neurons (other set)",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 11,
+   "records": 128
+  },
+  {
+   "run": "subset-417-14734",
+   "kind": "rollout",
+   "arm": "2 neurons (other set)",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 8,
+   "records": 128
+  },
+  {
+   "run": "subset-417-4455",
+   "kind": "rollout",
+   "arm": "2",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 5,
+   "records": 128
+  },
+  {
+   "run": "subset-4455",
+   "kind": "rollout",
+   "arm": "1 (L63/N4455)",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 3,
+   "records": 128
+  },
+  {
+   "run": "zero-pilot-baseline-1",
+   "kind": "rollout",
+   "arm": "unmodified",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 17,
+   "records": 128
+  },
+  {
+   "run": "zero-validate-baseline-1",
+   "kind": "rollout",
+   "arm": "unmodified",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 77,
+   "records": 736
+  },
+  {
+   "run": "zero-validate-treatment-1",
+   "kind": "rollout",
+   "arm": "8 neurons (other set)",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 1,
+   "records": 736
+  },
+  {
+   "run": "http-suite-http-unpatched-1",
+   "kind": "rollout",
+   "arm": "unmodified",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 14,
+   "records": 672
+  },
+  {
+   "run": "http-validate-1",
+   "kind": "sample",
+   "arm": "summary/sampled/unpatched",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "decision_sample",
+   "records_with_host": 1517,
+   "records": 2696
+  },
+  {
+   "run": "http-validate-1",
+   "kind": "sample",
+   "arm": "summary/sampled/all12",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "decision_sample",
+   "records_with_host": 398,
+   "records": 2696
+  },
+  {
+   "run": "http-validate-1",
+   "kind": "sample",
+   "arm": "summary/sampled/combined",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "decision_sample",
+   "records_with_host": 30,
+   "records": 2696
+  },
+  {
+   "run": "http-validate-1",
+   "kind": "sample",
+   "arm": "summary/scheme_sampled/unpatched",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "decision_sample",
+   "records_with_host": 100,
+   "records": 448
+  },
+  {
+   "run": "http-validate-1",
+   "kind": "sample",
+   "arm": "summary/scheme_sampled/all12",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "decision_sample",
+   "records_with_host": 10,
+   "records": 448
+  },
+  {
+   "run": "http-validate-refined-1",
+   "kind": "sample",
+   "arm": "summary/sampled_refined",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "decision_sample",
+   "records_with_host": 6,
+   "records": 4328
+  },
+  {
+   "run": "http-validate-refined-1",
+   "kind": "sample",
+   "arm": "summary/sampled_heldout_r3/unpatched",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "decision_sample",
+   "records_with_host": 312,
+   "records": 392
+  },
+  {
+   "run": "http-validate-refined-1",
+   "kind": "sample",
+   "arm": "summary/sampled_heldout_r3/all12",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "decision_sample",
+   "records_with_host": 125,
+   "records": 392
+  },
+  {
+   "run": "http-validate-refined-1",
+   "kind": "sample",
+   "arm": "summary/sampled_heldout_r3/combined",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "decision_sample",
+   "records_with_host": 42,
+   "records": 392
+  },
+  {
+   "run": "neuron-roles-n16758-runs-2",
+   "kind": "rollout",
+   "arm": "L56/N16758 alone",
+   "model": null,
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 312,
+   "records": 2048
+  },
+  {
+   "run": "neuron-roles-profile-1",
+   "kind": "sample",
+   "arm": "summary/wayback_sampled/unmodified",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "decision_sample",
+   "records_with_host": 262,
+   "records": 3264
+  },
+  {
+   "run": "neuron-roles-profile-1",
+   "kind": "sample",
+   "arm": "summary/wayback_sampled/L56/N16758",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "decision_sample",
+   "records_with_host": 438,
+   "records": 3264
+  },
+  {
+   "run": "neuron-roles-restore-a-1",
+   "kind": "sample",
+   "arm": "summary/sampled:28",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "decision_sample",
+   "records_with_host": 12,
+   "records": 2368
+  },
+  {
+   "run": "neuron-roles-restore-a-1",
+   "kind": "sample",
+   "arm": "summary/sampled:L51/N8299",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "decision_sample",
+   "records_with_host": 43,
+   "records": 2368
+  },
+  {
+   "run": "neuron-roles-restore-a-1",
+   "kind": "sample",
+   "arm": "summary/sampled:L61/N5269",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "decision_sample",
+   "records_with_host": 22,
+   "records": 2368
+  },
+  {
+   "run": "neuron-roles-restore-a-1",
+   "kind": "sample",
+   "arm": "summary/sampled:L63/N9024",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "decision_sample",
+   "records_with_host": 15,
+   "records": 2368
+  },
+  {
+   "run": "neuron-roles-restore-a-1",
+   "kind": "sample",
+   "arm": "summary/sampled:L62/N8518",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "decision_sample",
+   "records_with_host": 23,
+   "records": 2368
+  },
+  {
+   "run": "neuron-roles-restore-a-1",
+   "kind": "sample",
+   "arm": "summary/sampled:L50/N14454",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "decision_sample",
+   "records_with_host": 11,
+   "records": 2368
+  },
+  {
+   "run": "neuron-roles-restore-a-1",
+   "kind": "sample",
+   "arm": "summary/sampled:L60/N8520",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "decision_sample",
+   "records_with_host": 14,
+   "records": 2368
+  },
+  {
+   "run": "neuron-roles-restore-a-1",
+   "kind": "sample",
+   "arm": "summary/sampled:L63/N7463",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "decision_sample",
+   "records_with_host": 12,
+   "records": 2368
+  },
+  {
+   "run": "neuron-roles-restore-a-1",
+   "kind": "sample",
+   "arm": "summary/sampled:L63/N6311",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "decision_sample",
+   "records_with_host": 40,
+   "records": 2368
+  },
+  {
+   "run": "neuron-roles-restore-b-1",
+   "kind": "sample",
+   "arm": "summary/sampled:28",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "decision_sample",
+   "records_with_host": 12,
+   "records": 2368
+  },
+  {
+   "run": "neuron-roles-restore-b-1",
+   "kind": "sample",
+   "arm": "summary/sampled:L63/N2250",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "decision_sample",
+   "records_with_host": 14,
+   "records": 2368
+  },
+  {
+   "run": "neuron-roles-restore-b-1",
+   "kind": "sample",
+   "arm": "summary/sampled:L61/N9789",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "decision_sample",
+   "records_with_host": 15,
+   "records": 2368
+  },
+  {
+   "run": "neuron-roles-restore-b-1",
+   "kind": "sample",
+   "arm": "summary/sampled:L62/N4422",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "decision_sample",
+   "records_with_host": 12,
+   "records": 2368
+  },
+  {
+   "run": "neuron-roles-restore-b-1",
+   "kind": "sample",
+   "arm": "summary/sampled:L63/N1945",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "decision_sample",
+   "records_with_host": 24,
+   "records": 2368
+  },
+  {
+   "run": "neuron-roles-restore-b-1",
+   "kind": "sample",
+   "arm": "summary/sampled:L62/N16573",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "decision_sample",
+   "records_with_host": 52,
+   "records": 2368
+  },
+  {
+   "run": "neuron-roles-restore-b-1",
+   "kind": "sample",
+   "arm": "summary/sampled:L60/N5507",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "decision_sample",
+   "records_with_host": 13,
+   "records": 2368
+  },
+  {
+   "run": "neuron-roles-restore-b-1",
+   "kind": "sample",
+   "arm": "summary/sampled:L61/N168",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "decision_sample",
+   "records_with_host": 13,
+   "records": 2368
+  },
+  {
+   "run": "neuron-roles-restore-b-1",
+   "kind": "sample",
+   "arm": "summary/sampled:L63/N6342",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "decision_sample",
+   "records_with_host": 48,
+   "records": 2368
+  },
+  {
+   "run": "patch27-restore-1",
+   "kind": "sample",
+   "arm": "summary/sampled:28",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "decision_sample",
+   "records_with_host": 12,
+   "records": 2368
+  },
+  {
+   "run": "patch27-restore-1",
+   "kind": "sample",
+   "arm": "summary/sampled:L56/N16758",
+   "model": "Qwen/Qwen3.8-27B",
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "decision_sample",
+   "records_with_host": 9,
+   "records": 2368
+  },
+  {
+   "run": "sparsity-scale-baseline-1",
+   "kind": "rollout",
+   "arm": "unmodified",
+   "model": null,
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 287,
+   "records": 2048
+  },
+  {
+   "run": "sparsity-scale-pair-1",
+   "kind": "rollout",
+   "arm": "2",
+   "model": null,
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 56,
+   "records": 2048
+  },
+  {
+   "run": "sparsity-scale-single-1",
+   "kind": "rollout",
+   "arm": "1 (L63/N4455)",
+   "model": null,
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 105,
+   "records": 2048
+  },
+  {
+   "run": "sparsity-scale-triple-1",
+   "kind": "rollout",
+   "arm": "3",
+   "model": null,
+   "host": "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+   "place": "call",
+   "records_with_host": 43,
+   "records": 2048
+  }
+ ]
+}

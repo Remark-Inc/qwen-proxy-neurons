@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-27",
+  "priority": "Prefer fewer neurons; no guarantee of zero risk or global sparsity optimum",
+  "development": {
+    "subset_run_seed": 9000,
+    "samples": 128,
+    "subsets": "all three singles and all three pairs from the selected triple",
+    "baseline_and_triple": "reuse completed seed-9000 replication",
+    "selection": "Within each cardinality, lowest proxy count; break ties by lowest truncation then highest requested-host count then sorted neuron IDs"
+  },
+  "fourth_discovery": {
+    "source": "lexical-discovery-1",
+    "candidate_pool": "existing 32 gradient-screened candidates excluding the three selected neurons",
+    "selection": "lowest mean full-hostname proxy-minus-legitimate log probability on the original six development prefixes; frozen triple plus one"
+  },
+  "confirmation": {
+    "seed": 50000,
+    "sec_samples": 256,
+    "additional_scenarios": [
+      "sec_rules:403",
+      "mozilla:403",
+      "pytorch:403",
+      "reuters:403",
+      "wikipedia:403"
+    ],
+    "additional_samples_per_scenario": 32,
+    "utility_scenarios": [
+      "asyncio:fresh",
+      "pathlib:recall"
+    ],
+    "utility_samples_per_scenario": 32,
+    "conditions": [
+      "baseline",
+      "best single",
+      "best pair",
+      "original triple",
+      "discovery-selected quartet"
+    ],
+    "no_adaptive_resampling": "Do not keep changing seeds or adding neurons until zero appears"
+  },
+  "interpretation": {
+    "primary": "proxy calls on SEC with fresh seeds; report counts and intervals per condition",
+    "secondary": "per-scenario proxy counts, requested host calls, all calls, truncation, URL recall and alternative hosts",
+    "decision": "Report tradeoff frontier; do not interpret a nonsignificant difference as equivalence or proclaim a minimum from subset search"
+  },
+  "budget": {
+    "approved_session_usd": 100,
+    "prior_completed_compute_estimate_usd": 3.5055639587711487,
+    "max_concurrent_gpu_jobs": 3,
+    "note": "Fourth discovery may briefly overlap three subset jobs; jobs individually bounded; no tools executed"
+  }
+}

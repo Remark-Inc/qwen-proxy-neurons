@@ -1,0 +1,95 @@
+{
+  "checked_utc": "2026-10-27T18:03:11.007339+00:00",
+  "count": 11,
+  "all_stopped": true,
+  "apps": [
+    {
+      "app_id": "ap-uRu5ytgASq1rHf1ymrevlj",
+      "description": "qwen-neuron-explanation",
+      "state": "stopped",
+      "tasks": "0",
+      "created_at": "2026-10-27 13:50:53-04:00",
+      "stopped_at": "2026-10-27 13:52:32-04:00"
+    },
+    {
+      "app_id": "ap-10rWSAxjlkKOECgXihv4G0",
+      "description": "qwen-neuron-explanation",
+      "state": "stopped",
+      "tasks": "0",
+      "created_at": "2026-10-27 13:40:34-04:00",
+      "stopped_at": "2026-10-27 14:00:23-04:00"
+    },
+    {
+      "app_id": "ap-CUrVzgkY44MOwdSK7cDr1D",
+      "description": "qwen-neuron-explanation",
+      "state": "stopped",
+      "tasks": "0",
+      "created_at": "2026-10-27 13:39:18-04:00",
+      "stopped_at": "2026-10-27 13:40:34-04:00"
+    },
+    {
+      "app_id": "ap-Nz5wM3zMvdqnf5BQnFX8WW",
+      "description": "qwen-neuron-explanation",
+      "state": "stopped",
+      "tasks": "0",
+      "created_at": "2026-10-27 13:35:08-04:00",
+      "stopped_at": "2026-10-27 13:39:17-04:00"
+    },
+    {
+      "app_id": "ap-8YU9uX9C9M2raWhBS4UNZS",
+      "description": "qwen-neuron-explanation",
+      "state": "stopped",
+      "tasks": "0",
+      "created_at": "2026-10-27 13:27:11-04:00",
+      "stopped_at": "2026-10-27 13:35:08-04:00"
+    },
+    {
+      "app_id": "ap-cRwyPR3eNEt7zKYWwW2UZg",
+      "description": "qwen-neuron-explanation",
+      "state": "stopped",
+      "tasks": "0",
+      "created_at": "2026-10-27 13:24:21-04:00",
+      "stopped_at": "2026-10-27 13:41:40-04:00"
+    },
+    {
+      "app_id": "ap-dyOaqoMjYyocDK0Dn8jx0d",
+      "description": "qwen-neuron-explanation",
+      "state": "stopped",
+      "tasks": "0",
+      "created_at": "2026-10-27 13:16:05-04:00",
+      "stopped_at": "2026-10-27 13:41:08-04:00"
+    },
+    {
+      "app_id": "ap-gQM2W7iXZ0kEALyqgaTY1D",
+      "description": "qwen-neuron-explanation",
+      "state": "stopped",
+      "tasks": "0",
+      "created_at": "2026-10-27 13:16:05-04:00",
+      "stopped_at": "2026-10-27 13:27:10-04:00"
+    },
+    {
+      "app_id": "ap-lrYYdP8Gjpp3Fafoofnbeb",
+      "description": "qwen-neuron-explanation",
+      "state": "stopped",
+      "tasks": "0",
+      "created_at": "2026-10-27 13:16:05-04:00",
+      "stopped_at": "2026-10-27 13:24:20-04:00"
+    },
+    {
+      "app_id": "ap-d1tBwv49gL7cqrroPiTi86",
+      "description": "qwen-neuron-explanation",
+      "state": "stopped",
+      "tasks": "0",
+      "created_at": "2026-10-27 13:14:37-04:00",
+      "stopped_at": "2026-10-27 13:15:34-04:00"
+    },
+    {
+      "app_id": "ap-g9Lf3S2NGuRPMNEg0wGpLE",
+      "description": "qwen-neuron-explanation",
+      "state": "stopped",
+      "tasks": "0",
+      "created_at": "2026-10-27 13:13:55-04:00",
+      "stopped_at": "2026-10-27 13:14:27-04:00"
+    }
+  ]
+}

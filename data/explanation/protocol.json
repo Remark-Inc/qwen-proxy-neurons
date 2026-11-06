@@ -1,0 +1,107 @@
+{
+  "created_utc": "2026-10-27T17:13:54.323650+00:00",
+  "objective": "Explain the frozen twelve-neuron intervention through causal restoration, temporal localization, controlled contrasts, activation patching, interactions and descriptive profiles.",
+  "additional_authorized_usd": 100,
+  "prior_measured_compute_usd": 17.58145401571673,
+  "candidate_sha256": "c9be6c06dc2b9da7fb1dff649074b4b16f18147fa111a642a676b064169898b3",
+  "neurons": [
+    {
+      "layer": 63,
+      "neuron": 417,
+      "mode": "scale",
+      "value": 0
+    },
+    {
+      "layer": 63,
+      "neuron": 14734,
+      "mode": "scale",
+      "value": 0
+    },
+    {
+      "layer": 63,
+      "neuron": 4455,
+      "mode": "scale",
+      "value": 0
+    },
+    {
+      "layer": 54,
+      "neuron": 10344,
+      "mode": "scale",
+      "value": 0
+    },
+    {
+      "layer": 62,
+      "neuron": 6870,
+      "mode": "scale",
+      "value": 0
+    },
+    {
+      "layer": 63,
+      "neuron": 3149,
+      "mode": "scale",
+      "value": 0
+    },
+    {
+      "layer": 62,
+      "neuron": 13617,
+      "mode": "scale",
+      "value": 0
+    },
+    {
+      "layer": 54,
+      "neuron": 6172,
+      "mode": "scale",
+      "value": 0
+    },
+    {
+      "layer": 62,
+      "neuron": 10856,
+      "mode": "scale",
+      "value": 0
+    },
+    {
+      "layer": 63,
+      "neuron": 10126,
+      "mode": "scale",
+      "value": 0
+    },
+    {
+      "layer": 56,
+      "neuron": 16758,
+      "mode": "scale",
+      "value": 0
+    },
+    {
+      "layer": 58,
+      "neuron": 11828,
+      "mode": "scale",
+      "value": 0
+    }
+  ],
+  "budget_envelope": "Ten invocations maximum including one stopped packaging failure; $9 reserved per invocation, $90 reservation ceiling and at least $10 overhead reserve. Hard GPU timeout 5400 seconds for successful imports; failed-import app explicitly stopped. No experiment retries.",
+  "phases": [
+    "smoke",
+    "conditional",
+    "contexts",
+    "timing",
+    "patches",
+    "profile",
+    "generate_restore",
+    "generate_single",
+    "generate_timing"
+  ],
+  "conditional": "12 single ablations, 12 one-neuron restorations, 66 pair restorations, group doses .25/.5/.75/1.25, each single gain1.5, matched-layer random12 control; 8 unsteered failure prefixes +5 old quartet failures +6 synthetic prefixes; pair screen natural prefixes only.",
+  "contexts": "60 synthetic contrasts: six hosts times 403/404/timeout/success, requested proxy/legitimate fetch, quoted proxy/legitimate URL, similar routify and cloud-host alternatives; baseline/all12/12 singles/12 restorations.",
+  "timing": "All12 and each single on full sequence, prompt, supplied reasoning, call-prefix, final prefix decision position, or suffix predictor positions; exact token offsets.",
+  "patches": "Restore same-prefix unsteered decision activations into all12; earlier-layer ablation then later decision restoration; exchange decision activations between matched synthetic403/success contexts. No future suffix information used for donor values.",
+  "profile": "16 natural failures +16 nonproxy responses and16 explicitly synthetic broad-topic control continuations, signed activation snippets.",
+  "generation": "Fresh seed370000,64 SEC samples per single/restoration arm; timing128 SEC +16 clean fetch per arm; common max2048/batch32/temperature1/top_p.95/top_k20. No suspicious continuation prefill; supplied legitimate initial call plus synthetic403 retained.",
+  "interpretation": [
+    "Prior validation remains frozen; reused prior traces are explanatory data, not new holdouts.",
+    "Null effects are not evidence of irrelevance or minimality.",
+    "Pair interactions are relative to all12 ablation, not global circuit necessity.",
+    "Teacher-forced synthetic context effects do not establish free-generation behavior.",
+    "Broad helpfulness/capability benchmarking is deferred.",
+    "Generated tools are never executed; GPU network blocked."
+  ]
+}

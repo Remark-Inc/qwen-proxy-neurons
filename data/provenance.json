@@ -1,0 +1,19 @@
+{
+  "cohere": {
+    "source": "https://huggingface.co/datasets/CohereLabs/10-2026-qwen-investigation-traces/raw/main/qwen-investigation.jsonl",
+    "downloaded": "2026-10-27",
+    "sha256": "7110edee1203a58c8dea3b0e3f0a18a86fa42515a655b7b1901a7dda0278d1e6",
+    "model": "Qwen/Qwen3.8-Flash-Next",
+    "note": "Four JSONL records. Export format, not activation data. Original raw token IDs are in the upstream Parquet."
+  },
+  "vals": {
+    "source": "https://www.vals.ai/blogs/qwen-alibaba-requests",
+    "accessed": "2026-10-27",
+    "note": "Fixtures reconstruct the published 403 and URL-recall examples; full original provider settings were not supplied on the article."
+  },
+  "neuron_explorer": {
+    "source": "https://github.com/lyramakesmusic/neuron-explorer",
+    "inspected_commit": "e566e83e3f9fe00f85438231a788f90e83e2af43",
+    "note": "Methodological reference; no Qwen3.5 neuron IDs or caches transferred."
+  }
+}

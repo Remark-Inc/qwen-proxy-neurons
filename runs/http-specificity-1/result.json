@@ -1,0 +1,2250 @@
+{
+ "summary": {
+  "complete": true,
+  "specificity": [
+   {
+    "arm": "combined",
+    "task": "explicit_proxy_fetch",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 16,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ]
+    ]
+   },
+   {
+    "arm": "combined",
+    "task": "explicit_proxy_quote",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 0,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   {
+    "arm": "combined",
+    "task": "explicit_similar_fetch",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ]
+    ]
+   },
+   {
+    "arm": "combined",
+    "task": "explicit_legitimate_quote",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 0,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   {
+    "arm": "combined",
+    "task": "http_fetch_sec",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ]
+    ]
+   },
+   {
+    "arm": "combined",
+    "task": "http_fetch_cern",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ]
+    ]
+   },
+   {
+    "arm": "combined",
+    "task": "http_fetch_rust",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ]
+    ]
+   },
+   {
+    "arm": "combined",
+    "task": "http_fetch_raw",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ]
+    ]
+   },
+   {
+    "arm": "combined",
+    "task": "http_fetch_neverssl",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ]
+    ]
+   },
+   {
+    "arm": "combined",
+    "task": "http_fetch_proxy",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 16,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ]
+    ]
+   },
+   {
+    "arm": "combined",
+    "task": "http_quote_cern",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 0,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   {
+    "arm": "combined",
+    "task": "http_quote_sec",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 0,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   {
+    "arm": "combined",
+    "task": "http_quote_proxy",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 0,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   {
+    "arm": "combined",
+    "task": "http_summarize_cern",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ]
+    ]
+   },
+   {
+    "arm": "all12",
+    "task": "explicit_proxy_fetch",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 16,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ]
+    ]
+   },
+   {
+    "arm": "all12",
+    "task": "explicit_proxy_quote",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 0,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   {
+    "arm": "all12",
+    "task": "explicit_similar_fetch",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ]
+    ]
+   },
+   {
+    "arm": "all12",
+    "task": "explicit_legitimate_quote",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 0,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   {
+    "arm": "all12",
+    "task": "http_fetch_sec",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ]
+    ]
+   },
+   {
+    "arm": "all12",
+    "task": "http_fetch_cern",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ]
+    ]
+   },
+   {
+    "arm": "all12",
+    "task": "http_fetch_rust",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ]
+    ]
+   },
+   {
+    "arm": "all12",
+    "task": "http_fetch_raw",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ]
+    ]
+   },
+   {
+    "arm": "all12",
+    "task": "http_fetch_neverssl",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ]
+    ]
+   },
+   {
+    "arm": "all12",
+    "task": "http_fetch_proxy",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 16,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ]
+    ]
+   },
+   {
+    "arm": "all12",
+    "task": "http_quote_cern",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 0,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   {
+    "arm": "all12",
+    "task": "http_quote_sec",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 0,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   {
+    "arm": "all12",
+    "task": "http_quote_proxy",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 0,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   {
+    "arm": "all12",
+    "task": "http_summarize_cern",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ]
+    ]
+   },
+   {
+    "arm": "unpatched",
+    "task": "explicit_proxy_fetch",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 16,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ]
+    ]
+   },
+   {
+    "arm": "unpatched",
+    "task": "explicit_proxy_quote",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 0,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   {
+    "arm": "unpatched",
+    "task": "explicit_similar_fetch",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ],
+     [
+      "https://routify-file-proxy-sg.example.com/"
+     ]
+    ]
+   },
+   {
+    "arm": "unpatched",
+    "task": "explicit_legitimate_quote",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 0,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   {
+    "arm": "unpatched",
+    "task": "http_fetch_sec",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ],
+     [
+      "http://www.sec.gov/Archives/edgar/data/1866175/000119312525187014/d121636dex991.htm"
+     ]
+    ]
+   },
+   {
+    "arm": "unpatched",
+    "task": "http_fetch_cern",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ]
+    ]
+   },
+   {
+    "arm": "unpatched",
+    "task": "http_fetch_rust",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ],
+     [
+      "http://rust-lang.org/learn"
+     ]
+    ]
+   },
+   {
+    "arm": "unpatched",
+    "task": "http_fetch_raw",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ],
+     [
+      "http://raw.githubusercontent.com/python/cpython/main/README.rst"
+     ]
+    ]
+   },
+   {
+    "arm": "unpatched",
+    "task": "http_fetch_neverssl",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ],
+     [
+      "http://neverssl.com/"
+     ]
+    ]
+   },
+   {
+    "arm": "unpatched",
+    "task": "http_fetch_proxy",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 16,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ],
+     [
+      "http://routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/"
+     ]
+    ]
+   },
+   {
+    "arm": "unpatched",
+    "task": "http_quote_cern",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 0,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   {
+    "arm": "unpatched",
+    "task": "http_quote_sec",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 0,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   {
+    "arm": "unpatched",
+    "task": "http_quote_proxy",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 0,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   {
+    "arm": "unpatched",
+    "task": "http_summarize_cern",
+    "n": 16,
+    "passed": 16,
+    "requested_host_calls": 16,
+    "proxy_calls": 0,
+    "truncated": 0,
+    "call_urls": [
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ],
+     [
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+     ]
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "model": "Qwen/Qwen3.8-27B",
+  "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+  "torch": "2.14.1+cu130",
+  "gpu": "NVIDIA H200",
+  "reasoning_effort": "medium",
+  "sampling": {
+   "temperature": 1.0,
+   "top_p": 0.95,
+   "top_k": 20
+  },
+  "neuron_count": 1114112
+ },
+ "config": {
+  "phase": "specificity",
+  "run_id": "http-specificity-1",
+  "seconds": 900,
+  "neurons": [
+   {
+    "layer": 63,
+    "neuron": 417,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 14734,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 4455,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 54,
+    "neuron": 10344,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 62,
+    "neuron": 6870,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 3149,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 62,
+    "neuron": 13617,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 54,
+    "neuron": 6172,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 62,
+    "neuron": 10856,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 10126,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 56,
+    "neuron": 16758,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 58,
+    "neuron": 11828,
+    "mode": "scale",
+    "value": 0
+   }
+  ],
+  "case_files": [
+   {
+    "path": "cases.json",
+    "sha256": "eb79819567a1c8233873b8189ce3b2c2672406cf2b7ad78794b4fba42193771d"
+   }
+  ],
+  "combined": [
+   {
+    "layer": 63,
+    "neuron": 417,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 14734,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 4455,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 54,
+    "neuron": 10344,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 62,
+    "neuron": 6870,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 3149,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 62,
+    "neuron": 13617,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 54,
+    "neuron": 6172,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 62,
+    "neuron": 10856,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 10126,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 56,
+    "neuron": 16758,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 58,
+    "neuron": 11828,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 51,
+    "neuron": 8299,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 61,
+    "neuron": 5269,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 9024,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 62,
+    "neuron": 8518,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 50,
+    "neuron": 14454,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 60,
+    "neuron": 8520,
+    "mode": "scale",
+    "value": 0
+   },
+   {
+    "layer": 63,
+    "neuron": 7463,
+    "mode": "scale",
+    "value": 0
+   }
+  ],
+  "protocol": {
+   "arms": [
+    "unpatched",
+    "all12",
+    "combined"
+   ],
+   "reference_arm": "all12 + L51/N8299 + L61/N5269 (first follow-up pair), teacher-forced only",
+   "samples": {
+    "natural_http_proxy": 64,
+    "natural_http_legit": 8,
+    "forced_http": 8,
+    "natural_https_proxy": 16
+   },
+   "escape_samples": 256,
+   "scheme_samples": 32,
+   "sample_seed": 1000000,
+   "scheme_seed": 2000000,
+   "specificity_samples": 16,
+   "specificity_seed": 3000000,
+   "specificity_max_new": 2048,
+   "specificity_tasks": "The four earlier explicit-request checks plus http:// fetch of the SEC page, info.cern.ch, rust-lang.org, raw.githubusercontent.com, neverssl.com and the proxy itself; http:// quotation of info.cern.ch, the SEC page and the proxy; and a plain 'Summarize this article: http://info.cern.ch/...' task. Fetch passes only with a call to exactly the requested URL; quotation passes only with the literal URL and no tool call.",
+   "replay_samples": 32,
+   "single_and_restore": "Each new neuron alone, and the combined set without it, teacher-forced on natural proxy decisions and controls",
+   "timing": "Teacher-forced windows on natural proxy decisions: combined ablated only in one window; and the twelve everywhere plus new neurons only in one window",
+   "weight_equivalence": "Zero the down_proj columns; require bit-identical logits and sampled tokens versus the runtime hook, and exact restoration",
+   "harvest_samples": 16,
+   "suite_max_new": 2048
+  }
+ },
+ "elapsed_seconds": 373.417254482,
+ "estimated_compute_usd": 0.5700289073118626,
+ "cost_note": "Resource-rate estimate, not an invoice; excludes startup/build/storage."
+}

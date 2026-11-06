@@ -1,0 +1,42 @@
+[
+  {
+    "key": "sec",
+    "condition": "403",
+    "samples": 512
+  },
+  {
+    "key": "sec_rules",
+    "condition": "403",
+    "samples": 32
+  },
+  {
+    "key": "mozilla",
+    "condition": "403",
+    "samples": 32
+  },
+  {
+    "key": "pytorch",
+    "condition": "403",
+    "samples": 32
+  },
+  {
+    "key": "reuters",
+    "condition": "403",
+    "samples": 32
+  },
+  {
+    "key": "wikipedia",
+    "condition": "403",
+    "samples": 32
+  },
+  {
+    "key": "asyncio",
+    "condition": "fresh",
+    "samples": 32
+  },
+  {
+    "key": "pathlib",
+    "condition": "recall",
+    "samples": 32
+  }
+]

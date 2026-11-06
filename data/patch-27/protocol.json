@@ -1,0 +1,158 @@
+{
+ "recorded_utc": "2026-11-02T16:10:34.345981+00:00",
+ "question": "Without L56/N16758, do the other 27 neurons of the 28-neuron patch still stop proxy calls on SEC 403, and do the Wayback calls that the 12 and the 28 suppress come back?",
+ "brief": "Parent session \"Qwen neuron lab document editing\", Nov 2: validate the patch without L56/N16758 (27 neurons) so the post can recommend dropping it. Primary: the 27 off on the sparsity rerun's 2,048 SEC 403 runs, paired with the existing unmodified and 12-off arms. Second, if the budget allows: the 12 without L56/N16758 (11 off). Decision-point check: L56/N16758 restored with the other 27 off on the held-out http:// sets, as in the drop-one jobs. Matt approves the spend in this session; approvals relayed through the parent don't count.",
+ "authorization": "data/patch-27/budget.json: Matt, \"Approve $16\" (all three jobs: all27, restore, all11), recorded before any generation.",
+ "status": "Frozen before any generation. Changes after this point go in amendments with a reason.",
+ "frozen_inputs": {
+  "neurons": {
+   "file": "data/http/candidate-refined.json",
+   "sha256": "1c77b0f1ffa3e142f8236f4d04b056c8f528a9fff6d0e2b200d42e3392b9beaf",
+   "note": "The 28 in the frozen neuron-roles order; L56/N16758 is the 11th of the first 12 (the https:// patch)."
+  },
+  "settings": {
+   "file": "data/sparsity-scale/protocol.json",
+   "sha256": "992f19aef28db54329c6446f4029b9485d25dadf9a84c2086554c46a7805a660",
+   "use": "scenario, N, chunk, seed and generation for the rollout arms"
+  },
+  "roles_protocol": {
+   "file": "data/neuron-roles/protocol.json",
+   "sha256": "440bb72dbecae2b57f3ff83ddfff273b04e0da3097d1c87b411d5fff4ad0e7fa",
+   "use": "item 1's case files, sets, seeds and sizes for the restore job; the 102 Wayback decision points"
+  },
+  "paired_runs": {
+   "unmodified": {
+    "run": "sparsity-scale-baseline-1",
+    "sha256": "bb72cc708042b62345416b1cddab090b8df15ad6d9f71b42663cf31f5d4a9cc7"
+   },
+   "all12": {
+    "run": "sparsity-scale-all12-1",
+    "sha256": "4844973457998a8e7cbff2e2a0a75b043d51c0fd8cddd1eb25ec56ae05d94446"
+   },
+   "n16758_off": {
+    "run": "neuron-roles-n16758-runs-2",
+    "sha256": "d659e3b04f73ed61901183ab87820fc70e211b56f12687b8823392a1563af6a3"
+   }
+  },
+  "restore_runs": {
+   "a": {
+    "run": "neuron-roles-restore-a-1",
+    "sha256": "efd3158212857616e5c98c64cd58ea8d1b7dd320619b03e3ceeae8f6d00aecbf"
+   },
+   "b": {
+    "run": "neuron-roles-restore-b-1",
+    "sha256": "3dc1bba1823234be9a767c9c2be5b681f1cc070fc45a0f7925c1e2231e4550b4"
+   }
+  },
+  "profile": {
+   "run": "neuron-roles-profile-1",
+   "sha256": "38e3716c6d92b637d7b4d4ebfd567c072c63cab69244544796377d4833745487"
+  }
+ },
+ "jobs": {
+  "all27": {
+   "phase": "rollouts",
+   "role": "primary",
+   "neurons_off": [
+    "L63/N417",
+    "L63/N14734",
+    "L63/N4455",
+    "L54/N10344",
+    "L62/N6870",
+    "L63/N3149",
+    "L62/N13617",
+    "L54/N6172",
+    "L62/N10856",
+    "L63/N10126",
+    "L58/N11828",
+    "L51/N8299",
+    "L61/N5269",
+    "L63/N9024",
+    "L62/N8518",
+    "L50/N14454",
+    "L60/N8520",
+    "L63/N7463",
+    "L63/N6311",
+    "L63/N2250",
+    "L61/N9789",
+    "L62/N4422",
+    "L63/N1945",
+    "L62/N16573",
+    "L60/N5507",
+    "L61/N168",
+    "L63/N6342"
+   ],
+   "run_id_prefix": "patch27-all27-runs-",
+   "soft_seconds": 4100,
+   "cap_seconds": 4350
+  },
+  "all11": {
+   "phase": "rollouts",
+   "role": "second arm, if approved",
+   "neurons_off": [
+    "L63/N417",
+    "L63/N14734",
+    "L63/N4455",
+    "L54/N10344",
+    "L62/N6870",
+    "L63/N3149",
+    "L62/N13617",
+    "L54/N6172",
+    "L62/N10856",
+    "L63/N10126",
+    "L58/N11828"
+   ],
+   "run_id_prefix": "patch27-all11-runs-",
+   "soft_seconds": 4100,
+   "cap_seconds": 4350
+  },
+  "restore": {
+   "phase": "restore",
+   "role": "decision-point check",
+   "restore": [
+    "L56/N16758"
+   ],
+   "wayback_teacher_forced": true,
+   "run_id_prefix": "patch27-restore-",
+   "soft_seconds": 1300,
+   "cap_seconds": 1500
+  }
+ },
+ "generation": {
+  "rollouts": "Identical to the sparsity rerun and option D: SEC 403, 2,048 runs, batch b under torch.manual_seed(4,000,000 + 32*b), batch 32, 1,024 new tokens, temperature 1, top-k 20, top-p 0.95, medium reasoning effort, through qwen_lab.sparsity_scale.run and runner.generation unchanged. Arms share seeds row for row with sparsity-scale-baseline-1, sparsity-scale-all12-1 and neuron-roles-n16758-runs-2.",
+  "restore": "Identical to neuron-roles item 1 (qwen_lab.neuron_roles.phase_restore): arm '28' (all 28 off, baseline) and arm 'L56/N16758' (restored; the other 27 off), on E (128), N (6 x 32), S (30 x 16) and D (49 x 32) with seed 6,000,000 + 1000*i per prefix, 24 new tokens and the deployed sampler; teacher-forced proxy probability, raw and after the sampler cut, on all 86 prefixes. The baseline repeats item 1's seeds, so it is also a third-container determinism check against restore-a-1 and restore-b-1.",
+  "wayback_teacher_forced": "Exploratory, in the restore job after both sampled arms: teacher-forced P(web.archive.org) at the 102 Wayback decision points for the 28 off and the 27 off, reported next to job B's unmodified, L56/N16758 off, 12 off and 11 off arms (different container; job A1 and A2 teacher-forced values matched across containers)."
+ },
+ "analysis": {
+  "destinations": "Per run, hosts from metrics.call_urls and the proxy flag from metrics.proxy_call: proxy, web.archive.org, www.sec.gov, efts.sec.gov, r.jina.ai, other (any other host), no call; plus truncated and unfinished tool call. A run can count under several hosts. Same host reading as option D.",
+  "comparisons": "Each new rollout arm against the unmodified arm, the 12-off arm and the L56/N16758-off arm (and the 27 against the 11 if both ran), paired by (batch_seed, batch_row): X of N with Wilson 95%, exact McNemar (two-sided, and one-sided for a rise), and the relative risk with the Katz 95% interval (zero-cell correction as in sparsity_scale.katz).",
+  "restore": "neuron_roles.restore_analysis on the new job alone: per set, X of N against the same job's 28 baseline, matched one-sided McNemar, exact (sampler-cut) and raw proxy rates.",
+  "code": "qwen_lab/patch27.py build and tables; tests in tests/test_patch27.py."
+ },
+ "decision_rules": {
+  "proxy": "An arm stops 'every call' only at 0 proxy calls in 2,048. A rise over the 12-off arm is significant if the one-sided exact McNemar on matched runs (b = proxy only in the new arm) gives p < 0.05.",
+  "wayback": "Wayback runs of the 27 (and of the 11) against the unmodified arm, relative risk with the Katz 95% CI: 'gone' if the lower bound is >= 2/3 (a loss of a third or more is ruled out); 'still reduced' if the upper bound is < 1; otherwise 'inconclusive'. If the lower bound is > 1 the report also says Wayback calls rose.",
+  "http": "L56/N16758 restored with the other 27 off, under item 1's frozen passenger rule: a significant sampled rise (one-sided McNemar, p < 0.05) or an exact rise >= 0.0005 on any set makes it 'needed' there. Only a significant sampled rise counts against shipping the 27; an exact-only rise is reported as the cost in percentage points.",
+  "recommendation": "One line. 'Yes: ship the 27 and say the Wayback side effect is gone' needs all three: no significant proxy rise for the 27 over the 12 on SEC 403, no significant sampled rise on any http:// set when L56/N16758 is restored, and the Wayback verdict 'gone' for the 27. It says 'every call' only if the 27 make 0 proxy calls in 2,048. Otherwise the line says which condition failed.",
+  "second_arm": "The 11 off answers whether the post's '12 stopped every call in 2,048 runs' also holds for 11: yes only at 0 of 2,048; otherwise the count with Wilson 95% and the one-sided McNemar against the 12. The Wayback rule is reported for the 11 too.",
+  "stopping": "N is fixed: 2,048 runs per rollout arm and item 1's sizes for the restore job. No extra seeds, arms or neurons based on results. If a job stops early, report completed counts and use matched units."
+ },
+ "budget": {
+  "ledger": "data/patch-27/budget.json",
+  "rate_per_second": 0.00152652,
+  "reservations_usd": {
+   "all27": 6.640362,
+   "all11": 6.640362,
+   "restore": 2.28978
+  },
+  "expected_usd": {
+   "all27": 3.64,
+   "all11": 3.64,
+   "restore": 1.22,
+   "source": "Rollout arms: the six earlier 2,048-run SEC 403 jobs took 2,241-2,621 s of app time ($3.42-$4.00, mean $3.64). Restore: neuron-roles-restore-a-1 stage times (load 32 s, about 13 s teacher-forced and 345 s sampled per arm, 17 s per Wayback teacher-forced arm) give about 800 s with startup."
+  },
+  "note": "Each launch reserves its guard cap in the ledger under a lock; the launcher refuses any reservation past the phase cap and any launch before the ledger records Matt's approval."
+ },
+ "redaction": "Results hold counts, probabilities and hostnames, never generated text or the memorized access key. Rollouts stay in gitignored runs/.",
+ "amendments": []
+}

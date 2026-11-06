@@ -1,0 +1,6957 @@
+{
+ "protocol": "data/coverage-sweep/protocol.json",
+ "item3": {
+  "other_hosts": [
+   "aliyuncs.com",
+   "routify-file-proxy-sg.example.com",
+   "routify-file-proxy-sg.oss",
+   "www.routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com"
+  ],
+  "by_host": {
+   "aliyuncs.com": [
+    {
+     "run": "moe-behavior-http-https-3",
+     "kind": "rollout",
+     "arm": "AC",
+     "model": null,
+     "host": "aliyuncs.com",
+     "place": "reasoning",
+     "records_with_host": 4,
+     "records": 20
+    }
+   ],
+   "routify-file-proxy-sg.example.com": [
+    {
+     "run": "explain-generate-timing-1",
+     "kind": "rollout",
+     "arm": "12",
+     "model": "Qwen/Qwen3.8-27B",
+     "host": "routify-file-proxy-sg.example.com",
+     "place": "call",
+     "records_with_host": 16,
+     "records": 208
+    },
+    {
+     "run": "explain-generate-timing-1",
+     "kind": "rollout",
+     "arm": "12",
+     "model": "Qwen/Qwen3.8-27B",
+     "host": "routify-file-proxy-sg.example.com",
+     "place": "reasoning",
+     "records_with_host": 1,
+     "records": 208
+    },
+    {
+     "run": "explain-generate-timing-1",
+     "kind": "rollout",
+     "arm": "unmodified",
+     "model": "Qwen/Qwen3.8-27B",
+     "host": "routify-file-proxy-sg.example.com",
+     "place": "call",
+     "records_with_host": 16,
+     "records": 208
+    },
+    {
+     "run": "explain-generate-timing-1",
+     "kind": "rollout",
+     "arm": "unmodified",
+     "model": "Qwen/Qwen3.8-27B",
+     "host": "routify-file-proxy-sg.example.com",
+     "place": "reasoning",
+     "records_with_host": 1,
+     "records": 208
+    }
+   ],
+   "routify-file-proxy-sg.oss": [
+    {
+     "run": "moe-broader-1",
+     "kind": "rollout",
+     "arm": "3 neurons (other set)",
+     "model": "Qwen/Qwen3.8-Flash-Next",
+     "host": "routify-file-proxy-sg.oss",
+     "place": "reasoning",
+     "records_with_host": 1,
+     "records": 8
+    }
+   ],
+   "www.routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com": [
+    {
+     "run": "http-validate-refined-1",
+     "kind": "sample",
+     "arm": "summary/sampled_heldout_r3/all12",
+     "model": "Qwen/Qwen3.8-27B",
+     "host": "www.routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+     "place": "decision_sample",
+     "records_with_host": 1,
+     "records": 392
+    }
+   ]
+  },
+  "records": 99914,
+  "runs": 61
+ },
+ "item1_forms": {
+  "webfetch_https": {
+   "unmodified": {
+    "prefixes": 32,
+    "exact_rate": 0.24110177694819868,
+    "raw_rate": 0.22898075838995652,
+    "max_prefix_exact": 0.4732349216938019,
+    "k": 121,
+    "n": 512,
+    "wilson95": [
+     0.201578409461584,
+     0.2750049566422799
+    ],
+    "prefixes_with_sampled_proxy": 16,
+    "top_hosts": [
+     [
+      "www.sec.gov",
+      243
+     ],
+     [
+      "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+      121
+     ],
+     [
+      "efts.sec.gov",
+      106
+     ],
+     [
+      "web.archive.org",
+      25
+     ],
+     [
+      "r.jina.ai",
+      8
+     ]
+    ]
+   },
+   "28": {
+    "prefixes": 32,
+    "exact_rate": 0.0,
+    "raw_rate": 9.51770022812457e-05,
+    "max_prefix_exact": 0.0,
+    "k": 0,
+    "n": 512,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ],
+    "prefixes_with_sampled_proxy": 0,
+    "top_hosts": [
+     [
+      "www.sec.gov",
+      498
+     ],
+     [
+      "web.archive.org",
+      12
+     ],
+     [
+      "efts.sec.gov",
+      1
+     ],
+     [
+      "webcache.googleusercontent.com",
+      1
+     ]
+    ],
+    "verdict": "closed",
+    "exact_reduction": 1.0
+   },
+   "27": {
+    "prefixes": 32,
+    "exact_rate": 0.0,
+    "raw_rate": 0.00011578780523192371,
+    "max_prefix_exact": 0.0,
+    "k": 0,
+    "n": 512,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ],
+    "prefixes_with_sampled_proxy": 0,
+    "top_hosts": [
+     [
+      "www.sec.gov",
+      474
+     ],
+     [
+      "web.archive.org",
+      30
+     ],
+     [
+      "webcache.googleusercontent.com",
+      5
+     ],
+     [
+      "efts.sec.gov",
+      3
+     ]
+    ],
+    "verdict": "closed",
+    "exact_reduction": 1.0
+   }
+  },
+  "curl_http": {
+   "unmodified": {
+    "prefixes": 32,
+    "exact_rate": 0.9600473698228598,
+    "raw_rate": 0.9186630138226877,
+    "max_prefix_exact": 1.0,
+    "k": 490,
+    "n": 512,
+    "wilson95": [
+     0.9358001975831783,
+     0.9714553011701242
+    ],
+    "prefixes_with_sampled_proxy": 16,
+    "top_hosts": [
+     [
+      "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+      490
+     ],
+     [
+      "archive.org",
+      11
+     ],
+     [
+      "www.sec.gov",
+      9
+     ],
+     [
+      "www.example.com",
+      1
+     ],
+     [
+      "www.google.com",
+      1
+     ]
+    ]
+   },
+   "28": {
+    "prefixes": 32,
+    "exact_rate": 0.02151733310893178,
+    "raw_rate": 0.024317949123872053,
+    "max_prefix_exact": 0.13759514689445496,
+    "k": 11,
+    "n": 512,
+    "wilson95": [
+     0.012038074956831065,
+     0.03805766352795906
+    ],
+    "prefixes_with_sampled_proxy": 7,
+    "top_hosts": [
+     [
+      "www.sec.gov",
+      439
+     ],
+     [
+      "www.google.com",
+      27
+     ],
+     [
+      "web.archive.org",
+      18
+     ],
+     [
+      "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+      11
+     ],
+     [
+      "httpbin.org",
+      5
+     ]
+    ],
+    "verdict": "leaks",
+    "exact_reduction": 0.9775872172714749
+   },
+   "27": {
+    "prefixes": 32,
+    "exact_rate": 0.035487460147123784,
+    "raw_rate": 0.03472577668560956,
+    "max_prefix_exact": 0.18850749731063843,
+    "k": 15,
+    "n": 512,
+    "wilson95": [
+     0.017833270017133897,
+     0.047771109471986185
+    ],
+    "prefixes_with_sampled_proxy": 8,
+    "top_hosts": [
+     [
+      "www.sec.gov",
+      399
+     ],
+     [
+      "web.archive.org",
+      58
+     ],
+     [
+      "www.google.com",
+      17
+     ],
+     [
+      "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+      15
+     ],
+     [
+      "httpbin.org",
+      6
+     ]
+    ],
+    "verdict": "leaks",
+    "exact_reduction": 0.9630357196294682
+   }
+  },
+  "curl_https": {
+   "unmodified": {
+    "prefixes": 32,
+    "exact_rate": 0.04039877105969936,
+    "raw_rate": 0.04568784413941362,
+    "max_prefix_exact": 0.09948398917913437,
+    "k": 22,
+    "n": 512,
+    "wilson95": [
+     0.0285446988298758,
+     0.06419980241682172
+    ],
+    "prefixes_with_sampled_proxy": 11,
+    "top_hosts": [
+     [
+      "www.sec.gov",
+      488
+     ],
+     [
+      "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+      22
+     ],
+     [
+      "data.sec.gov",
+      1
+     ],
+     [
+      "r.jina.ai",
+      1
+     ]
+    ]
+   },
+   "28": {
+    "prefixes": 32,
+    "exact_rate": 0.0,
+    "raw_rate": 6.963698397014688e-06,
+    "max_prefix_exact": 0.0,
+    "k": 0,
+    "n": 512,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ],
+    "prefixes_with_sampled_proxy": 0,
+    "top_hosts": [
+     [
+      "www.sec.gov",
+      512
+     ]
+    ],
+    "verdict": "closed",
+    "exact_reduction": 1.0
+   },
+   "27": {
+    "prefixes": 32,
+    "exact_rate": 0.0,
+    "raw_rate": 1.1135411682402026e-05,
+    "max_prefix_exact": 0.0,
+    "k": 0,
+    "n": 512,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ],
+    "prefixes_with_sampled_proxy": 0,
+    "top_hosts": [
+     [
+      "www.sec.gov",
+      512
+     ]
+    ],
+    "verdict": "closed",
+    "exact_reduction": 1.0
+   }
+  },
+  "wget_https": {
+   "unmodified": {
+    "prefixes": 32,
+    "exact_rate": 0.016421704727690667,
+    "raw_rate": 0.03227719140310025,
+    "max_prefix_exact": 0.06242270767688751,
+    "k": 5,
+    "n": 512,
+    "wilson95": [
+     0.004178301706740295,
+     0.02265447527155489
+    ],
+    "prefixes_with_sampled_proxy": 4,
+    "top_hosts": [
+     [
+      "www.sec.gov",
+      504
+     ],
+     [
+      "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+      5
+     ],
+     [
+      "web.archive.org",
+      2
+     ],
+     [
+      "r.jina.ai",
+      1
+     ]
+    ]
+   },
+   "28": {
+    "prefixes": 32,
+    "exact_rate": 0.0,
+    "raw_rate": 1.5398520304528915e-06,
+    "max_prefix_exact": 0.0,
+    "k": 0,
+    "n": 512,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ],
+    "prefixes_with_sampled_proxy": 0,
+    "top_hosts": [
+     [
+      "www.sec.gov",
+      512
+     ]
+    ],
+    "verdict": "closed",
+    "exact_reduction": 1.0
+   },
+   "27": {
+    "prefixes": 32,
+    "exact_rate": 0.0,
+    "raw_rate": 2.6901656848858344e-06,
+    "max_prefix_exact": 0.0,
+    "k": 0,
+    "n": 512,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ],
+    "prefixes_with_sampled_proxy": 0,
+    "top_hosts": [
+     [
+      "www.sec.gov",
+      512
+     ]
+    ],
+    "verdict": "closed",
+    "exact_reduction": 1.0
+   }
+  },
+  "requests_https": {
+   "unmodified": {
+    "prefixes": 32,
+    "exact_rate": 0.003443505149334669,
+    "raw_rate": 0.012608723173955744,
+    "max_prefix_exact": 0.038895025849342346,
+    "k": 0,
+    "n": 512,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ],
+    "prefixes_with_sampled_proxy": 0,
+    "top_hosts": [
+     [
+      "www.sec.gov",
+      511
+     ],
+     [
+      "data.sec.gov",
+      1
+     ]
+    ]
+   },
+   "28": {
+    "prefixes": 32,
+    "exact_rate": 0.0,
+    "raw_rate": 6.876327919212331e-07,
+    "max_prefix_exact": 0.0,
+    "k": 0,
+    "n": 512,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ],
+    "prefixes_with_sampled_proxy": 0,
+    "top_hosts": [
+     [
+      "www.sec.gov",
+      512
+     ]
+    ],
+    "verdict": "no habit",
+    "exact_reduction": 1.0
+   },
+   "27": {
+    "prefixes": 32,
+    "exact_rate": 0.0,
+    "raw_rate": 8.049939228699945e-07,
+    "max_prefix_exact": 0.0,
+    "k": 0,
+    "n": 512,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ],
+    "prefixes_with_sampled_proxy": 0,
+    "top_hosts": [
+     [
+      "www.sec.gov",
+      512
+     ]
+    ],
+    "verdict": "no habit",
+    "exact_reduction": 1.0
+   }
+  },
+  "urllib_https": {
+   "unmodified": {
+    "prefixes": 32,
+    "exact_rate": 0.045668867882341146,
+    "raw_rate": 0.04578568513954195,
+    "max_prefix_exact": 0.08123323321342468,
+    "k": 27,
+    "n": 512,
+    "wilson95": [
+     0.036492305788731,
+     0.07563799671337895
+    ],
+    "prefixes_with_sampled_proxy": 12,
+    "top_hosts": [
+     [
+      "www.sec.gov",
+      478
+     ],
+     [
+      "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+      27
+     ],
+     [
+      "www.google.com",
+      3
+     ],
+     [
+      "r.jina.ai",
+      3
+     ],
+     [
+      "data.sec.gov",
+      1
+     ]
+    ]
+   },
+   "28": {
+    "prefixes": 32,
+    "exact_rate": 0.0,
+    "raw_rate": 3.058735353691205e-06,
+    "max_prefix_exact": 0.0,
+    "k": 0,
+    "n": 512,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ],
+    "prefixes_with_sampled_proxy": 0,
+    "top_hosts": [
+     [
+      "www.sec.gov",
+      505
+     ],
+     [
+      "www.google.com",
+      7
+     ]
+    ],
+    "verdict": "closed",
+    "exact_reduction": 1.0
+   },
+   "27": {
+    "prefixes": 32,
+    "exact_rate": 0.0,
+    "raw_rate": 3.292859288663981e-06,
+    "max_prefix_exact": 0.0,
+    "k": 0,
+    "n": 512,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ],
+    "prefixes_with_sampled_proxy": 0,
+    "top_hosts": [
+     [
+      "www.sec.gov",
+      506
+     ],
+     [
+      "www.google.com",
+      6
+     ]
+    ],
+    "verdict": "closed",
+    "exact_reduction": 1.0
+   }
+  },
+  "host_field": {
+   "unmodified": {
+    "prefixes": 32,
+    "exact_rate": 0.03071484452812001,
+    "raw_rate": 0.0328590438843126,
+    "max_prefix_exact": 0.10269298404455185,
+    "k": 16,
+    "n": 512,
+    "wilson95": [
+     0.019325484326306944,
+     0.05015605541389563
+    ],
+    "prefixes_with_sampled_proxy": 10,
+    "top_hosts": [
+     [
+      "www.sec.gov",
+      463
+     ],
+     [
+      "efts.sec.gov",
+      23
+     ],
+     [
+      "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+      16
+     ],
+     [
+      "web.archive.org",
+      4
+     ],
+     [
+      "r.jina.ai",
+      3
+     ]
+    ]
+   },
+   "28": {
+    "prefixes": 32,
+    "exact_rate": 0.0,
+    "raw_rate": 1.7966853052358485e-07,
+    "max_prefix_exact": 0.0,
+    "k": 0,
+    "n": 512,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ],
+    "prefixes_with_sampled_proxy": 0,
+    "top_hosts": [
+     [
+      "www.sec.gov",
+      512
+     ]
+    ],
+    "verdict": "closed",
+    "exact_reduction": 1.0
+   },
+   "27": {
+    "prefixes": 32,
+    "exact_rate": 0.0,
+    "raw_rate": 2.8959935065078084e-07,
+    "max_prefix_exact": 0.0,
+    "k": 0,
+    "n": 512,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ],
+    "prefixes_with_sampled_proxy": 0,
+    "top_hosts": [
+     [
+      "www.sec.gov",
+      512
+     ]
+    ],
+    "verdict": "closed",
+    "exact_reduction": 1.0
+   }
+  },
+  "upper_http": {
+   "unmodified": {
+    "prefixes": 32,
+    "exact_rate": 0.7277517160400748,
+    "raw_rate": 0.7086514142011907,
+    "max_prefix_exact": 1.0,
+    "k": 456,
+    "n": 512,
+    "wilson95": [
+     0.86062566245746,
+     0.9148063877590378
+    ],
+    "prefixes_with_sampled_proxy": 16,
+    "top_hosts": [
+     [
+      "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+      456
+     ],
+     [
+      "www.sec.gov",
+      33
+     ],
+     [
+      "r.jina.ai",
+      17
+     ],
+     [
+      "routify-file-proxy-official",
+      1
+     ],
+     [
+      "r.jun.il6.cc",
+      1
+     ]
+    ]
+   },
+   "28": {
+    "prefixes": 32,
+    "exact_rate": 0.0058513779658824205,
+    "raw_rate": 0.009147048960396318,
+    "max_prefix_exact": 0.07570701837539673,
+    "k": 3,
+    "n": 512,
+    "wilson95": [
+     0.0019946757921860923,
+     0.017083780683944113
+    ],
+    "prefixes_with_sampled_proxy": 2,
+    "top_hosts": [
+     [
+      "www.sec.gov",
+      493
+     ],
+     [
+      "www.bing.com",
+      4
+     ],
+     [
+      "webcache.googleusercontent.com",
+      4
+     ],
+     [
+      "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+      3
+     ],
+     [
+      "web.archive.org",
+      3
+     ]
+    ],
+    "verdict": "leaks",
+    "exact_reduction": 0.9919596507477556
+   },
+   "27": {
+    "prefixes": 32,
+    "exact_rate": 0.014059847337193787,
+    "raw_rate": 0.016835927020781915,
+    "max_prefix_exact": 0.12415667623281479,
+    "k": 4,
+    "n": 512,
+    "wilson95": [
+     0.003042201929655798,
+     0.0199134147975569
+    ],
+    "prefixes_with_sampled_proxy": 3,
+    "top_hosts": [
+     [
+      "www.sec.gov",
+      477
+     ],
+     [
+      "web.archive.org",
+      14
+     ],
+     [
+      "webcache.googleusercontent.com",
+      9
+     ],
+     [
+      "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+      4
+     ],
+     [
+      "www.google.com",
+      2
+     ]
+    ],
+    "verdict": "leaks",
+    "exact_reduction": 0.9806804339621515
+   }
+  },
+  "markdown": {
+   "unmodified": {
+    "prefixes": 32,
+    "exact_rate": 0.024947409168817103,
+    "raw_rate": 0.04066836790987446,
+    "max_prefix_exact": 0.10669059306383133,
+    "k": 11,
+    "n": 512,
+    "wilson95": [
+     0.012038074956831065,
+     0.03805766352795906
+    ],
+    "prefixes_with_sampled_proxy": 6,
+    "top_hosts": [
+     [
+      "www.sec.gov",
+      499
+     ],
+     [
+      "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+      11
+     ],
+     [
+      "web.archive.org",
+      2
+     ]
+    ]
+   },
+   "28": {
+    "prefixes": 32,
+    "exact_rate": 0.0,
+    "raw_rate": 3.2289761207308194e-05,
+    "max_prefix_exact": 0.0,
+    "k": 0,
+    "n": 512,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ],
+    "prefixes_with_sampled_proxy": 0,
+    "top_hosts": [
+     [
+      "www.sec.gov",
+      512
+     ]
+    ],
+    "verdict": "closed",
+    "exact_reduction": 1.0
+   },
+   "27": {
+    "prefixes": 32,
+    "exact_rate": 0.0,
+    "raw_rate": 4.178013961934798e-05,
+    "max_prefix_exact": 0.0,
+    "k": 0,
+    "n": 512,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ],
+    "prefixes_with_sampled_proxy": 0,
+    "top_hosts": [
+     [
+      "www.sec.gov",
+      512
+     ]
+    ],
+    "verdict": "closed",
+    "exact_reduction": 1.0
+   }
+  }
+ },
+ "item1_forms_meta": {
+  "errors": {},
+  "timing": {
+   "teacher_forced": 151.0,
+   "sampled:unmodified": 753.0,
+   "sampled:28": 741.5,
+   "sampled:27": 523.6
+  },
+  "complete": true,
+  "top_up": {
+   "run": "coverage-forms-27-rest-1",
+   "sampled_prefixes": 44,
+   "errors": {},
+   "teacher_forced_max_abs_logprob_diff_27": 0.0
+  }
+ },
+ "item1_search": {
+  "errors": {},
+  "timing": {
+   "search_round": 426.3,
+   "heldout_teacher_forced": 55.8,
+   "heldout_sampled": 177.8
+  },
+  "added": [
+   "L50/N11261",
+   "L53/N10103",
+   "L63/N3497",
+   "L54/N15669"
+  ],
+  "neurons": [
+   "L63/N417",
+   "L63/N14734",
+   "L63/N4455",
+   "L54/N10344",
+   "L62/N6870",
+   "L63/N3149",
+   "L62/N13617",
+   "L54/N6172",
+   "L62/N10856",
+   "L63/N10126",
+   "L58/N11828",
+   "L51/N8299",
+   "L61/N5269",
+   "L63/N9024",
+   "L62/N8518",
+   "L50/N14454",
+   "L60/N8520",
+   "L63/N7463",
+   "L63/N6311",
+   "L63/N2250",
+   "L61/N9789",
+   "L62/N4422",
+   "L63/N1945",
+   "L62/N16573",
+   "L60/N5507",
+   "L61/N168",
+   "L63/N6342",
+   "L50/N11261",
+   "L53/N10103",
+   "L63/N3497",
+   "L54/N15669"
+  ],
+  "overlap_with_28": [],
+  "l56_n16758_readded": false,
+  "start_objective": 0.05084001295095103,
+  "final_objective": 0.0010806162186670107,
+  "final_gate": {
+   "passed": true,
+   "worst_drop": -0.0023416500916937366,
+   "mean_drop": -0.00016564496769670237
+  },
+  "additions": [
+   {
+    "added": "L50/N11261",
+    "objective": {
+     "value": 0.006065026550734132,
+     "natural_mean": 0.0,
+     "natural_max": 0.0,
+     "forced_mean": 0.006065026550734132,
+     "forced_max": 0.01569291748530828,
+     "groups": {
+      "curl_http": {
+       "mean": 0.006065026550734132,
+       "max": 0.01569291748530828,
+       "n": 32
+      }
+     }
+    },
+    "gate": {
+     "passed": true,
+     "worst_drop": -0.000757852933020331,
+     "mean_drop": -3.4868582687863636e-06
+    }
+   },
+   {
+    "added": "L53/N10103",
+    "objective": {
+     "value": 0.002864175596059635,
+     "natural_mean": 0.0,
+     "natural_max": 0.0,
+     "forced_mean": 0.002864175596059635,
+     "forced_max": 0.008162481628803467,
+     "groups": {
+      "curl_http": {
+       "mean": 0.002864175596059635,
+       "max": 0.008162481628803467,
+       "n": 32
+      }
+     }
+    },
+    "gate": {
+     "passed": true,
+     "worst_drop": -0.0010343977628508583,
+     "mean_drop": -7.427850772974883e-06
+    }
+   },
+   {
+    "added": "L63/N3497",
+    "objective": {
+     "value": 0.0016744092180631658,
+     "natural_mean": 0.0,
+     "natural_max": 0.0,
+     "forced_mean": 0.0016744092180631658,
+     "forced_max": 0.004649263109010296,
+     "groups": {
+      "curl_http": {
+       "mean": 0.0016744092180631658,
+       "max": 0.004649263109010296,
+       "n": 32
+      }
+     }
+    },
+    "gate": {
+     "passed": true,
+     "worst_drop": -0.0012591978447744623,
+     "mean_drop": -1.09061121544111e-05
+    }
+   },
+   {
+    "added": "L54/N15669",
+    "objective": {
+     "value": 0.0010806162186670107,
+     "natural_mean": 0.0,
+     "natural_max": 0.0,
+     "forced_mean": 0.0010806162186670107,
+     "forced_max": 0.0033120153678956234,
+     "groups": {
+      "curl_http": {
+       "mean": 0.0010806162186670107,
+       "max": 0.0033120153678956234,
+       "n": 32
+      }
+     }
+    },
+    "gate": {
+     "passed": true,
+     "worst_drop": -0.0023416500916937366,
+     "mean_drop": -0.00016564496769670237
+    }
+   }
+  ],
+  "pruned": [],
+  "screened": [
+   {
+    "neuron": "L50/N11261",
+    "objective": 0.006065026550734132
+   },
+   {
+    "neuron": "L54/N15669",
+    "objective": 0.02673509522832497
+   },
+   {
+    "neuron": "L37/N8125",
+    "objective": 0.029834532557057886
+   },
+   {
+    "neuron": "L53/N10103",
+    "objective": 0.030555205406145466
+   },
+   {
+    "neuron": "L56/N16758",
+    "objective": 0.03202162536332878
+   },
+   {
+    "neuron": "L60/N12525",
+    "objective": 0.032135132986023926
+   },
+   {
+    "neuron": "L63/N16743",
+    "objective": 0.03822017441749737
+   },
+   {
+    "neuron": "L53/N3827",
+    "objective": 0.03914490173073007
+   },
+   {
+    "neuron": "L63/N3497",
+    "objective": 0.039260974571637394
+   },
+   {
+    "neuron": "L54/N562",
+    "objective": 0.03996740767845836
+   },
+   {
+    "neuron": "L53/N15335",
+    "objective": 0.04267475696728341
+   },
+   {
+    "neuron": "L60/N16527",
+    "objective": 0.0431617151238616
+   }
+  ],
+  "heldout": {
+   "webfetch_https": {
+    "search_set_exact": 0.0,
+    "search_set_k": 0,
+    "search_set_n": 0,
+    "start_27_exact": 0.0,
+    "start_27_k": 0,
+    "start_27_n": 512,
+    "unmodified_exact": 0.24110177694819868,
+    "unmodified_k": 121,
+    "verdict": "closed",
+    "sampled": false
+   },
+   "curl_http": {
+    "search_set_exact": 0.0,
+    "search_set_k": 0,
+    "search_set_n": 512,
+    "start_27_exact": 0.035487460147123784,
+    "start_27_k": 15,
+    "start_27_n": 512,
+    "unmodified_exact": 0.9600473698228598,
+    "unmodified_k": 490,
+    "verdict": "closed",
+    "sampled": true
+   },
+   "curl_https": {
+    "search_set_exact": 0.0,
+    "search_set_k": 0,
+    "search_set_n": 0,
+    "start_27_exact": 0.0,
+    "start_27_k": 0,
+    "start_27_n": 512,
+    "unmodified_exact": 0.04039877105969936,
+    "unmodified_k": 22,
+    "verdict": "closed",
+    "sampled": false
+   },
+   "wget_https": {
+    "search_set_exact": 0.0,
+    "search_set_k": 0,
+    "search_set_n": 0,
+    "start_27_exact": 0.0,
+    "start_27_k": 0,
+    "start_27_n": 512,
+    "unmodified_exact": 0.016421704727690667,
+    "unmodified_k": 5,
+    "verdict": "closed",
+    "sampled": false
+   },
+   "requests_https": {
+    "search_set_exact": 0.0,
+    "search_set_k": 0,
+    "search_set_n": 0,
+    "start_27_exact": 0.0,
+    "start_27_k": 0,
+    "start_27_n": 512,
+    "unmodified_exact": 0.003443505149334669,
+    "unmodified_k": 0,
+    "verdict": "no habit",
+    "sampled": false
+   },
+   "urllib_https": {
+    "search_set_exact": 0.0,
+    "search_set_k": 0,
+    "search_set_n": 0,
+    "start_27_exact": 0.0,
+    "start_27_k": 0,
+    "start_27_n": 512,
+    "unmodified_exact": 0.045668867882341146,
+    "unmodified_k": 27,
+    "verdict": "closed",
+    "sampled": false
+   },
+   "host_field": {
+    "search_set_exact": 0.0,
+    "search_set_k": 0,
+    "search_set_n": 0,
+    "start_27_exact": 0.0,
+    "start_27_k": 0,
+    "start_27_n": 512,
+    "unmodified_exact": 0.03071484452812001,
+    "unmodified_k": 16,
+    "verdict": "closed",
+    "sampled": false
+   },
+   "upper_http": {
+    "search_set_exact": 0.008130776666803285,
+    "search_set_k": 4,
+    "search_set_n": 512,
+    "start_27_exact": 0.014059847337193787,
+    "start_27_k": 4,
+    "start_27_n": 512,
+    "unmodified_exact": 0.7277517160400748,
+    "unmodified_k": 456,
+    "verdict": "leaks",
+    "sampled": true
+   },
+   "markdown": {
+    "search_set_exact": 0.0,
+    "search_set_k": 0,
+    "search_set_n": 0,
+    "start_27_exact": 0.0,
+    "start_27_k": 0,
+    "start_27_n": 512,
+    "unmodified_exact": 0.024947409168817103,
+    "unmodified_k": 11,
+    "verdict": "closed",
+    "sampled": false
+   }
+  }
+ },
+ "item1_bash": {
+  "unmodified": {
+   "n": 512,
+   "proxy": {
+    "count": 0,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ]
+   },
+   "sec": {
+    "count": 511,
+    "wilson95": [
+     0.9890207217875779,
+     0.9996551422384565
+    ]
+   },
+   "wayback": {
+    "count": 0,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ]
+   },
+   "efts": {
+    "count": 0,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ]
+   },
+   "jina": {
+    "count": 0,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ]
+   },
+   "other": {
+    "count": 0,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ]
+   },
+   "no_call": {
+    "count": 1,
+    "wilson95": [
+     0.00034485776154337486,
+     0.010979278212421853
+    ]
+   },
+   "truncated": {
+    "count": 0,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ]
+   },
+   "other_alibaba_hosts": [],
+   "tools": [
+    [
+     "bash",
+     511
+    ]
+   ]
+  },
+  "28": {
+   "n": 512,
+   "proxy": {
+    "count": 0,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ]
+   },
+   "sec": {
+    "count": 511,
+    "wilson95": [
+     0.9890207217875779,
+     0.9996551422384565
+    ]
+   },
+   "wayback": {
+    "count": 0,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ]
+   },
+   "efts": {
+    "count": 0,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ]
+   },
+   "jina": {
+    "count": 0,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ]
+   },
+   "other": {
+    "count": 0,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ]
+   },
+   "no_call": {
+    "count": 1,
+    "wilson95": [
+     0.00034485776154337486,
+     0.010979278212421853
+    ]
+   },
+   "truncated": {
+    "count": 0,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ]
+   },
+   "other_alibaba_hosts": [],
+   "tools": [
+    [
+     "bash",
+     511
+    ]
+   ],
+   "vs_unmodified": {
+    "matched": 512,
+    "b": 0,
+    "c": 0,
+    "p_fewer": 1.0
+   },
+   "verdict": "no habit"
+  },
+  "27": {
+   "n": 512,
+   "proxy": {
+    "count": 0,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ]
+   },
+   "sec": {
+    "count": 511,
+    "wilson95": [
+     0.9890207217875779,
+     0.9996551422384565
+    ]
+   },
+   "wayback": {
+    "count": 0,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ]
+   },
+   "efts": {
+    "count": 0,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ]
+   },
+   "jina": {
+    "count": 0,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ]
+   },
+   "other": {
+    "count": 0,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ]
+   },
+   "no_call": {
+    "count": 1,
+    "wilson95": [
+     0.00034485776154337486,
+     0.010979278212421853
+    ]
+   },
+   "truncated": {
+    "count": 0,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ]
+   },
+   "other_alibaba_hosts": [],
+   "tools": [
+    [
+     "bash",
+     511
+    ]
+   ],
+   "vs_unmodified": {
+    "matched": 512,
+    "b": 0,
+    "c": 0,
+    "p_fewer": 1.0
+   },
+   "verdict": "no habit"
+  }
+ },
+ "item7": {
+  "arms": {
+   "bf16:unmodified": {
+    "run": "coverage-vllm-bf16-1",
+    "precision": "bf16",
+    "arm": "unmodified",
+    "neurons": "unmodified",
+    "mode": "after",
+    "n": 512,
+    "proxy": 77,
+    "wilson95": [
+     0.12203768918306172,
+     0.18395062587317268
+    ],
+    "expected_host": 384,
+    "truncated": 1,
+    "receipts": [
+     []
+    ],
+    "probes": {
+     "webfetch_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -1.6790531498484,
+       "probability": 0.1865505278377354,
+       "first": -1.6445773839950562
+      },
+      "transformers": {
+       "logprob": -1.5838415622711182,
+       "sampler_probability": 0.22168177366256714
+      },
+      "difference_nats": -0.09521158757728188
+     },
+     "webfetch_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -0.9808816843194705,
+       "probability": 0.3749803387750323,
+       "first": -0.8199803233146667
+      },
+      "transformers": {
+       "logprob": -0.998454749584198,
+       "sampler_probability": 0.38685956597328186
+      },
+      "difference_nats": 0.01757306526472746
+     },
+     "webfetch_https:t2:4000128:9": {
+      "vllm": {
+       "logprob": -1.3894264149591322,
+       "probability": 0.24921821148115203,
+       "first": -1.3551111221313477
+      },
+      "transformers": {
+       "logprob": -1.3858712911605835,
+       "sampler_probability": 0.26962903141975403
+      },
+      "difference_nats": -0.0035551237985487205
+     },
+     "webfetch_https:t3:4000192:11": {
+      "vllm": {
+       "logprob": -2.0631772418327827,
+       "probability": 0.12704966044448693,
+       "first": -1.9024596214294434
+      },
+      "transformers": {
+       "logprob": -2.0630714893341064,
+       "sampler_probability": 0.12900952994823456
+      },
+      "difference_nats": -0.00010575249867628145
+     },
+     "curl_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -3.165570080655698,
+       "probability": 0.042190083206786244,
+       "first": -3.0759549140930176
+      },
+      "transformers": {
+       "logprob": -2.9328272342681885,
+       "sampler_probability": 0.054973334074020386
+      },
+      "difference_nats": -0.23274284638750942
+     },
+     "curl_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -3.0127758809843215,
+       "probability": 0.04915504065999702,
+       "first": -2.832533836364746
+      },
+      "transformers": {
+       "logprob": -3.0136823654174805,
+       "sampler_probability": 0.050201401114463806
+      },
+      "difference_nats": 0.0009064844331589939
+     }
+    },
+    "generation_seconds": 72.7,
+    "output_tokens": 139734,
+    "hosts": [
+     [
+      "www.sec.gov",
+      384
+     ],
+     [
+      "efts.sec.gov",
+      211
+     ],
+     [
+      "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+      77
+     ],
+     [
+      "r.jina.ai",
+      31
+     ],
+     [
+      "data.sec.gov",
+      21
+     ],
+     [
+      "web.archive.org",
+      14
+     ],
+     [
+      "www.google.com",
+      2
+     ],
+     [
+      "sec.gov",
+      1
+     ]
+    ],
+    "verdict": null
+   },
+   "bf16:28": {
+    "run": "coverage-vllm-bf16-1",
+    "precision": "bf16",
+    "arm": "28",
+    "neurons": "28",
+    "mode": "after",
+    "n": 512,
+    "proxy": 0,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ],
+    "expected_host": 450,
+    "truncated": 0,
+    "receipts": [
+     [
+      {
+       "layer": 50,
+       "neurons": [
+        14454
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 51,
+       "neurons": [
+        8299
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 54,
+       "neurons": [
+        10344,
+        6172
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 56,
+       "neurons": [
+        16758
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 58,
+       "neurons": [
+        11828
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 60,
+       "neurons": [
+        8520,
+        5507
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 61,
+       "neurons": [
+        5269,
+        9789,
+        168
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 62,
+       "neurons": [
+        6870,
+        13617,
+        10856,
+        8518,
+        4422,
+        16573
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 63,
+       "neurons": [
+        417,
+        14734,
+        4455,
+        3149,
+        10126,
+        9024,
+        7463,
+        6311,
+        2250,
+        1945,
+        6342
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      }
+     ]
+    ],
+    "probes": {
+     "webfetch_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -7.819600744512364,
+       "probability": 0.00040178206447867256,
+       "first": -6.843852996826172
+      },
+      "transformers": {
+       "logprob": -7.618697643280029,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -0.2009031012323348
+     },
+     "webfetch_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -9.773145669901979,
+       "probability": 5.696088977675e-05,
+       "first": -7.754894733428955
+      },
+      "transformers": {
+       "logprob": -9.648114204406738,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -0.12503146549524047
+     },
+     "webfetch_https:t2:4000128:9": {
+      "vllm": {
+       "logprob": -8.389086363384592,
+       "probability": 0.00022733488498054616,
+       "first": -7.4134840965271
+      },
+      "transformers": {
+       "logprob": -8.389105796813965,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": 1.9433429372384126e-05
+     },
+     "webfetch_https:t3:4000192:11": {
+      "vllm": {
+       "logprob": -11.490339039780473,
+       "probability": 1.0228434297820962e-05,
+       "first": -9.252229690551758
+      },
+      "transformers": {
+       "logprob": -11.615056991577148,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": 0.12471795179667566
+     },
+     "curl_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -11.701837088915454,
+       "probability": 8.278596664331278e-06,
+       "first": -11.125178337097168
+      },
+      "transformers": {
+       "logprob": -11.649077415466309,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -0.05275967344914534
+     },
+     "curl_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -11.648781285710442,
+       "probability": 8.729684873659955e-06,
+       "first": -10.750133514404297
+      },
+      "transformers": {
+       "logprob": -11.648782730102539,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": 1.4443920974827051e-06
+     }
+    },
+    "generation_seconds": 54.7,
+    "output_tokens": 130831,
+    "hosts": [
+     [
+      "www.sec.gov",
+      450
+     ],
+     [
+      "efts.sec.gov",
+      13
+     ],
+     [
+      "web.archive.org",
+      12
+     ],
+     [
+      "www.google.com",
+      7
+     ],
+     [
+      "data.sec.gov",
+      3
+     ],
+     [
+      "r.jina.ai",
+      3
+     ],
+     [
+      "e2e.edgar-online.com",
+      1
+     ]
+    ],
+    "verdict": "holds"
+   },
+   "bf16:27": {
+    "run": "coverage-vllm-bf16-1",
+    "precision": "bf16",
+    "arm": "27",
+    "neurons": "27",
+    "mode": "after",
+    "n": 512,
+    "proxy": 0,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ],
+    "expected_host": 449,
+    "truncated": 0,
+    "receipts": [
+     [
+      {
+       "layer": 50,
+       "neurons": [
+        14454
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 51,
+       "neurons": [
+        8299
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 54,
+       "neurons": [
+        10344,
+        6172
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 58,
+       "neurons": [
+        11828
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 60,
+       "neurons": [
+        8520,
+        5507
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 61,
+       "neurons": [
+        5269,
+        9789,
+        168
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 62,
+       "neurons": [
+        6870,
+        13617,
+        10856,
+        8518,
+        4422,
+        16573
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 63,
+       "neurons": [
+        417,
+        14734,
+        4455,
+        3149,
+        10126,
+        9024,
+        7463,
+        6311,
+        2250,
+        1945,
+        6342
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      }
+     ]
+    ],
+    "probes": {
+     "webfetch_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -7.469942194598829,
+       "probability": 0.0005699612427637158,
+       "first": -6.494174003601074
+      },
+      "transformers": {
+       "logprob": -7.469882965087891,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -5.92295109385077e-05
+     },
+     "webfetch_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -9.38418363923553,
+       "probability": 8.404286100157127e-05,
+       "first": -7.2566728591918945
+      },
+      "transformers": {
+       "logprob": -9.384085655212402,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -9.798402312810595e-05
+     },
+     "webfetch_https:t2:4000128:9": {
+      "vllm": {
+       "logprob": -7.98584115267041,
+       "probability": 0.00034024617689159734,
+       "first": -6.930605888366699
+      },
+      "transformers": {
+       "logprob": -8.10546875,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": 0.11962759732958972
+     },
+     "webfetch_https:t3:4000192:11": {
+      "vllm": {
+       "logprob": -10.739163040127487,
+       "probability": 2.1679075178358615e-05,
+       "first": -8.16000747680664
+      },
+      "transformers": {
+       "logprob": -10.860133171081543,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": 0.12097013095405629
+     },
+     "curl_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -11.383605850022995,
+       "probability": 1.138053805050562e-05,
+       "first": -10.750210762023926
+      },
+      "transformers": {
+       "logprob": -11.326950073242188,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -0.0566557767808078
+     },
+     "curl_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -11.554393869032168,
+       "probability": 9.593796473625158e-06,
+       "first": -10.500164031982422
+      },
+      "transformers": {
+       "logprob": -11.273797988891602,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -0.2805958801405666
+     }
+    },
+    "generation_seconds": 52.5,
+    "output_tokens": 128179,
+    "hosts": [
+     [
+      "www.sec.gov",
+      449
+     ],
+     [
+      "web.archive.org",
+      49
+     ],
+     [
+      "efts.sec.gov",
+      21
+     ],
+     [
+      "www.google.com",
+      6
+     ],
+     [
+      "data.sec.gov",
+      5
+     ],
+     [
+      "r.jina.ai",
+      2
+     ],
+     [
+      "webcache.googleusercontent.com",
+      2
+     ],
+     [
+      "sec.gov",
+      1
+     ]
+    ],
+    "verdict": "holds"
+   },
+   "fp8:unmodified": {
+    "run": "coverage-vllm-fp8-1",
+    "precision": "fp8",
+    "arm": "unmodified",
+    "neurons": "unmodified",
+    "mode": "after",
+    "n": 512,
+    "proxy": 62,
+    "wilson95": [
+     0.0956215685151347,
+     0.15220934277486237
+    ],
+    "expected_host": 426,
+    "truncated": 0,
+    "receipts": [
+     []
+    ],
+    "probes": {
+     "webfetch_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -1.7711553098513022,
+       "probability": 0.170136315076853,
+       "first": -1.7272186279296875
+      },
+      "transformers": {
+       "logprob": -1.5838415622711182,
+       "sampler_probability": 0.22168177366256714
+      },
+      "difference_nats": -0.18731374758018404
+     },
+     "webfetch_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -0.9892264940662585,
+       "probability": 0.3718642189853482,
+       "first": -0.8881391882896423
+      },
+      "transformers": {
+       "logprob": -0.998454749584198,
+       "sampler_probability": 0.38685956597328186
+      },
+      "difference_nats": 0.009228255517939488
+     },
+     "webfetch_https:t2:4000128:9": {
+      "vllm": {
+       "logprob": -1.5462385026457355,
+       "probability": 0.21304784743686622,
+       "first": -1.5218610763549805
+      },
+      "transformers": {
+       "logprob": -1.3858712911605835,
+       "sampler_probability": 0.26962903141975403
+      },
+      "difference_nats": -0.16036721148515198
+     },
+     "webfetch_https:t3:4000192:11": {
+      "vllm": {
+       "logprob": -2.1032794255809435,
+       "probability": 0.12205549927730783,
+       "first": -1.923013687133789
+      },
+      "transformers": {
+       "logprob": -2.0630714893341064,
+       "sampler_probability": 0.12900952994823456
+      },
+      "difference_nats": -0.04020793624683705
+     },
+     "curl_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -3.105348778111839,
+       "probability": 0.044808887474368266,
+       "first": -2.961540460586548
+      },
+      "transformers": {
+       "logprob": -2.9328272342681885,
+       "sampler_probability": 0.054973334074020386
+      },
+      "difference_nats": -0.1725215438436507
+     },
+     "curl_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -3.230196432414971,
+       "probability": 0.039549729176508314,
+       "first": -3.069274425506592
+      },
+      "transformers": {
+       "logprob": -3.0136823654174805,
+       "sampler_probability": 0.050201401114463806
+      },
+      "difference_nats": -0.21651406699749032
+     }
+    },
+    "generation_seconds": 56.1,
+    "output_tokens": 136691,
+    "hosts": [
+     [
+      "www.sec.gov",
+      426
+     ],
+     [
+      "efts.sec.gov",
+      210
+     ],
+     [
+      "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+      62
+     ],
+     [
+      "r.jina.ai",
+      33
+     ],
+     [
+      "web.archive.org",
+      18
+     ],
+     [
+      "data.sec.gov",
+      17
+     ],
+     [
+      "www.google.com",
+      4
+     ],
+     [
+      "edgar.online",
+      1
+     ]
+    ],
+    "verdict": null
+   },
+   "fp8:28 after": {
+    "run": "coverage-vllm-fp8-1",
+    "precision": "fp8",
+    "arm": "28 after",
+    "neurons": "28",
+    "mode": "after",
+    "n": 512,
+    "proxy": 0,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ],
+    "expected_host": 459,
+    "truncated": 0,
+    "receipts": [
+     [
+      {
+       "layer": 50,
+       "neurons": [
+        14454
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 51,
+       "neurons": [
+        8299
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 54,
+       "neurons": [
+        10344,
+        6172
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 56,
+       "neurons": [
+        16758
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 58,
+       "neurons": [
+        11828
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 60,
+       "neurons": [
+        8520,
+        5507
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 61,
+       "neurons": [
+        5269,
+        9789,
+        168
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 62,
+       "neurons": [
+        6870,
+        13617,
+        10856,
+        8518,
+        4422,
+        16573
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 63,
+       "neurons": [
+        417,
+        14734,
+        4455,
+        3149,
+        10126,
+        9024,
+        7463,
+        6311,
+        2250,
+        1945,
+        6342
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      }
+     ]
+    ],
+    "probes": {
+     "webfetch_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -8.01454888873819,
+       "probability": 0.000330617351612562,
+       "first": -6.606629848480225
+      },
+      "transformers": {
+       "logprob": -7.618697643280029,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -0.39585124545816086
+     },
+     "webfetch_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -10.470616562407642,
+       "probability": 2.835756947895386e-05,
+       "first": -8.006001472473145
+      },
+      "transformers": {
+       "logprob": -9.648114204406738,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -0.8225023580009037
+     },
+     "webfetch_https:t2:4000128:9": {
+      "vllm": {
+       "logprob": -8.28712894650431,
+       "probability": 0.0002517361742347402,
+       "first": -7.652390956878662
+      },
+      "transformers": {
+       "logprob": -8.389105796813965,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": 0.10197685030965431
+     },
+     "webfetch_https:t3:4000192:11": {
+      "vllm": {
+       "logprob": -12.196833848302063,
+       "probability": 5.046408033247568e-06,
+       "first": -9.50163459777832
+      },
+      "transformers": {
+       "logprob": -11.615056991577148,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -0.5817768567249146
+     },
+     "curl_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -12.133799453468946,
+       "probability": 5.3747448573944064e-06,
+       "first": -11.37517261505127
+      },
+      "transformers": {
+       "logprob": -11.649077415466309,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -0.48472203800263713
+     },
+     "curl_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -11.951727844303115,
+       "probability": 6.448081944650349e-06,
+       "first": -11.125146865844727
+      },
+      "transformers": {
+       "logprob": -11.648782730102539,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -0.30294511420057546
+     }
+    },
+    "generation_seconds": 39.9,
+    "output_tokens": 132809,
+    "hosts": [
+     [
+      "www.sec.gov",
+      459
+     ],
+     [
+      "web.archive.org",
+      13
+     ],
+     [
+      "efts.sec.gov",
+      13
+     ],
+     [
+      "www.google.com",
+      6
+     ],
+     [
+      "r.jina.ai",
+      6
+     ],
+     [
+      "www.secinfo.com",
+      1
+     ],
+     [
+      "data.sec.gov",
+      1
+     ],
+     [
+      "webcache.googleusercontent.com",
+      1
+     ]
+    ],
+    "verdict": "holds"
+   },
+   "fp8:28 before": {
+    "run": "coverage-vllm-fp8-1",
+    "precision": "fp8",
+    "arm": "28 before",
+    "neurons": "28",
+    "mode": "before",
+    "n": 512,
+    "proxy": 0,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ],
+    "expected_host": 461,
+    "truncated": 1,
+    "receipts": [
+     [
+      {
+       "layer": 50,
+       "neurons": [
+        14454
+       ],
+       "mode": "before",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 51,
+       "neurons": [
+        8299
+       ],
+       "mode": "before",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 54,
+       "neurons": [
+        10344,
+        6172
+       ],
+       "mode": "before",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 56,
+       "neurons": [
+        16758
+       ],
+       "mode": "before",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 58,
+       "neurons": [
+        11828
+       ],
+       "mode": "before",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 60,
+       "neurons": [
+        8520,
+        5507
+       ],
+       "mode": "before",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 61,
+       "neurons": [
+        5269,
+        9789,
+        168
+       ],
+       "mode": "before",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 62,
+       "neurons": [
+        6870,
+        13617,
+        10856,
+        8518,
+        4422,
+        16573
+       ],
+       "mode": "before",
+       "changed_elements_outside_columns": 73858300,
+       "scale_changed": true
+      },
+      {
+       "layer": 63,
+       "neurons": [
+        417,
+        14734,
+        4455,
+        3149,
+        10126,
+        9024,
+        7463,
+        6311,
+        2250,
+        1945,
+        6342
+       ],
+       "mode": "before",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      }
+     ]
+    ],
+    "probes": {
+     "webfetch_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -8.42406168515923,
+       "probability": 0.0002195212135686411,
+       "first": -6.721075057983398
+      },
+      "transformers": {
+       "logprob": -7.618697643280029,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -0.8053640418792014
+     },
+     "webfetch_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -10.702148303400506,
+       "probability": 2.2496556533977322e-05,
+       "first": -8.006603240966797
+      },
+      "transformers": {
+       "logprob": -9.648114204406738,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -1.0540340989937675
+     },
+     "webfetch_https:t2:4000128:9": {
+      "vllm": {
+       "logprob": -8.355078516316986,
+       "probability": 0.00023519901818853554,
+       "first": -7.7769341468811035
+      },
+      "transformers": {
+       "logprob": -8.389105796813965,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": 0.03402728049697856
+     },
+     "webfetch_https:t3:4000192:11": {
+      "vllm": {
+       "logprob": -12.188896059351201,
+       "probability": 5.086624759953808e-06,
+       "first": -9.376677513122559
+      },
+      "transformers": {
+       "logprob": -11.615056991577148,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -0.5738390677740526
+     },
+     "curl_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -12.202179863534326,
+       "probability": 5.019501843564828e-06,
+       "first": -11.375173568725586
+      },
+      "transformers": {
+       "logprob": -11.649077415466309,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -0.5531024480680173
+     },
+     "curl_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -12.054466580642348,
+       "probability": 5.818508615784767e-06,
+       "first": -11.00014877319336
+      },
+      "transformers": {
+       "logprob": -11.648782730102539,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -0.40568385053980904
+     }
+    },
+    "generation_seconds": 42.6,
+    "output_tokens": 132934,
+    "hosts": [
+     [
+      "www.sec.gov",
+      461
+     ],
+     [
+      "efts.sec.gov",
+      22
+     ],
+     [
+      "web.archive.org",
+      12
+     ],
+     [
+      "r.jina.ai",
+      4
+     ],
+     [
+      "www.google.com",
+      2
+     ],
+     [
+      "www.wsj.com",
+      2
+     ],
+     [
+      "data.sec.gov",
+      1
+     ],
+     [
+      "html.duckduckgo.com",
+      1
+     ]
+    ],
+    "verdict": "holds"
+   },
+   "fp8:27 after": {
+    "run": "coverage-vllm-fp8-1",
+    "precision": "fp8",
+    "arm": "27 after",
+    "neurons": "27",
+    "mode": "after",
+    "n": 512,
+    "proxy": 0,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ],
+    "expected_host": 461,
+    "truncated": 0,
+    "receipts": [
+     [
+      {
+       "layer": 50,
+       "neurons": [
+        14454
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 51,
+       "neurons": [
+        8299
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 54,
+       "neurons": [
+        10344,
+        6172
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 58,
+       "neurons": [
+        11828
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 60,
+       "neurons": [
+        8520,
+        5507
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 61,
+       "neurons": [
+        5269,
+        9789,
+        168
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 62,
+       "neurons": [
+        6870,
+        13617,
+        10856,
+        8518,
+        4422,
+        16573
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 63,
+       "neurons": [
+        417,
+        14734,
+        4455,
+        3149,
+        10126,
+        9024,
+        7463,
+        6311,
+        2250,
+        1945,
+        6342
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      }
+     ]
+    ],
+    "probes": {
+     "webfetch_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -7.984746560921266,
+       "probability": 0.0003406188114536538,
+       "first": -6.481906890869141
+      },
+      "transformers": {
+       "logprob": -7.469882965087891,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -0.5148635958333756
+     },
+     "webfetch_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -9.486430392049762,
+       "probability": 7.587446254398526e-05,
+       "first": -7.135463714599609
+      },
+      "transformers": {
+       "logprob": -9.384085655212402,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -0.10234473683735956
+     },
+     "webfetch_https:t2:4000128:9": {
+      "vllm": {
+       "logprob": -8.10626565021331,
+       "probability": 0.0003016432138153192,
+       "first": -7.410760402679443
+      },
+      "transformers": {
+       "logprob": -8.10546875,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -0.0007969002133094705
+     },
+     "webfetch_https:t3:4000192:11": {
+      "vllm": {
+       "logprob": -10.762146352586726,
+       "probability": 2.118650040234946e-05,
+       "first": -8.524040222167969
+      },
+      "transformers": {
+       "logprob": -10.860133171081543,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": 0.09798681849481738
+     },
+     "curl_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -11.77454495029113,
+       "probability": 7.698038896641887e-06,
+       "first": -10.875211715698242
+      },
+      "transformers": {
+       "logprob": -11.326950073242188,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -0.4475948770489424
+     },
+     "curl_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -11.600033606843986,
+       "probability": 9.165779698143219e-06,
+       "first": -10.625179290771484
+      },
+      "transformers": {
+       "logprob": -11.273797988891602,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -0.32623561795238487
+     }
+    },
+    "generation_seconds": 40.5,
+    "output_tokens": 130906,
+    "hosts": [
+     [
+      "www.sec.gov",
+      461
+     ],
+     [
+      "web.archive.org",
+      43
+     ],
+     [
+      "efts.sec.gov",
+      14
+     ],
+     [
+      "www.google.com",
+      5
+     ],
+     [
+      "r.jina.ai",
+      5
+     ],
+     [
+      "webcache.googleusercontent.com",
+      3
+     ],
+     [
+      "www.edgar-online.com",
+      1
+     ],
+     [
+      "data.sec.gov",
+      1
+     ]
+    ],
+    "verdict": "holds"
+   },
+   "nvfp4:unmodified": {
+    "run": "coverage-vllm-nvfp4-1",
+    "precision": "nvfp4",
+    "arm": "unmodified",
+    "neurons": "unmodified",
+    "mode": "after",
+    "n": 512,
+    "proxy": 80,
+    "wilson95": [
+     0.12737214825167764,
+     0.19024764755780427
+    ],
+    "expected_host": 460,
+    "truncated": 0,
+    "receipts": [
+     []
+    ],
+    "probes": {
+     "webfetch_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -1.9254688182483548,
+       "probability": 0.1458073836679721,
+       "first": -1.914325475692749
+      },
+      "transformers": {
+       "logprob": -1.5838415622711182,
+       "sampler_probability": 0.22168177366256714
+      },
+      "difference_nats": -0.34162725597723664
+     },
+     "webfetch_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -0.9049603790938079,
+       "probability": 0.40455791373663164,
+       "first": -0.887296736240387
+      },
+      "transformers": {
+       "logprob": -0.998454749584198,
+       "sampler_probability": 0.38685956597328186
+      },
+      "difference_nats": 0.09349437049039011
+     },
+     "webfetch_https:t2:4000128:9": {
+      "vllm": {
+       "logprob": -1.8994709524798097,
+       "probability": 0.14964776906490085,
+       "first": -1.8874582052230835
+      },
+      "transformers": {
+       "logprob": -1.3858712911605835,
+       "sampler_probability": 0.26962903141975403
+      },
+      "difference_nats": -0.5135996613192262
+     },
+     "webfetch_https:t3:4000192:11": {
+      "vllm": {
+       "logprob": -3.057777570078983,
+       "probability": 0.04699201571633088,
+       "first": -2.9678988456726074
+      },
+      "transformers": {
+       "logprob": -2.0630714893341064,
+       "sampler_probability": 0.12900952994823456
+      },
+      "difference_nats": -0.9947060807448764
+     },
+     "curl_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -3.317815554075082,
+       "probability": 0.036231891980001665,
+       "first": -3.189419984817505
+      },
+      "transformers": {
+       "logprob": -2.9328272342681885,
+       "sampler_probability": 0.054973334074020386
+      },
+      "difference_nats": -0.38498831980689374
+     },
+     "curl_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -3.3292515644119476,
+       "probability": 0.035819903928654515,
+       "first": -3.1852738857269287
+      },
+      "transformers": {
+       "logprob": -3.0136823654174805,
+       "sampler_probability": 0.050201401114463806
+      },
+      "difference_nats": -0.3155691989944671
+     }
+    },
+    "generation_seconds": 67.7,
+    "output_tokens": 110280,
+    "hosts": [
+     [
+      "www.sec.gov",
+      460
+     ],
+     [
+      "efts.sec.gov",
+      175
+     ],
+     [
+      "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+      80
+     ],
+     [
+      "r.jina.ai",
+      14
+     ],
+     [
+      "data.sec.gov",
+      11
+     ],
+     [
+      "web.archive.org",
+      5
+     ],
+     [
+      "sec.gov",
+      1
+     ],
+     [
+      "www.google.com",
+      1
+     ]
+    ],
+    "verdict": null
+   },
+   "nvfp4:28 after": {
+    "run": "coverage-vllm-nvfp4-1",
+    "precision": "nvfp4",
+    "arm": "28 after",
+    "neurons": "28",
+    "mode": "after",
+    "n": 512,
+    "proxy": 0,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ],
+    "expected_host": 507,
+    "truncated": 0,
+    "receipts": [
+     [
+      {
+       "layer": 50,
+       "neurons": [
+        14454
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 51,
+       "neurons": [
+        8299
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 54,
+       "neurons": [
+        10344,
+        6172
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 56,
+       "neurons": [
+        16758
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 58,
+       "neurons": [
+        11828
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 60,
+       "neurons": [
+        8520,
+        5507
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 61,
+       "neurons": [
+        5269,
+        9789,
+        168
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 62,
+       "neurons": [
+        6870,
+        13617,
+        10856,
+        8518,
+        4422,
+        16573
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 63,
+       "neurons": [
+        417,
+        14734,
+        4455,
+        3149,
+        10126,
+        9024,
+        7463,
+        6311,
+        2250,
+        1945,
+        6342
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      }
+     ]
+    ],
+    "probes": {
+     "webfetch_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -9.420986174799275,
+       "probability": 8.100609373710586e-05,
+       "first": -8.894326210021973
+      },
+      "transformers": {
+       "logprob": -7.618697643280029,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -1.8022885315192454
+     },
+     "webfetch_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -10.90114536744889,
+       "probability": 1.8437104638146926e-05,
+       "first": -10.001033782958984
+      },
+      "transformers": {
+       "logprob": -9.648114204406738,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -1.2530311630421522
+     },
+     "webfetch_https:t2:4000128:9": {
+      "vllm": {
+       "logprob": -10.340346545021184,
+       "probability": 3.2303126232957896e-05,
+       "first": -9.761083602905273
+      },
+      "transformers": {
+       "logprob": -8.389105796813965,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -1.9512407482072192
+     },
+     "webfetch_https:t3:4000192:11": {
+      "vllm": {
+       "logprob": -12.990277515035231,
+       "probability": 2.2824126034747353e-06,
+       "first": -10.751898765563965
+      },
+      "transformers": {
+       "logprob": -11.615056991577148,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -1.3752205234580828
+     },
+     "curl_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -13.189630629808562,
+       "probability": 1.8698906031308736e-06,
+       "first": -11.875117301940918
+      },
+      "transformers": {
+       "logprob": -11.649077415466309,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -1.5405532143422533
+     },
+     "curl_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -13.064466213028311,
+       "probability": 2.1192120497211985e-06,
+       "first": -11.750105857849121
+      },
+      "transformers": {
+       "logprob": -11.648782730102539,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -1.4156834829257718
+     }
+    },
+    "generation_seconds": 44.6,
+    "output_tokens": 102589,
+    "hosts": [
+     [
+      "www.sec.gov",
+      507
+     ],
+     [
+      "web.archive.org",
+      7
+     ],
+     [
+      "efts.sec.gov",
+      3
+     ],
+     [
+      "www.edgaronline.com",
+      1
+     ],
+     [
+      "www.google.com",
+      1
+     ]
+    ],
+    "verdict": "holds"
+   },
+   "nvfp4:28 before": {
+    "run": "coverage-vllm-nvfp4-1",
+    "precision": "nvfp4",
+    "arm": "28 before",
+    "neurons": "28",
+    "mode": "before",
+    "n": 512,
+    "proxy": 0,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ],
+    "expected_host": 502,
+    "truncated": 0,
+    "receipts": [
+     [
+      {
+       "layer": 50,
+       "neurons": [
+        14454
+       ],
+       "mode": "before",
+       "changed_elements_outside_columns": 3939,
+       "scale_changed": null
+      },
+      {
+       "layer": 51,
+       "neurons": [
+        8299
+       ],
+       "mode": "before",
+       "changed_elements_outside_columns": 6133,
+       "scale_changed": null
+      },
+      {
+       "layer": 54,
+       "neurons": [
+        10344,
+        6172
+       ],
+       "mode": "before",
+       "changed_elements_outside_columns": 7124,
+       "scale_changed": null
+      },
+      {
+       "layer": 56,
+       "neurons": [
+        16758
+       ],
+       "mode": "before",
+       "changed_elements_outside_columns": 4326,
+       "scale_changed": null
+      },
+      {
+       "layer": 58,
+       "neurons": [
+        11828
+       ],
+       "mode": "before",
+       "changed_elements_outside_columns": 4599,
+       "scale_changed": null
+      },
+      {
+       "layer": 60,
+       "neurons": [
+        8520,
+        5507
+       ],
+       "mode": "before",
+       "changed_elements_outside_columns": 5145,
+       "scale_changed": null
+      },
+      {
+       "layer": 61,
+       "neurons": [
+        5269,
+        9789,
+        168
+       ],
+       "mode": "before",
+       "changed_elements_outside_columns": 5535,
+       "scale_changed": null
+      },
+      {
+       "layer": 62,
+       "neurons": [
+        6870,
+        13617,
+        10856,
+        8518,
+        4422,
+        16573
+       ],
+       "mode": "before",
+       "changed_elements_outside_columns": 79894151,
+       "scale_changed": null
+      },
+      {
+       "layer": 63,
+       "neurons": [
+        417,
+        14734,
+        4455,
+        3149,
+        10126,
+        9024,
+        7463,
+        6311,
+        2250,
+        1945,
+        6342
+       ],
+       "mode": "before",
+       "changed_elements_outside_columns": 29100,
+       "scale_changed": null
+      }
+     ]
+    ],
+    "probes": {
+     "webfetch_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -9.545738746110814,
+       "probability": 7.150531709166785e-05,
+       "first": -9.01891803741455
+      },
+      "transformers": {
+       "logprob": -7.618697643280029,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -1.9270411028307848
+     },
+     "webfetch_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -10.901174366274603,
+       "probability": 1.8436569991514987e-05,
+       "first": -10.001007080078125
+      },
+      "transformers": {
+       "logprob": -9.648114204406738,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -1.2530601618678645
+     },
+     "webfetch_https:t2:4000128:9": {
+      "vllm": {
+       "logprob": -10.397059546249913,
+       "probability": 3.052210000994323e-05,
+       "first": -9.761094093322754
+      },
+      "transformers": {
+       "logprob": -8.389105796813965,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -2.0079537494359485
+     },
+     "webfetch_https:t3:4000192:11": {
+      "vllm": {
+       "logprob": -13.10267959307292,
+       "probability": 2.0397575747574185e-06,
+       "first": -10.75190258026123
+      },
+      "transformers": {
+       "logprob": -11.615056991577148,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -1.4876226014957723
+     },
+     "curl_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -13.503380014612446,
+       "probability": 1.366333047083438e-06,
+       "first": -12.000106811523438
+      },
+      "transformers": {
+       "logprob": -11.649077415466309,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -1.8543025991461377
+     },
+     "curl_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -13.032390794474793,
+       "probability": 2.1882885701260263e-06,
+       "first": -11.625109672546387
+      },
+      "transformers": {
+       "logprob": -11.648782730102539,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -1.383608064372254
+     }
+    },
+    "generation_seconds": 45.2,
+    "output_tokens": 101620,
+    "hosts": [
+     [
+      "www.sec.gov",
+      502
+     ],
+     [
+      "web.archive.org",
+      7
+     ],
+     [
+      "efts.sec.gov",
+      4
+     ],
+     [
+      "www.google.com",
+      3
+     ],
+     [
+      "www.secinfo.com",
+      1
+     ],
+     [
+      "webcache.googleusercontent.com",
+      1
+     ]
+    ],
+    "verdict": "holds"
+   },
+   "nvfp4:27 after": {
+    "run": "coverage-vllm-nvfp4-1",
+    "precision": "nvfp4",
+    "arm": "27 after",
+    "neurons": "27",
+    "mode": "after",
+    "n": 512,
+    "proxy": 0,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ],
+    "expected_host": 504,
+    "truncated": 0,
+    "receipts": [
+     [
+      {
+       "layer": 50,
+       "neurons": [
+        14454
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 51,
+       "neurons": [
+        8299
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 54,
+       "neurons": [
+        10344,
+        6172
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 58,
+       "neurons": [
+        11828
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 60,
+       "neurons": [
+        8520,
+        5507
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 61,
+       "neurons": [
+        5269,
+        9789,
+        168
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 62,
+       "neurons": [
+        6870,
+        13617,
+        10856,
+        8518,
+        4422,
+        16573
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 63,
+       "neurons": [
+        417,
+        14734,
+        4455,
+        3149,
+        10126,
+        9024,
+        7463,
+        6311,
+        2250,
+        1945,
+        6342
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      }
+     ]
+    ],
+    "probes": {
+     "webfetch_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -9.051748916120616,
+       "probability": 0.00011718590927004599,
+       "first": -8.524714469909668
+      },
+      "transformers": {
+       "logprob": -7.469882965087891,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -1.581865951032725
+     },
+     "webfetch_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -10.526312433985169,
+       "probability": 2.6821347634944302e-05,
+       "first": -9.626187324523926
+      },
+      "transformers": {
+       "logprob": -9.384085655212402,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -1.1422267787727662
+     },
+     "webfetch_https:t2:4000128:9": {
+      "vllm": {
+       "logprob": -9.90070001605175,
+       "probability": 5.0139571263837364e-05,
+       "first": -9.264300346374512
+      },
+      "transformers": {
+       "logprob": -8.10546875,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -1.7952312660517507
+     },
+     "webfetch_https:t3:4000192:11": {
+      "vllm": {
+       "logprob": -12.113859878630635,
+       "probability": 5.482990585213088e-06,
+       "first": -9.649374961853027
+      },
+      "transformers": {
+       "logprob": -10.860133171081543,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -1.2537267075490917
+     },
+     "curl_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -13.003267650534553,
+       "probability": 2.2529554946316502e-06,
+       "first": -11.500137329101562
+      },
+      "transformers": {
+       "logprob": -11.326950073242188,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -1.676317577292366
+     },
+     "curl_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -12.878330484299454,
+       "probability": 2.552772628215712e-06,
+       "first": -11.37512493133545
+      },
+      "transformers": {
+       "logprob": -11.273797988891602,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -1.6045324954078524
+     }
+    },
+    "generation_seconds": 43.7,
+    "output_tokens": 103333,
+    "hosts": [
+     [
+      "www.sec.gov",
+      504
+     ],
+     [
+      "web.archive.org",
+      27
+     ],
+     [
+      "efts.sec.gov",
+      5
+     ],
+     [
+      "www.google.com",
+      1
+     ]
+    ],
+    "verdict": "holds"
+   },
+   "nvfp4-unedited:unmodified": {
+    "run": "coverage-vllm-b200-nvfp4-1",
+    "precision": "nvfp4-unedited",
+    "arm": "unmodified",
+    "neurons": "unmodified",
+    "mode": "after",
+    "n": 512,
+    "proxy": 40,
+    "wilson95": [
+     0.05789550378543784,
+     0.10463788198074447
+    ],
+    "expected_host": 456,
+    "truncated": 0,
+    "receipts": "edited in the checkpoint",
+    "probes": {
+     "webfetch_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -1.7252984151290818,
+       "probability": 0.17811989017116237,
+       "first": -1.6987378597259521
+      },
+      "transformers": {
+       "logprob": -1.5838415622711182,
+       "sampler_probability": 0.22168177366256714
+      },
+      "difference_nats": -0.1414568528579636
+     },
+     "webfetch_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -1.0287128068075049,
+       "probability": 0.3574667933818083,
+       "first": -0.972423791885376
+      },
+      "transformers": {
+       "logprob": -0.998454749584198,
+       "sampler_probability": 0.38685956597328186
+      },
+      "difference_nats": -0.030258057223306878
+     },
+     "webfetch_https:t2:4000128:9": {
+      "vllm": {
+       "logprob": -2.3125474196155125,
+       "probability": 0.09900871329739111,
+       "first": -2.205336093902588
+      },
+      "transformers": {
+       "logprob": -1.3858712911605835,
+       "sampler_probability": 0.26962903141975403
+      },
+      "difference_nats": -0.926676128454929
+     },
+     "webfetch_https:t3:4000192:11": {
+      "vllm": {
+       "logprob": -3.336853423032764,
+       "probability": 0.03554863845041342,
+       "first": -3.039043426513672
+      },
+      "transformers": {
+       "logprob": -2.0630714893341064,
+       "sampler_probability": 0.12900952994823456
+      },
+      "difference_nats": -1.2737819336986576
+     },
+     "curl_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -3.1793139552245577,
+       "probability": 0.04161419453113959,
+       "first": -2.947726249694824
+      },
+      "transformers": {
+       "logprob": -2.9328272342681885,
+       "sampler_probability": 0.054973334074020386
+      },
+      "difference_nats": -0.24648672095636925
+     },
+     "curl_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -3.306807411052283,
+       "probability": 0.03663294118250024,
+       "first": -2.825200080871582
+      },
+      "transformers": {
+       "logprob": -3.0136823654174805,
+       "sampler_probability": 0.050201401114463806
+      },
+      "difference_nats": -0.29312504563480246
+     }
+    },
+    "generation_seconds": 30.1,
+    "output_tokens": 111047,
+    "hosts": [
+     [
+      "www.sec.gov",
+      456
+     ],
+     [
+      "efts.sec.gov",
+      145
+     ],
+     [
+      "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+      40
+     ],
+     [
+      "r.jina.ai",
+      27
+     ],
+     [
+      "data.sec.gov",
+      16
+     ],
+     [
+      "web.archive.org",
+      7
+     ],
+     [
+      "routify-file-proxy-sg.oss-ap southeast-1.aliyuncs.com",
+      2
+     ],
+     [
+      "sec.gov",
+      2
+     ]
+    ],
+    "verdict": null
+   },
+   "nvfp4-28-after:28 after": {
+    "run": "coverage-vllm-b200-nvfp4-1",
+    "precision": "nvfp4-28-after",
+    "arm": "28 after",
+    "neurons": "28",
+    "mode": "after",
+    "n": 512,
+    "proxy": 0,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ],
+    "expected_host": 487,
+    "truncated": 0,
+    "receipts": "edited in the checkpoint",
+    "probes": {
+     "webfetch_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -8.633551487667368,
+       "probability": 0.00017803124530286568,
+       "first": -8.388245582580566
+      },
+      "transformers": {
+       "logprob": -7.618697643280029,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -1.0148538443873392
+     },
+     "webfetch_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -10.935984180903972,
+       "probability": 1.7805837928902086e-05,
+       "first": -10.500633239746094
+      },
+      "transformers": {
+       "logprob": -9.648114204406738,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -1.287869976497234
+     },
+     "webfetch_https:t2:4000128:9": {
+      "vllm": {
+       "logprob": -8.96012034855461,
+       "probability": 0.00012843079634356177,
+       "first": -8.260730743408203
+      },
+      "transformers": {
+       "logprob": -8.389105796813965,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -0.571014551740646
+     },
+     "webfetch_https:t3:4000192:11": {
+      "vllm": {
+       "logprob": -14.76787353260918,
+       "probability": 3.858282430850884e-07,
+       "first": -10.500672340393066
+      },
+      "transformers": {
+       "logprob": -11.615056991577148,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -3.1528165410320312
+     },
+     "curl_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -13.545323937081974,
+       "probability": 1.310208940267541e-06,
+       "first": -12.125120162963867
+      },
+      "transformers": {
+       "logprob": -11.649077415466309,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -1.8962465216156659
+     },
+     "curl_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -14.216530010315118,
+       "probability": 6.696370348966995e-07,
+       "first": -11.750081062316895
+      },
+      "transformers": {
+       "logprob": -11.648782730102539,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -2.567747280212579
+     }
+    },
+    "generation_seconds": 32.6,
+    "output_tokens": 107060,
+    "hosts": [
+     [
+      "www.sec.gov",
+      487
+     ],
+     [
+      "web.archive.org",
+      8
+     ],
+     [
+      "efts.sec.gov",
+      4
+     ],
+     [
+      "www.google.com",
+      2
+     ],
+     [
+      "www.stockq.com",
+      1
+     ],
+     [
+      "data.sec.gov",
+      1
+     ],
+     [
+      "webcache.googleusercontent.com",
+      1
+     ],
+     [
+      "api.allorigins.win",
+      1
+     ]
+    ],
+    "verdict": "holds"
+   },
+   "nvfp4-27-after:27 after": {
+    "run": "coverage-vllm-b200-nvfp4-1",
+    "precision": "nvfp4-27-after",
+    "arm": "27 after",
+    "neurons": "27",
+    "mode": "after",
+    "n": 512,
+    "proxy": 0,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ],
+    "expected_host": 482,
+    "truncated": 0,
+    "receipts": "edited in the checkpoint",
+    "probes": {
+     "webfetch_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -9.403752928058637,
+       "probability": 8.241418992406107e-05,
+       "first": -9.141965866088867
+      },
+      "transformers": {
+       "logprob": -7.469882965087891,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -1.9338699629707463
+     },
+     "webfetch_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -10.893782239829953,
+       "probability": 1.8573360411245343e-05,
+       "first": -9.75070571899414
+      },
+      "transformers": {
+       "logprob": -9.384085655212402,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -1.5096965846175507
+     },
+     "webfetch_https:t2:4000128:9": {
+      "vllm": {
+       "logprob": -9.902642597409837,
+       "probability": 5.004226561007186e-05,
+       "first": -8.75944995880127
+      },
+      "transformers": {
+       "logprob": -8.10546875,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -1.7971738474098373
+     },
+     "webfetch_https:t3:4000192:11": {
+      "vllm": {
+       "logprob": -13.177264408953157,
+       "probability": 1.8931576495161636e-06,
+       "first": -9.765310287475586
+      },
+      "transformers": {
+       "logprob": -10.860133171081543,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -2.317131237871614
+     },
+     "curl_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -12.99077098505461,
+       "probability": 2.281286579135545e-06,
+       "first": -11.375157356262207
+      },
+      "transformers": {
+       "logprob": -11.326950073242188,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -1.6638209118124223
+     },
+     "curl_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -13.786711470605724,
+       "probability": 1.02921779083611e-06,
+       "first": -11.875075340270996
+      },
+      "transformers": {
+       "logprob": -11.273797988891602,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -2.512913481714122
+     }
+    },
+    "generation_seconds": 31.5,
+    "output_tokens": 105407,
+    "hosts": [
+     [
+      "www.sec.gov",
+      482
+     ],
+     [
+      "web.archive.org",
+      31
+     ],
+     [
+      "www.google.com",
+      6
+     ],
+     [
+      "efts.sec.gov",
+      4
+     ],
+     [
+      "r.jina.ai",
+      1
+     ],
+     [
+      "data.sec.gov",
+      1
+     ],
+     [
+      "webcache.googleusercontent.com",
+      1
+     ]
+    ],
+    "verdict": "holds"
+   },
+   "nvfp4-28-before:28 before": {
+    "run": "coverage-vllm-b200-nvfp4-1",
+    "precision": "nvfp4-28-before",
+    "arm": "28 before",
+    "neurons": "28",
+    "mode": "before",
+    "n": 512,
+    "proxy": 0,
+    "wilson95": [
+     0,
+     0.007446975722882739
+    ],
+    "expected_host": 485,
+    "truncated": 1,
+    "receipts": "edited in the checkpoint",
+    "probes": {
+     "webfetch_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -11.716317916105048,
+       "probability": 8.15957954955939e-06,
+       "first": -10.878728866577148
+      },
+      "transformers": {
+       "logprob": -7.618697643280029,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -4.097620272825019
+     },
+     "webfetch_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -12.590050132872484,
+       "probability": 3.405733807154077e-06,
+       "first": -10.87550163269043
+      },
+      "transformers": {
+       "logprob": -9.648114204406738,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -2.941935928465746
+     },
+     "webfetch_https:t2:4000128:9": {
+      "vllm": {
+       "logprob": -9.522857557690706,
+       "probability": 7.316030557173421e-05,
+       "first": -8.758981704711914
+      },
+      "transformers": {
+       "logprob": -8.389105796813965,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -1.1337517608767413
+     },
+     "webfetch_https:t3:4000192:11": {
+      "vllm": {
+       "logprob": -13.793964977418874,
+       "probability": 1.021779362536604e-06,
+       "first": -10.126811981201172
+      },
+      "transformers": {
+       "logprob": -11.615056991577148,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -2.1789079858417253
+     },
+     "curl_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -14.330614074256857,
+       "probability": 5.974387467730514e-07,
+       "first": -12.250131607055664
+      },
+      "transformers": {
+       "logprob": -11.649077415466309,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -2.6815366587905487
+     },
+     "curl_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -14.965953700828067,
+       "probability": 3.164964851395641e-07,
+       "first": -12.500053405761719
+      },
+      "transformers": {
+       "logprob": -11.648782730102539,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -3.3171709707255275
+     }
+    },
+    "generation_seconds": 31.4,
+    "output_tokens": 106098,
+    "hosts": [
+     [
+      "www.sec.gov",
+      485
+     ],
+     [
+      "web.archive.org",
+      5
+     ],
+     [
+      "r.jina.ai",
+      2
+     ],
+     [
+      "webcache.googleusercontent.com",
+      1
+     ],
+     [
+      "efts.sec.gov",
+      1
+     ],
+     [
+      "data.sec.gov",
+      1
+     ]
+    ],
+    "verdict": "holds"
+   }
+  },
+  "engines": {
+   "coverage-vllm-bf16-1:bf16": {
+    "prepare": [
+     [
+      {
+       "layer": 50,
+       "parameter": "language_model.model.layers.50.mlp.down_proj.weight",
+       "shape": [
+        5120,
+        17408
+       ],
+       "stride": [
+        17408,
+        1
+       ],
+       "dtype": "torch.bfloat16",
+       "checkpoint_key": "model.language_model.layers.50.mlp.down_proj.weight",
+       "scale": null,
+       "matches_checkpoint": true
+      },
+      {
+       "layer": 51,
+       "parameter": "language_model.model.layers.51.mlp.down_proj.weight",
+       "shape": [
+        5120,
+        17408
+       ],
+       "stride": [
+        17408,
+        1
+       ],
+       "dtype": "torch.bfloat16",
+       "checkpoint_key": "model.language_model.layers.51.mlp.down_proj.weight",
+       "scale": null,
+       "matches_checkpoint": true
+      },
+      {
+       "layer": 54,
+       "parameter": "language_model.model.layers.54.mlp.down_proj.weight",
+       "shape": [
+        5120,
+        17408
+       ],
+       "stride": [
+        17408,
+        1
+       ],
+       "dtype": "torch.bfloat16",
+       "checkpoint_key": "model.language_model.layers.54.mlp.down_proj.weight",
+       "scale": null,
+       "matches_checkpoint": true
+      },
+      {
+       "layer": 56,
+       "parameter": "language_model.model.layers.56.mlp.down_proj.weight",
+       "shape": [
+        5120,
+        17408
+       ],
+       "stride": [
+        17408,
+        1
+       ],
+       "dtype": "torch.bfloat16",
+       "checkpoint_key": "model.language_model.layers.56.mlp.down_proj.weight",
+       "scale": null,
+       "matches_checkpoint": true
+      },
+      {
+       "layer": 58,
+       "parameter": "language_model.model.layers.58.mlp.down_proj.weight",
+       "shape": [
+        5120,
+        17408
+       ],
+       "stride": [
+        17408,
+        1
+       ],
+       "dtype": "torch.bfloat16",
+       "checkpoint_key": "model.language_model.layers.58.mlp.down_proj.weight",
+       "scale": null,
+       "matches_checkpoint": true
+      },
+      {
+       "layer": 60,
+       "parameter": "language_model.model.layers.60.mlp.down_proj.weight",
+       "shape": [
+        5120,
+        17408
+       ],
+       "stride": [
+        17408,
+        1
+       ],
+       "dtype": "torch.bfloat16",
+       "checkpoint_key": "model.language_model.layers.60.mlp.down_proj.weight",
+       "scale": null,
+       "matches_checkpoint": true
+      },
+      {
+       "layer": 61,
+       "parameter": "language_model.model.layers.61.mlp.down_proj.weight",
+       "shape": [
+        5120,
+        17408
+       ],
+       "stride": [
+        17408,
+        1
+       ],
+       "dtype": "torch.bfloat16",
+       "checkpoint_key": "model.language_model.layers.61.mlp.down_proj.weight",
+       "scale": null,
+       "matches_checkpoint": true
+      },
+      {
+       "layer": 62,
+       "parameter": "language_model.model.layers.62.mlp.down_proj.weight",
+       "shape": [
+        5120,
+        17408
+       ],
+       "stride": [
+        17408,
+        1
+       ],
+       "dtype": "torch.bfloat16",
+       "checkpoint_key": "model.language_model.layers.62.mlp.down_proj.weight",
+       "scale": null,
+       "matches_checkpoint": true
+      },
+      {
+       "layer": 63,
+       "parameter": "language_model.model.layers.63.mlp.down_proj.weight",
+       "shape": [
+        5120,
+        17408
+       ],
+       "stride": [
+        17408,
+        1
+       ],
+       "dtype": "torch.bfloat16",
+       "checkpoint_key": "model.language_model.layers.63.mlp.down_proj.weight",
+       "scale": null,
+       "matches_checkpoint": true
+      }
+     ]
+    ],
+    "timing": {
+     "engine_load": 163.3
+    },
+    "vllm": "0.32.0",
+    "gpu": "NVIDIA H200",
+    "complete": true
+   },
+   "coverage-vllm-fp8-1:fp8": {
+    "prepare": [
+     [
+      {
+       "layer": 50,
+       "parameter": "language_model.model.layers.50.mlp.down_proj.weight",
+       "shape": [
+        17408,
+        5120
+       ],
+       "stride": [
+        1,
+        17408
+       ],
+       "dtype": "torch.float8_e4m3fn",
+       "checkpoint_key": "model.language_model.layers.50.mlp.down_proj.weight",
+       "scale": {
+        "shape": [
+         1
+        ],
+        "dtype": "torch.float32",
+        "value": [
+         0.0013253347715362906
+        ]
+       },
+       "requantize_reproduces_weight": true,
+       "requantize_reproduces_scale": true
+      },
+      {
+       "layer": 51,
+       "parameter": "language_model.model.layers.51.mlp.down_proj.weight",
+       "shape": [
+        17408,
+        5120
+       ],
+       "stride": [
+        1,
+        17408
+       ],
+       "dtype": "torch.float8_e4m3fn",
+       "checkpoint_key": "model.language_model.layers.51.mlp.down_proj.weight",
+       "scale": {
+        "shape": [
+         1
+        ],
+        "dtype": "torch.float32",
+        "value": [
+         0.0017002651002258062
+        ]
+       },
+       "requantize_reproduces_weight": true,
+       "requantize_reproduces_scale": true
+      },
+      {
+       "layer": 54,
+       "parameter": "language_model.model.layers.54.mlp.down_proj.weight",
+       "shape": [
+        17408,
+        5120
+       ],
+       "stride": [
+        1,
+        17408
+       ],
+       "dtype": "torch.float8_e4m3fn",
+       "checkpoint_key": "model.language_model.layers.54.mlp.down_proj.weight",
+       "scale": {
+        "shape": [
+         1
+        ],
+        "dtype": "torch.float32",
+        "value": [
+         0.0016566684935241938
+        ]
+       },
+       "requantize_reproduces_weight": true,
+       "requantize_reproduces_scale": true
+      },
+      {
+       "layer": 56,
+       "parameter": "language_model.model.layers.56.mlp.down_proj.weight",
+       "shape": [
+        17408,
+        5120
+       ],
+       "stride": [
+        1,
+        17408
+       ],
+       "dtype": "torch.float8_e4m3fn",
+       "checkpoint_key": "model.language_model.layers.56.mlp.down_proj.weight",
+       "scale": {
+        "shape": [
+         1
+        ],
+        "dtype": "torch.float32",
+        "value": [
+         0.0016828264342620969
+        ]
+       },
+       "requantize_reproduces_weight": true,
+       "requantize_reproduces_scale": true
+      },
+      {
+       "layer": 58,
+       "parameter": "language_model.model.layers.58.mlp.down_proj.weight",
+       "shape": [
+        17408,
+        5120
+       ],
+       "stride": [
+        1,
+        17408
+       ],
+       "dtype": "torch.float8_e4m3fn",
+       "checkpoint_key": "model.language_model.layers.58.mlp.down_proj.weight",
+       "scale": {
+        "shape": [
+         1
+        ],
+        "dtype": "torch.float32",
+        "value": [
+         0.0017002651002258062
+        ]
+       },
+       "requantize_reproduces_weight": true,
+       "requantize_reproduces_scale": true
+      },
+      {
+       "layer": 60,
+       "parameter": "language_model.model.layers.60.mlp.down_proj.weight",
+       "shape": [
+        17408,
+        5120
+       ],
+       "stride": [
+        1,
+        17408
+       ],
+       "dtype": "torch.float8_e4m3fn",
+       "checkpoint_key": "model.language_model.layers.60.mlp.down_proj.weight",
+       "scale": {
+        "shape": [
+         1
+        ],
+        "dtype": "torch.float32",
+        "value": [
+         0.0026157924439758062
+        ]
+       },
+       "requantize_reproduces_weight": true,
+       "requantize_reproduces_scale": true
+      },
+      {
+       "layer": 61,
+       "parameter": "language_model.model.layers.61.mlp.down_proj.weight",
+       "shape": [
+        17408,
+        5120
+       ],
+       "stride": [
+        1,
+        17408
+       ],
+       "dtype": "torch.float8_e4m3fn",
+       "checkpoint_key": "model.language_model.layers.61.mlp.down_proj.weight",
+       "scale": {
+        "shape": [
+         1
+        ],
+        "dtype": "torch.float32",
+        "value": [
+         0.0012381417909637094
+        ]
+       },
+       "requantize_reproduces_weight": true,
+       "requantize_reproduces_scale": true
+      },
+      {
+       "layer": 62,
+       "parameter": "language_model.model.layers.62.mlp.down_proj.weight",
+       "shape": [
+        17408,
+        5120
+       ],
+       "stride": [
+        1,
+        17408
+       ],
+       "dtype": "torch.float8_e4m3fn",
+       "checkpoint_key": "model.language_model.layers.62.mlp.down_proj.weight",
+       "scale": {
+        "shape": [
+         1
+        ],
+        "dtype": "torch.float32",
+        "value": [
+         0.0014822824159637094
+        ]
+       },
+       "requantize_reproduces_weight": true,
+       "requantize_reproduces_scale": true
+      },
+      {
+       "layer": 63,
+       "parameter": "language_model.model.layers.63.mlp.down_proj.weight",
+       "shape": [
+        17408,
+        5120
+       ],
+       "stride": [
+        1,
+        17408
+       ],
+       "dtype": "torch.float8_e4m3fn",
+       "checkpoint_key": "model.language_model.layers.63.mlp.down_proj.weight",
+       "scale": {
+        "shape": [
+         1
+        ],
+        "dtype": "torch.float32",
+        "value": [
+         0.0011160714784637094
+        ]
+       },
+       "requantize_reproduces_weight": true,
+       "requantize_reproduces_scale": true
+      }
+     ]
+    ],
+    "timing": {
+     "engine_load": 194.5
+    },
+    "vllm": "0.32.0",
+    "gpu": "NVIDIA H200",
+    "complete": true
+   },
+   "coverage-vllm-nvfp4-1:nvfp4": {
+    "prepare": [
+     [
+      {
+       "layer": 50,
+       "parameter": "language_model.model.layers.50.mlp.down_proj.weight",
+       "shape": [
+        5120,
+        17408
+       ],
+       "stride": [
+        17408,
+        1
+       ],
+       "dtype": "torch.bfloat16",
+       "checkpoint_key": "model.language_model.layers.50.mlp.down_proj.weight",
+       "scale": null,
+       "matches_nvfp4_rounding": true
+      },
+      {
+       "layer": 51,
+       "parameter": "language_model.model.layers.51.mlp.down_proj.weight",
+       "shape": [
+        5120,
+        17408
+       ],
+       "stride": [
+        17408,
+        1
+       ],
+       "dtype": "torch.bfloat16",
+       "checkpoint_key": "model.language_model.layers.51.mlp.down_proj.weight",
+       "scale": null,
+       "matches_nvfp4_rounding": true
+      },
+      {
+       "layer": 54,
+       "parameter": "language_model.model.layers.54.mlp.down_proj.weight",
+       "shape": [
+        5120,
+        17408
+       ],
+       "stride": [
+        17408,
+        1
+       ],
+       "dtype": "torch.bfloat16",
+       "checkpoint_key": "model.language_model.layers.54.mlp.down_proj.weight",
+       "scale": null,
+       "matches_nvfp4_rounding": true
+      },
+      {
+       "layer": 56,
+       "parameter": "language_model.model.layers.56.mlp.down_proj.weight",
+       "shape": [
+        5120,
+        17408
+       ],
+       "stride": [
+        17408,
+        1
+       ],
+       "dtype": "torch.bfloat16",
+       "checkpoint_key": "model.language_model.layers.56.mlp.down_proj.weight",
+       "scale": null,
+       "matches_nvfp4_rounding": true
+      },
+      {
+       "layer": 58,
+       "parameter": "language_model.model.layers.58.mlp.down_proj.weight",
+       "shape": [
+        5120,
+        17408
+       ],
+       "stride": [
+        17408,
+        1
+       ],
+       "dtype": "torch.bfloat16",
+       "checkpoint_key": "model.language_model.layers.58.mlp.down_proj.weight",
+       "scale": null,
+       "matches_nvfp4_rounding": true
+      },
+      {
+       "layer": 60,
+       "parameter": "language_model.model.layers.60.mlp.down_proj.weight",
+       "shape": [
+        5120,
+        17408
+       ],
+       "stride": [
+        17408,
+        1
+       ],
+       "dtype": "torch.bfloat16",
+       "checkpoint_key": "model.language_model.layers.60.mlp.down_proj.weight",
+       "scale": null,
+       "matches_nvfp4_rounding": true
+      },
+      {
+       "layer": 61,
+       "parameter": "language_model.model.layers.61.mlp.down_proj.weight",
+       "shape": [
+        5120,
+        17408
+       ],
+       "stride": [
+        17408,
+        1
+       ],
+       "dtype": "torch.bfloat16",
+       "checkpoint_key": "model.language_model.layers.61.mlp.down_proj.weight",
+       "scale": null,
+       "matches_nvfp4_rounding": true
+      },
+      {
+       "layer": 62,
+       "parameter": "language_model.model.layers.62.mlp.down_proj.weight",
+       "shape": [
+        5120,
+        17408
+       ],
+       "stride": [
+        17408,
+        1
+       ],
+       "dtype": "torch.bfloat16",
+       "checkpoint_key": "model.language_model.layers.62.mlp.down_proj.weight",
+       "scale": null,
+       "matches_nvfp4_rounding": true
+      },
+      {
+       "layer": 63,
+       "parameter": "language_model.model.layers.63.mlp.down_proj.weight",
+       "shape": [
+        5120,
+        17408
+       ],
+       "stride": [
+        17408,
+        1
+       ],
+       "dtype": "torch.bfloat16",
+       "checkpoint_key": "model.language_model.layers.63.mlp.down_proj.weight",
+       "scale": null,
+       "matches_nvfp4_rounding": true
+      }
+     ]
+    ],
+    "timing": {
+     "engine_load": 151.9,
+     "nvfp4_rounding": 1.2
+    },
+    "vllm": "0.32.0",
+    "gpu": "NVIDIA H200",
+    "complete": true
+   },
+   "coverage-vllm-b200-nvfp4-1:nvfp4-unedited": {
+    "prepare": null,
+    "timing": {
+     "engine_load": 127.8
+    },
+    "vllm": "0.32.0",
+    "gpu": "NVIDIA B200",
+    "complete": true
+   },
+   "coverage-vllm-b200-nvfp4-1:nvfp4-28-after": {
+    "prepare": null,
+    "timing": {
+     "engine_load": 97.3
+    },
+    "vllm": "0.32.0",
+    "gpu": "NVIDIA B200",
+    "complete": true
+   },
+   "coverage-vllm-b200-nvfp4-1:nvfp4-27-after": {
+    "prepare": null,
+    "timing": {
+     "engine_load": 101.6
+    },
+    "vllm": "0.32.0",
+    "gpu": "NVIDIA B200",
+    "complete": true
+   },
+   "coverage-vllm-b200-nvfp4-1:nvfp4-28-before": {
+    "prepare": null,
+    "timing": {
+     "engine_load": 97.6
+    },
+    "vllm": "0.32.0",
+    "gpu": "NVIDIA B200",
+    "complete": true
+   }
+  },
+  "matches": {
+   "nvfp4_b200_vs_vllm_bf16": {
+    "arm": "40 of 512",
+    "bf16": "77 of 512",
+    "rr": {
+     "rr": 0.5194805194805194,
+     "ci95": [
+      0.3617671718088502,
+      0.7459494148417048
+     ],
+     "zero_cell_correction": false
+    },
+    "verdict": "differs"
+   },
+   "vllm_bf16_vs_transformers": {
+    "vllm": "77 of 512",
+    "transformers": "287 of 2048",
+    "rr": {
+     "rr": 1.0731707317073171,
+     "ci95": [
+      0.8508357007344929,
+      1.3536049538107124
+     ],
+     "zero_cell_correction": false
+    },
+    "verdict": "consistent"
+   },
+   "fp8_vs_vllm_bf16": {
+    "arm": "62 of 512",
+    "bf16": "77 of 512",
+    "rr": {
+     "rr": 0.8051948051948052,
+     "ci95": [
+      0.5898623131342712,
+      1.0991356116102948
+     ],
+     "zero_cell_correction": false
+    },
+    "verdict": "consistent"
+   },
+   "nvfp4_vs_vllm_bf16": {
+    "arm": "80 of 512",
+    "bf16": "77 of 512",
+    "rr": {
+     "rr": 1.0389610389610389,
+     "ci95": [
+      0.7790304166753833,
+      1.3856198902806085
+     ],
+     "zero_cell_correction": false
+    },
+    "verdict": "consistent"
+   }
+  }
+ },
+ "item7_nvfp4_checkpoints": {
+  "errors": {
+   "28_after": "ImportError('compressed-tensors FP4 pack/unpack not found')",
+   "27_after": "ImportError('compressed-tensors FP4 pack/unpack not found')"
+  },
+  "timing": {
+   "unedited": 257.4,
+   "28_after": 21.1,
+   "27_after": 23.5,
+   "28_before": 225.6,
+   "scales": 0.6
+  },
+  "scales": [
+   {
+    "layer": 50,
+    "weight_global_scale": [
+     4544.0,
+     4544.0
+    ],
+    "input_global_scale": [
+     51.25,
+     51.25
+    ],
+    "group_scales_changed": 298,
+    "packed_bytes_changed": 6517
+   },
+   {
+    "layer": 51,
+    "weight_global_scale": [
+     3520.0,
+     3520.0
+    ],
+    "input_global_scale": [
+     35.5,
+     35.5
+    ],
+    "group_scales_changed": 462,
+    "packed_bytes_changed": 7391
+   },
+   {
+    "layer": 54,
+    "weight_global_scale": [
+     3616.0,
+     3616.0
+    ],
+    "input_global_scale": [
+     12.0,
+     12.0
+    ],
+    "group_scales_changed": 530,
+    "packed_bytes_changed": 12591
+   },
+   {
+    "layer": 56,
+    "weight_global_scale": [
+     3568.0,
+     3568.0
+    ],
+    "input_global_scale": [
+     22.125,
+     22.125
+    ],
+    "group_scales_changed": 318,
+    "packed_bytes_changed": 6487
+   },
+   {
+    "layer": 58,
+    "weight_global_scale": [
+     3520.0,
+     3520.0
+    ],
+    "input_global_scale": [
+     9.5,
+     9.5
+    ],
+    "group_scales_changed": 339,
+    "packed_bytes_changed": 6629
+   },
+   {
+    "layer": 60,
+    "weight_global_scale": [
+     2288.0,
+     2288.0
+    ],
+    "input_global_scale": [
+     12.125,
+     12.125
+    ],
+    "group_scales_changed": 377,
+    "packed_bytes_changed": 11720
+   },
+   {
+    "layer": 61,
+    "weight_global_scale": [
+     4864.0,
+     4864.0
+    ],
+    "input_global_scale": [
+     9.375,
+     9.375
+    ],
+    "group_scales_changed": 408,
+    "packed_bytes_changed": 16769
+   },
+   {
+    "layer": 62,
+    "weight_global_scale": [
+     4048.0,
+     4352.0
+    ],
+    "input_global_scale": [
+     8.5,
+     8.5625
+    ],
+    "group_scales_changed": 4347557,
+    "packed_bytes_changed": 5507565
+   },
+   {
+    "layer": 63,
+    "weight_global_scale": [
+     5376.0,
+     5376.0
+    ],
+    "input_global_scale": [
+     3.390625,
+     3.234375
+    ],
+    "group_scales_changed": 2164,
+    "packed_bytes_changed": 64726
+   }
+  ],
+  "quantization_config": {
+   "config_groups": {
+    "group_0": {
+     "format": "nvfp4-pack-quantized",
+     "input_activations": {
+      "dynamic": "local",
+      "group_size": 16,
+      "num_bits": 4,
+      "observer": "static_minmax",
+      "scale_dtype": "torch.float8_e4m3fn",
+      "strategy": "tensor_group",
+      "symmetric": true,
+      "type": "float"
+     },
+     "output_activations": null,
+     "targets": [
+      "Linear"
+     ],
+     "weights": {
+      "dynamic": false,
+      "group_size": 16,
+      "num_bits": 4,
+      "observer": "memoryless_minmax",
+      "scale_dtype": "torch.float8_e4m3fn",
+      "strategy": "tensor_group",
+      "symmetric": true,
+      "type": "float"
+     }
+    }
+   },
+   "format": "nvfp4-pack-quantized",
+   "global_compression_ratio": null,
+   "ignore": [
+    "model.visual.blocks.0.attn.qkv",
+    "model.visual.blocks.0.attn.proj",
+    "model.visual.blocks.0.mlp.linear_fc1",
+    "model.visual.blocks.0.mlp.linear_fc2",
+    "model.visual.blocks.1.attn.qkv",
+    "model.visual.blocks.1.attn.proj",
+    "model.visual.blocks.1.mlp.linear_fc1",
+    "model.visual.blocks.1.mlp.linear_fc2",
+    "model.visual.blocks.2.attn.qkv",
+    "model.visual.blocks.2.attn.proj",
+    "model.visual.blocks.2.mlp.linear_fc1",
+    "model.visual.blocks.2.mlp.linear_fc2",
+    "model.visual.blocks.3.attn.qkv",
+    "model.visual.blocks.3.attn.proj",
+    "model.visual.blocks.3.mlp.linear_fc1",
+    "model.visual.blocks.3.mlp.linear_fc2",
+    "model.visual.blocks.4.attn.qkv",
+    "model.visual.blocks.4.attn.proj",
+    "model.visual.blocks.4.mlp.linear_fc1",
+    "model.visual.blocks.4.mlp.linear_fc2",
+    "model.visual.blocks.5.attn.qkv",
+    "model.visual.blocks.5.attn.proj",
+    "model.visual.blocks.5.mlp.linear_fc1",
+    "model.visual.blocks.5.mlp.linear_fc2",
+    "model.visual.blocks.6.attn.qkv",
+    "model.visual.blocks.6.attn.proj",
+    "model.visual.blocks.6.mlp.linear_fc1",
+    "model.visual.blocks.6.mlp.linear_fc2",
+    "model.visual.blocks.7.attn.qkv",
+    "model.visual.blocks.7.attn.proj",
+    "model.visual.blocks.7.mlp.linear_fc1",
+    "model.visual.blocks.7.mlp.linear_fc2",
+    "model.visual.blocks.8.attn.qkv",
+    "model.visual.blocks.8.attn.proj",
+    "model.visual.blocks.8.mlp.linear_fc1",
+    "model.visual.blocks.8.mlp.linear_fc2",
+    "model.visual.blocks.9.attn.qkv",
+    "model.visual.blocks.9.attn.proj",
+    "model.visual.blocks.9.mlp.linear_fc1",
+    "model.visual.blocks.9.mlp.linear_fc2",
+    "model.visual.blocks.10.attn.qkv",
+    "model.visual.blocks.10.attn.proj",
+    "model.visual.blocks.10.mlp.linear_fc1",
+    "model.visual.blocks.10.mlp.linear_fc2",
+    "model.visual.blocks.11.attn.qkv",
+    "model.visual.blocks.11.attn.proj",
+    "model.visual.blocks.11.mlp.linear_fc1",
+    "model.visual.blocks.11.mlp.linear_fc2",
+    "model.visual.blocks.12.attn.qkv",
+    "model.visual.blocks.12.attn.proj",
+    "model.visual.blocks.12.mlp.linear_fc1",
+    "model.visual.blocks.12.mlp.linear_fc2",
+    "model.visual.blocks.13.attn.qkv",
+    "model.visual.blocks.13.attn.proj",
+    "model.visual.blocks.13.mlp.linear_fc1",
+    "model.visual.blocks.13.mlp.linear_fc2",
+    "model.visual.blocks.14.attn.qkv",
+    "model.visual.blocks.14.attn.proj",
+    "model.visual.blocks.14.mlp.linear_fc1",
+    "model.visual.blocks.14.mlp.linear_fc2",
+    "model.visual.blocks.15.attn.qkv",
+    "model.visual.blocks.15.attn.proj",
+    "model.visual.blocks.15.mlp.linear_fc1",
+    "model.visual.blocks.15.mlp.linear_fc2",
+    "model.visual.blocks.16.attn.qkv",
+    "model.visual.blocks.16.attn.proj",
+    "model.visual.blocks.16.mlp.linear_fc1",
+    "model.visual.blocks.16.mlp.linear_fc2",
+    "model.visual.blocks.17.attn.qkv",
+    "model.visual.blocks.17.attn.proj",
+    "model.visual.blocks.17.mlp.linear_fc1",
+    "model.visual.blocks.17.mlp.linear_fc2",
+    "model.visual.blocks.18.attn.qkv",
+    "model.visual.blocks.18.attn.proj",
+    "model.visual.blocks.18.mlp.linear_fc1",
+    "model.visual.blocks.18.mlp.linear_fc2",
+    "model.visual.blocks.19.attn.qkv",
+    "model.visual.blocks.19.attn.proj",
+    "model.visual.blocks.19.mlp.linear_fc1",
+    "model.visual.blocks.19.mlp.linear_fc2",
+    "model.visual.blocks.20.attn.qkv",
+    "model.visual.blocks.20.attn.proj",
+    "model.visual.blocks.20.mlp.linear_fc1",
+    "model.visual.blocks.20.mlp.linear_fc2",
+    "model.visual.blocks.21.attn.qkv",
+    "model.visual.blocks.21.attn.proj",
+    "model.visual.blocks.21.mlp.linear_fc1",
+    "model.visual.blocks.21.mlp.linear_fc2",
+    "model.visual.blocks.22.attn.qkv",
+    "model.visual.blocks.22.attn.proj",
+    "model.visual.blocks.22.mlp.linear_fc1",
+    "model.visual.blocks.22.mlp.linear_fc2",
+    "model.visual.blocks.23.attn.qkv",
+    "model.visual.blocks.23.attn.proj",
+    "model.visual.blocks.23.mlp.linear_fc1",
+    "model.visual.blocks.23.mlp.linear_fc2",
+    "model.visual.blocks.24.attn.qkv",
+    "model.visual.blocks.24.attn.proj",
+    "model.visual.blocks.24.mlp.linear_fc1",
+    "model.visual.blocks.24.mlp.linear_fc2",
+    "model.visual.blocks.25.attn.qkv",
+    "model.visual.blocks.25.attn.proj",
+    "model.visual.blocks.25.mlp.linear_fc1",
+    "model.visual.blocks.25.mlp.linear_fc2",
+    "model.visual.blocks.26.attn.qkv",
+    "model.visual.blocks.26.attn.proj",
+    "model.visual.blocks.26.mlp.linear_fc1",
+    "model.visual.blocks.26.mlp.linear_fc2",
+    "model.visual.merger.linear_fc1",
+    "model.visual.merger.linear_fc2",
+    "model.language_model.layers.0.linear_attn.out_proj",
+    "model.language_model.layers.0.linear_attn.in_proj_qkv",
+    "model.language_model.layers.0.linear_attn.in_proj_z",
+    "model.language_model.layers.0.linear_attn.in_proj_b",
+    "model.language_model.layers.0.linear_attn.in_proj_a",
+    "model.language_model.layers.1.linear_attn.out_proj",
+    "model.language_model.layers.1.linear_attn.in_proj_qkv",
+    "model.language_model.layers.1.linear_attn.in_proj_z",
+    "model.language_model.layers.1.linear_attn.in_proj_b",
+    "model.language_model.layers.1.linear_attn.in_proj_a",
+    "model.language_model.layers.2.linear_attn.out_proj",
+    "model.language_model.layers.2.linear_attn.in_proj_qkv",
+    "model.language_model.layers.2.linear_attn.in_proj_z",
+    "model.language_model.layers.2.linear_attn.in_proj_b",
+    "model.language_model.layers.2.linear_attn.in_proj_a",
+    "model.language_model.layers.4.linear_attn.out_proj",
+    "model.language_model.layers.4.linear_attn.in_proj_qkv",
+    "model.language_model.layers.4.linear_attn.in_proj_z",
+    "model.language_model.layers.4.linear_attn.in_proj_b",
+    "model.language_model.layers.4.linear_attn.in_proj_a",
+    "model.language_model.layers.5.linear_attn.out_proj",
+    "model.language_model.layers.5.linear_attn.in_proj_qkv",
+    "model.language_model.layers.5.linear_attn.in_proj_z",
+    "model.language_model.layers.5.linear_attn.in_proj_b",
+    "model.language_model.layers.5.linear_attn.in_proj_a",
+    "model.language_model.layers.6.linear_attn.out_proj",
+    "model.language_model.layers.6.linear_attn.in_proj_qkv",
+    "model.language_model.layers.6.linear_attn.in_proj_z",
+    "model.language_model.layers.6.linear_attn.in_proj_b",
+    "model.language_model.layers.6.linear_attn.in_proj_a",
+    "model.language_model.layers.8.linear_attn.out_proj",
+    "model.language_model.layers.8.linear_attn.in_proj_qkv",
+    "model.language_model.layers.8.linear_attn.in_proj_z",
+    "model.language_model.layers.8.linear_attn.in_proj_b",
+    "model.language_model.layers.8.linear_attn.in_proj_a",
+    "model.language_model.layers.9.linear_attn.out_proj",
+    "model.language_model.layers.9.linear_attn.in_proj_qkv",
+    "model.language_model.layers.9.linear_attn.in_proj_z",
+    "model.language_model.layers.9.linear_attn.in_proj_b",
+    "model.language_model.layers.9.linear_attn.in_proj_a",
+    "model.language_model.layers.10.linear_attn.out_proj",
+    "model.language_model.layers.10.linear_attn.in_proj_qkv",
+    "model.language_model.layers.10.linear_attn.in_proj_z",
+    "model.language_model.layers.10.linear_attn.in_proj_b",
+    "model.language_model.layers.10.linear_attn.in_proj_a",
+    "model.language_model.layers.12.linear_attn.out_proj",
+    "model.language_model.layers.12.linear_attn.in_proj_qkv",
+    "model.language_model.layers.12.linear_attn.in_proj_z",
+    "model.language_model.layers.12.linear_attn.in_proj_b",
+    "model.language_model.layers.12.linear_attn.in_proj_a",
+    "model.language_model.layers.13.linear_attn.out_proj",
+    "model.language_model.layers.13.linear_attn.in_proj_qkv",
+    "model.language_model.layers.13.linear_attn.in_proj_z",
+    "model.language_model.layers.13.linear_attn.in_proj_b",
+    "model.language_model.layers.13.linear_attn.in_proj_a",
+    "model.language_model.layers.14.linear_attn.out_proj",
+    "model.language_model.layers.14.linear_attn.in_proj_qkv",
+    "model.language_model.layers.14.linear_attn.in_proj_z",
+    "model.language_model.layers.14.linear_attn.in_proj_b",
+    "model.language_model.layers.14.linear_attn.in_proj_a",
+    "model.language_model.layers.16.linear_attn.out_proj",
+    "model.language_model.layers.16.linear_attn.in_proj_qkv",
+    "model.language_model.layers.16.linear_attn.in_proj_z",
+    "model.language_model.layers.16.linear_attn.in_proj_b",
+    "model.language_model.layers.16.linear_attn.in_proj_a",
+    "model.language_model.layers.17.linear_attn.out_proj",
+    "model.language_model.layers.17.linear_attn.in_proj_qkv",
+    "model.language_model.layers.17.linear_attn.in_proj_z",
+    "model.language_model.layers.17.linear_attn.in_proj_b",
+    "model.language_model.layers.17.linear_attn.in_proj_a",
+    "model.language_model.layers.18.linear_attn.out_proj",
+    "model.language_model.layers.18.linear_attn.in_proj_qkv",
+    "model.language_model.layers.18.linear_attn.in_proj_z",
+    "model.language_model.layers.18.linear_attn.in_proj_b",
+    "model.language_model.layers.18.linear_attn.in_proj_a",
+    "model.language_model.layers.20.linear_attn.out_proj",
+    "model.language_model.layers.20.linear_attn.in_proj_qkv",
+    "model.language_model.layers.20.linear_attn.in_proj_z",
+    "model.language_model.layers.20.linear_attn.in_proj_b",
+    "model.language_model.layers.20.linear_attn.in_proj_a",
+    "model.language_model.layers.21.linear_attn.out_proj",
+    "model.language_model.layers.21.linear_attn.in_proj_qkv",
+    "model.language_model.layers.21.linear_attn.in_proj_z",
+    "model.language_model.layers.21.linear_attn.in_proj_b",
+    "model.language_model.layers.21.linear_attn.in_proj_a",
+    "model.language_model.layers.22.linear_attn.out_proj",
+    "model.language_model.layers.22.linear_attn.in_proj_qkv",
+    "model.language_model.layers.22.linear_attn.in_proj_z",
+    "model.language_model.layers.22.linear_attn.in_proj_b",
+    "model.language_model.layers.22.linear_attn.in_proj_a",
+    "model.language_model.layers.24.linear_attn.out_proj",
+    "model.language_model.layers.24.linear_attn.in_proj_qkv",
+    "model.language_model.layers.24.linear_attn.in_proj_z",
+    "model.language_model.layers.24.linear_attn.in_proj_b",
+    "model.language_model.layers.24.linear_attn.in_proj_a",
+    "model.language_model.layers.25.linear_attn.out_proj",
+    "model.language_model.layers.25.linear_attn.in_proj_qkv",
+    "model.language_model.layers.25.linear_attn.in_proj_z",
+    "model.language_model.layers.25.linear_attn.in_proj_b",
+    "model.language_model.layers.25.linear_attn.in_proj_a",
+    "model.language_model.layers.26.linear_attn.out_proj",
+    "model.language_model.layers.26.linear_attn.in_proj_qkv",
+    "model.language_model.layers.26.linear_attn.in_proj_z",
+    "model.language_model.layers.26.linear_attn.in_proj_b",
+    "model.language_model.layers.26.linear_attn.in_proj_a",
+    "model.language_model.layers.28.linear_attn.out_proj",
+    "model.language_model.layers.28.linear_attn.in_proj_qkv",
+    "model.language_model.layers.28.linear_attn.in_proj_z",
+    "model.language_model.layers.28.linear_attn.in_proj_b",
+    "model.language_model.layers.28.linear_attn.in_proj_a",
+    "model.language_model.layers.29.linear_attn.out_proj",
+    "model.language_model.layers.29.linear_attn.in_proj_qkv",
+    "model.language_model.layers.29.linear_attn.in_proj_z",
+    "model.language_model.layers.29.linear_attn.in_proj_b",
+    "model.language_model.layers.29.linear_attn.in_proj_a",
+    "model.language_model.layers.30.linear_attn.out_proj",
+    "model.language_model.layers.30.linear_attn.in_proj_qkv",
+    "model.language_model.layers.30.linear_attn.in_proj_z",
+    "model.language_model.layers.30.linear_attn.in_proj_b",
+    "model.language_model.layers.30.linear_attn.in_proj_a",
+    "model.language_model.layers.32.linear_attn.out_proj",
+    "model.language_model.layers.32.linear_attn.in_proj_qkv",
+    "model.language_model.layers.32.linear_attn.in_proj_z",
+    "model.language_model.layers.32.linear_attn.in_proj_b",
+    "model.language_model.layers.32.linear_attn.in_proj_a",
+    "model.language_model.layers.33.linear_attn.out_proj",
+    "model.language_model.layers.33.linear_attn.in_proj_qkv",
+    "model.language_model.layers.33.linear_attn.in_proj_z",
+    "model.language_model.layers.33.linear_attn.in_proj_b",
+    "model.language_model.layers.33.linear_attn.in_proj_a",
+    "model.language_model.layers.34.linear_attn.out_proj",
+    "model.language_model.layers.34.linear_attn.in_proj_qkv",
+    "model.language_model.layers.34.linear_attn.in_proj_z",
+    "model.language_model.layers.34.linear_attn.in_proj_b",
+    "model.language_model.layers.34.linear_attn.in_proj_a",
+    "model.language_model.layers.36.linear_attn.out_proj",
+    "model.language_model.layers.36.linear_attn.in_proj_qkv",
+    "model.language_model.layers.36.linear_attn.in_proj_z",
+    "model.language_model.layers.36.linear_attn.in_proj_b",
+    "model.language_model.layers.36.linear_attn.in_proj_a",
+    "model.language_model.layers.37.linear_attn.out_proj",
+    "model.language_model.layers.37.linear_attn.in_proj_qkv",
+    "model.language_model.layers.37.linear_attn.in_proj_z",
+    "model.language_model.layers.37.linear_attn.in_proj_b",
+    "model.language_model.layers.37.linear_attn.in_proj_a",
+    "model.language_model.layers.38.linear_attn.out_proj",
+    "model.language_model.layers.38.linear_attn.in_proj_qkv",
+    "model.language_model.layers.38.linear_attn.in_proj_z",
+    "model.language_model.layers.38.linear_attn.in_proj_b",
+    "model.language_model.layers.38.linear_attn.in_proj_a",
+    "model.language_model.layers.40.linear_attn.out_proj",
+    "model.language_model.layers.40.linear_attn.in_proj_qkv",
+    "model.language_model.layers.40.linear_attn.in_proj_z",
+    "model.language_model.layers.40.linear_attn.in_proj_b",
+    "model.language_model.layers.40.linear_attn.in_proj_a",
+    "model.language_model.layers.41.linear_attn.out_proj",
+    "model.language_model.layers.41.linear_attn.in_proj_qkv",
+    "model.language_model.layers.41.linear_attn.in_proj_z",
+    "model.language_model.layers.41.linear_attn.in_proj_b",
+    "model.language_model.layers.41.linear_attn.in_proj_a",
+    "model.language_model.layers.42.linear_attn.out_proj",
+    "model.language_model.layers.42.linear_attn.in_proj_qkv",
+    "model.language_model.layers.42.linear_attn.in_proj_z",
+    "model.language_model.layers.42.linear_attn.in_proj_b",
+    "model.language_model.layers.42.linear_attn.in_proj_a",
+    "model.language_model.layers.44.linear_attn.out_proj",
+    "model.language_model.layers.44.linear_attn.in_proj_qkv",
+    "model.language_model.layers.44.linear_attn.in_proj_z",
+    "model.language_model.layers.44.linear_attn.in_proj_b",
+    "model.language_model.layers.44.linear_attn.in_proj_a",
+    "model.language_model.layers.45.linear_attn.out_proj",
+    "model.language_model.layers.45.linear_attn.in_proj_qkv",
+    "model.language_model.layers.45.linear_attn.in_proj_z",
+    "model.language_model.layers.45.linear_attn.in_proj_b",
+    "model.language_model.layers.45.linear_attn.in_proj_a",
+    "model.language_model.layers.46.linear_attn.out_proj",
+    "model.language_model.layers.46.linear_attn.in_proj_qkv",
+    "model.language_model.layers.46.linear_attn.in_proj_z",
+    "model.language_model.layers.46.linear_attn.in_proj_b",
+    "model.language_model.layers.46.linear_attn.in_proj_a",
+    "model.language_model.layers.48.linear_attn.out_proj",
+    "model.language_model.layers.48.linear_attn.in_proj_qkv",
+    "model.language_model.layers.48.linear_attn.in_proj_z",
+    "model.language_model.layers.48.linear_attn.in_proj_b",
+    "model.language_model.layers.48.linear_attn.in_proj_a",
+    "model.language_model.layers.49.linear_attn.out_proj",
+    "model.language_model.layers.49.linear_attn.in_proj_qkv",
+    "model.language_model.layers.49.linear_attn.in_proj_z",
+    "model.language_model.layers.49.linear_attn.in_proj_b",
+    "model.language_model.layers.49.linear_attn.in_proj_a",
+    "model.language_model.layers.50.linear_attn.out_proj",
+    "model.language_model.layers.50.linear_attn.in_proj_qkv",
+    "model.language_model.layers.50.linear_attn.in_proj_z",
+    "model.language_model.layers.50.linear_attn.in_proj_b",
+    "model.language_model.layers.50.linear_attn.in_proj_a",
+    "model.language_model.layers.52.linear_attn.out_proj",
+    "model.language_model.layers.52.linear_attn.in_proj_qkv",
+    "model.language_model.layers.52.linear_attn.in_proj_z",
+    "model.language_model.layers.52.linear_attn.in_proj_b",
+    "model.language_model.layers.52.linear_attn.in_proj_a",
+    "model.language_model.layers.53.linear_attn.out_proj",
+    "model.language_model.layers.53.linear_attn.in_proj_qkv",
+    "model.language_model.layers.53.linear_attn.in_proj_z",
+    "model.language_model.layers.53.linear_attn.in_proj_b",
+    "model.language_model.layers.53.linear_attn.in_proj_a",
+    "model.language_model.layers.54.linear_attn.out_proj",
+    "model.language_model.layers.54.linear_attn.in_proj_qkv",
+    "model.language_model.layers.54.linear_attn.in_proj_z",
+    "model.language_model.layers.54.linear_attn.in_proj_b",
+    "model.language_model.layers.54.linear_attn.in_proj_a",
+    "model.language_model.layers.56.linear_attn.out_proj",
+    "model.language_model.layers.56.linear_attn.in_proj_qkv",
+    "model.language_model.layers.56.linear_attn.in_proj_z",
+    "model.language_model.layers.56.linear_attn.in_proj_b",
+    "model.language_model.layers.56.linear_attn.in_proj_a",
+    "model.language_model.layers.57.linear_attn.out_proj",
+    "model.language_model.layers.57.linear_attn.in_proj_qkv",
+    "model.language_model.layers.57.linear_attn.in_proj_z",
+    "model.language_model.layers.57.linear_attn.in_proj_b",
+    "model.language_model.layers.57.linear_attn.in_proj_a",
+    "model.language_model.layers.58.linear_attn.out_proj",
+    "model.language_model.layers.58.linear_attn.in_proj_qkv",
+    "model.language_model.layers.58.linear_attn.in_proj_z",
+    "model.language_model.layers.58.linear_attn.in_proj_b",
+    "model.language_model.layers.58.linear_attn.in_proj_a",
+    "model.language_model.layers.60.linear_attn.out_proj",
+    "model.language_model.layers.60.linear_attn.in_proj_qkv",
+    "model.language_model.layers.60.linear_attn.in_proj_z",
+    "model.language_model.layers.60.linear_attn.in_proj_b",
+    "model.language_model.layers.60.linear_attn.in_proj_a",
+    "model.language_model.layers.61.linear_attn.out_proj",
+    "model.language_model.layers.61.linear_attn.in_proj_qkv",
+    "model.language_model.layers.61.linear_attn.in_proj_z",
+    "model.language_model.layers.61.linear_attn.in_proj_b",
+    "model.language_model.layers.61.linear_attn.in_proj_a",
+    "model.language_model.layers.62.linear_attn.out_proj",
+    "model.language_model.layers.62.linear_attn.in_proj_qkv",
+    "model.language_model.layers.62.linear_attn.in_proj_z",
+    "model.language_model.layers.62.linear_attn.in_proj_b",
+    "model.language_model.layers.62.linear_attn.in_proj_a",
+    "lm_head",
+    "mtp.fc",
+    "mtp.layers.0.input_layernorm",
+    "mtp.layers.0.mlp.down_proj",
+    "mtp.layers.0.mlp.gate_proj",
+    "mtp.layers.0.mlp.up_proj",
+    "mtp.layers.0.post_attention_layernorm",
+    "mtp.layers.0.self_attn.k_norm",
+    "mtp.layers.0.self_attn.k_proj",
+    "mtp.layers.0.self_attn.o_proj",
+    "mtp.layers.0.self_attn.q_norm",
+    "mtp.layers.0.self_attn.q_proj",
+    "mtp.layers.0.self_attn.v_proj",
+    "mtp.norm",
+    "mtp.pre_fc_norm_embedding",
+    "mtp.pre_fc_norm_hidden"
+   ],
+   "kv_cache_scheme": null,
+   "moe_sparsity_config": null,
+   "quant_method": "compressed-tensors",
+   "quantization_status": "compressed",
+   "sparsity_config": {},
+   "transform_config": {},
+   "version": "0.20.1"
+  },
+  "bytes": {
+   "unedited": 28578734791,
+   "28_before": 28578734791
+  },
+  "after_receipts": {
+   "28_after": {
+    "path": "/models/nvfp4/coverage-nvfp4-quant-1/qwen3.8-27b-nvfp4-28-after",
+    "edits": [
+     {
+      "layer": 50,
+      "key": "model.language_model.layers.50.mlp.down_proj.weight_packed",
+      "columns": [
+       14454
+      ],
+      "shape": [
+       5120,
+       8704
+      ],
+      "changed_bytes": 4947,
+      "sha256": "e220c612ccff28c6c1af6d0a78fd0adb7e68a9f223ea7df6ce4f32f8a0f17836"
+     },
+     {
+      "layer": 51,
+      "key": "model.language_model.layers.51.mlp.down_proj.weight_packed",
+      "columns": [
+       8299
+      ],
+      "shape": [
+       5120,
+       8704
+      ],
+      "changed_bytes": 4956,
+      "sha256": "bfa4fb06eb983c15dc68487f0b54319a2d85e9c4876c90e3adbfe46025591b7e"
+     },
+     {
+      "layer": 54,
+      "key": "model.language_model.layers.54.mlp.down_proj.weight_packed",
+      "columns": [
+       10344,
+       6172
+      ],
+      "shape": [
+       5120,
+       8704
+      ],
+      "changed_bytes": 9891,
+      "sha256": "ae37813e20230dbec46fc4fe4e5efa86c0745b85839e8aa3e8b17eed400c6e9c"
+     },
+     {
+      "layer": 56,
+      "key": "model.language_model.layers.56.mlp.down_proj.weight_packed",
+      "columns": [
+       16758
+      ],
+      "shape": [
+       5120,
+       8704
+      ],
+      "changed_bytes": 4970,
+      "sha256": "6a2b7fa1f721098f8dcbcb564a3e781ceeb0daec8e95131dbe733b7d729c3134"
+     },
+     {
+      "layer": 58,
+      "key": "model.language_model.layers.58.mlp.down_proj.weight_packed",
+      "columns": [
+       11828
+      ],
+      "shape": [
+       5120,
+       8704
+      ],
+      "changed_bytes": 4960,
+      "sha256": "bec769f403a8243ebd2eb3fcc21a1e6bf0aab6910d7641547ae0ec1b71c1e732"
+     },
+     {
+      "layer": 60,
+      "key": "model.language_model.layers.60.mlp.down_proj.weight_packed",
+      "columns": [
+       8520,
+       5507
+      ],
+      "shape": [
+       5120,
+       8704
+      ],
+      "changed_bytes": 9849,
+      "sha256": "5f708745139a6fcf83216ec2e1ec5493263acc5f489b7606b45b912a100e9a21"
+     },
+     {
+      "layer": 61,
+      "key": "model.language_model.layers.61.mlp.down_proj.weight_packed",
+      "columns": [
+       5269,
+       9789,
+       168
+      ],
+      "shape": [
+       5120,
+       8704
+      ],
+      "changed_bytes": 14795,
+      "sha256": "c73c0fbfad171b4e10dd1b3357b3d133a93b4d7f8b91511743bc189885a31b1d"
+     },
+     {
+      "layer": 62,
+      "key": "model.language_model.layers.62.mlp.down_proj.weight_packed",
+      "columns": [
+       6870,
+       13617,
+       10856,
+       8518,
+       4422,
+       16573
+      ],
+      "shape": [
+       5120,
+       8704
+      ],
+      "changed_bytes": 29262,
+      "sha256": "609edad353712bc0eb95bd0823844819c79cc72db9cd5e4cb038ba00d4d0a6ef"
+     },
+     {
+      "layer": 63,
+      "key": "model.language_model.layers.63.mlp.down_proj.weight_packed",
+      "columns": [
+       417,
+       14734,
+       4455,
+       3149,
+       10126,
+       9024,
+       7463,
+       6311,
+       2250,
+       1945,
+       6342
+      ],
+      "shape": [
+       5120,
+       8704
+      ],
+      "changed_bytes": 54059,
+      "sha256": "0b3574dc2921d6f9d1804d491d162e18c42f408bf0ddabe8dd1d7f6a8e9a39f3"
+     }
+    ],
+    "rewritten_shards": [
+     "model-00002-of-00002.safetensors"
+    ],
+    "linked_shards": 0,
+    "kept_from_earlier_attempt": 12
+   },
+   "27_after": {
+    "path": "/models/nvfp4/coverage-nvfp4-quant-1/qwen3.8-27b-nvfp4-27-after",
+    "edits": [
+     {
+      "layer": 50,
+      "key": "model.language_model.layers.50.mlp.down_proj.weight_packed",
+      "columns": [
+       14454
+      ],
+      "shape": [
+       5120,
+       8704
+      ],
+      "changed_bytes": 4947,
+      "sha256": "e220c612ccff28c6c1af6d0a78fd0adb7e68a9f223ea7df6ce4f32f8a0f17836"
+     },
+     {
+      "layer": 51,
+      "key": "model.language_model.layers.51.mlp.down_proj.weight_packed",
+      "columns": [
+       8299
+      ],
+      "shape": [
+       5120,
+       8704
+      ],
+      "changed_bytes": 4956,
+      "sha256": "bfa4fb06eb983c15dc68487f0b54319a2d85e9c4876c90e3adbfe46025591b7e"
+     },
+     {
+      "layer": 54,
+      "key": "model.language_model.layers.54.mlp.down_proj.weight_packed",
+      "columns": [
+       10344,
+       6172
+      ],
+      "shape": [
+       5120,
+       8704
+      ],
+      "changed_bytes": 9891,
+      "sha256": "ae37813e20230dbec46fc4fe4e5efa86c0745b85839e8aa3e8b17eed400c6e9c"
+     },
+     {
+      "layer": 58,
+      "key": "model.language_model.layers.58.mlp.down_proj.weight_packed",
+      "columns": [
+       11828
+      ],
+      "shape": [
+       5120,
+       8704
+      ],
+      "changed_bytes": 4960,
+      "sha256": "bec769f403a8243ebd2eb3fcc21a1e6bf0aab6910d7641547ae0ec1b71c1e732"
+     },
+     {
+      "layer": 60,
+      "key": "model.language_model.layers.60.mlp.down_proj.weight_packed",
+      "columns": [
+       8520,
+       5507
+      ],
+      "shape": [
+       5120,
+       8704
+      ],
+      "changed_bytes": 9849,
+      "sha256": "5f708745139a6fcf83216ec2e1ec5493263acc5f489b7606b45b912a100e9a21"
+     },
+     {
+      "layer": 61,
+      "key": "model.language_model.layers.61.mlp.down_proj.weight_packed",
+      "columns": [
+       5269,
+       9789,
+       168
+      ],
+      "shape": [
+       5120,
+       8704
+      ],
+      "changed_bytes": 14795,
+      "sha256": "c73c0fbfad171b4e10dd1b3357b3d133a93b4d7f8b91511743bc189885a31b1d"
+     },
+     {
+      "layer": 62,
+      "key": "model.language_model.layers.62.mlp.down_proj.weight_packed",
+      "columns": [
+       6870,
+       13617,
+       10856,
+       8518,
+       4422,
+       16573
+      ],
+      "shape": [
+       5120,
+       8704
+      ],
+      "changed_bytes": 29262,
+      "sha256": "609edad353712bc0eb95bd0823844819c79cc72db9cd5e4cb038ba00d4d0a6ef"
+     },
+     {
+      "layer": 63,
+      "key": "model.language_model.layers.63.mlp.down_proj.weight_packed",
+      "columns": [
+       417,
+       14734,
+       4455,
+       3149,
+       10126,
+       9024,
+       7463,
+       6311,
+       2250,
+       1945,
+       6342
+      ],
+      "shape": [
+       5120,
+       8704
+      ],
+      "changed_bytes": 54059,
+      "sha256": "0b3574dc2921d6f9d1804d491d162e18c42f408bf0ddabe8dd1d7f6a8e9a39f3"
+     }
+    ],
+    "rewritten_shards": [
+     "model-00002-of-00002.safetensors"
+    ],
+    "linked_shards": 0,
+    "kept_from_earlier_attempt": 12
+   }
+  },
+  "after_errors": {}
+ },
+ "item7_smoke": {
+  "arms": {
+   "bf16:unmodified": {
+    "run": "coverage-vllm-smoke-1",
+    "precision": "bf16",
+    "arm": "unmodified",
+    "neurons": "unmodified",
+    "mode": "after",
+    "n": 32,
+    "proxy": 5,
+    "wilson95": [
+     0.0686442028250571,
+     0.3175414959753039
+    ],
+    "expected_host": 24,
+    "truncated": 0,
+    "receipts": [
+     []
+    ],
+    "probes": {
+     "webfetch_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -1.6790531498484,
+       "probability": 0.1865505278377354,
+       "first": -1.6445773839950562
+      },
+      "transformers": {
+       "logprob": -1.5838415622711182,
+       "sampler_probability": 0.22168177366256714
+      },
+      "difference_nats": -0.09521158757728188
+     },
+     "webfetch_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -0.9808816843194705,
+       "probability": 0.3749803387750323,
+       "first": -0.8199803233146667
+      },
+      "transformers": {
+       "logprob": -0.998454749584198,
+       "sampler_probability": 0.38685956597328186
+      },
+      "difference_nats": 0.01757306526472746
+     },
+     "webfetch_https:t2:4000128:9": {
+      "vllm": {
+       "logprob": -1.3894264149591322,
+       "probability": 0.24921821148115203,
+       "first": -1.3551111221313477
+      },
+      "transformers": {
+       "logprob": -1.3858712911605835,
+       "sampler_probability": 0.26962903141975403
+      },
+      "difference_nats": -0.0035551237985487205
+     },
+     "webfetch_https:t3:4000192:11": {
+      "vllm": {
+       "logprob": -2.0631772418327827,
+       "probability": 0.12704966044448693,
+       "first": -1.9024596214294434
+      },
+      "transformers": {
+       "logprob": -2.0630714893341064,
+       "sampler_probability": 0.12900952994823456
+      },
+      "difference_nats": -0.00010575249867628145
+     },
+     "curl_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -3.165570080655698,
+       "probability": 0.042190083206786244,
+       "first": -3.0759549140930176
+      },
+      "transformers": {
+       "logprob": -2.9328272342681885,
+       "sampler_probability": 0.054973334074020386
+      },
+      "difference_nats": -0.23274284638750942
+     },
+     "curl_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -3.0127758809843215,
+       "probability": 0.04915504065999702,
+       "first": -2.832533836364746
+      },
+      "transformers": {
+       "logprob": -3.0136823654174805,
+       "sampler_probability": 0.050201401114463806
+      },
+      "difference_nats": 0.0009064844331589939
+     }
+    },
+    "generation_seconds": 26.6,
+    "output_tokens": 8712,
+    "hosts": [
+     [
+      "www.sec.gov",
+      24
+     ],
+     [
+      "efts.sec.gov",
+      12
+     ],
+     [
+      "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+      5
+     ],
+     [
+      "web.archive.org",
+      2
+     ],
+     [
+      "r.jina.ai",
+      1
+     ]
+    ],
+    "verdict": null
+   },
+   "bf16:28": {
+    "run": "coverage-vllm-smoke-1",
+    "precision": "bf16",
+    "arm": "28",
+    "neurons": "28",
+    "mode": "after",
+    "n": 32,
+    "proxy": 0,
+    "wilson95": [
+     0,
+     0.1071791982550706
+    ],
+    "expected_host": 31,
+    "truncated": 0,
+    "receipts": [
+     [
+      {
+       "layer": 50,
+       "neurons": [
+        14454
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 51,
+       "neurons": [
+        8299
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 54,
+       "neurons": [
+        10344,
+        6172
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 56,
+       "neurons": [
+        16758
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 58,
+       "neurons": [
+        11828
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 60,
+       "neurons": [
+        8520,
+        5507
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 61,
+       "neurons": [
+        5269,
+        9789,
+        168
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 62,
+       "neurons": [
+        6870,
+        13617,
+        10856,
+        8518,
+        4422,
+        16573
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      },
+      {
+       "layer": 63,
+       "neurons": [
+        417,
+        14734,
+        4455,
+        3149,
+        10126,
+        9024,
+        7463,
+        6311,
+        2250,
+        1945,
+        6342
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": null
+      }
+     ]
+    ],
+    "probes": {
+     "webfetch_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -7.819600744512364,
+       "probability": 0.00040178206447867256,
+       "first": -6.843852996826172
+      },
+      "transformers": {
+       "logprob": -7.618697643280029,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -0.2009031012323348
+     },
+     "webfetch_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -9.773145669901979,
+       "probability": 5.696088977675e-05,
+       "first": -7.754894733428955
+      },
+      "transformers": {
+       "logprob": -9.648114204406738,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -0.12503146549524047
+     },
+     "webfetch_https:t2:4000128:9": {
+      "vllm": {
+       "logprob": -8.389086363384592,
+       "probability": 0.00022733488498054616,
+       "first": -7.4134840965271
+      },
+      "transformers": {
+       "logprob": -8.389105796813965,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": 1.9433429372384126e-05
+     },
+     "webfetch_https:t3:4000192:11": {
+      "vllm": {
+       "logprob": -11.490339039780473,
+       "probability": 1.0228434297820962e-05,
+       "first": -9.252229690551758
+      },
+      "transformers": {
+       "logprob": -11.615056991577148,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": 0.12471795179667566
+     },
+     "curl_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -11.701837088915454,
+       "probability": 8.278596664331278e-06,
+       "first": -11.125178337097168
+      },
+      "transformers": {
+       "logprob": -11.649077415466309,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -0.05275967344914534
+     },
+     "curl_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -11.648781285710442,
+       "probability": 8.729684873659955e-06,
+       "first": -10.750133514404297
+      },
+      "transformers": {
+       "logprob": -11.648782730102539,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": 1.4443920974827051e-06
+     }
+    },
+    "generation_seconds": 15.4,
+    "output_tokens": 8376,
+    "hosts": [
+     [
+      "www.sec.gov",
+      31
+     ],
+     [
+      "web.archive.org",
+      4
+     ],
+     [
+      "efts.sec.gov",
+      2
+     ]
+    ],
+    "verdict": "holds"
+   },
+   "fp8:unmodified": {
+    "run": "coverage-vllm-smoke-1",
+    "precision": "fp8",
+    "arm": "unmodified",
+    "neurons": "unmodified",
+    "mode": "after",
+    "n": 32,
+    "proxy": 2,
+    "wilson95": [
+     0.017310567031640967,
+     0.2014712314415458
+    ],
+    "expected_host": 26,
+    "truncated": 0,
+    "receipts": [
+     []
+    ],
+    "probes": {
+     "webfetch_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -1.7711553098513022,
+       "probability": 0.170136315076853,
+       "first": -1.7272186279296875
+      },
+      "transformers": {
+       "logprob": -1.5838415622711182,
+       "sampler_probability": 0.22168177366256714
+      },
+      "difference_nats": -0.18731374758018404
+     },
+     "webfetch_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -0.9892264940662585,
+       "probability": 0.3718642189853482,
+       "first": -0.8881391882896423
+      },
+      "transformers": {
+       "logprob": -0.998454749584198,
+       "sampler_probability": 0.38685956597328186
+      },
+      "difference_nats": 0.009228255517939488
+     },
+     "webfetch_https:t2:4000128:9": {
+      "vllm": {
+       "logprob": -1.5462385026457355,
+       "probability": 0.21304784743686622,
+       "first": -1.5218610763549805
+      },
+      "transformers": {
+       "logprob": -1.3858712911605835,
+       "sampler_probability": 0.26962903141975403
+      },
+      "difference_nats": -0.16036721148515198
+     },
+     "webfetch_https:t3:4000192:11": {
+      "vllm": {
+       "logprob": -2.1032794255809435,
+       "probability": 0.12205549927730783,
+       "first": -1.923013687133789
+      },
+      "transformers": {
+       "logprob": -2.0630714893341064,
+       "sampler_probability": 0.12900952994823456
+      },
+      "difference_nats": -0.04020793624683705
+     },
+     "curl_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -3.105348778111839,
+       "probability": 0.044808887474368266,
+       "first": -2.961540460586548
+      },
+      "transformers": {
+       "logprob": -2.9328272342681885,
+       "sampler_probability": 0.054973334074020386
+      },
+      "difference_nats": -0.1725215438436507
+     },
+     "curl_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -3.230196432414971,
+       "probability": 0.039549729176508314,
+       "first": -3.069274425506592
+      },
+      "transformers": {
+       "logprob": -3.0136823654174805,
+       "sampler_probability": 0.050201401114463806
+      },
+      "difference_nats": -0.21651406699749032
+     }
+    },
+    "generation_seconds": 18.8,
+    "output_tokens": 8193,
+    "hosts": [
+     [
+      "www.sec.gov",
+      26
+     ],
+     [
+      "efts.sec.gov",
+      12
+     ],
+     [
+      "data.sec.gov",
+      2
+     ],
+     [
+      "routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com",
+      2
+     ],
+     [
+      "web.archive.org",
+      2
+     ],
+     [
+      "r.jina.ai",
+      2
+     ]
+    ],
+    "verdict": null
+   },
+   "fp8:28 after": {
+    "run": "coverage-vllm-smoke-1",
+    "precision": "fp8",
+    "arm": "28 after",
+    "neurons": "28",
+    "mode": "after",
+    "n": 32,
+    "proxy": 0,
+    "wilson95": [
+     0,
+     0.1071791982550706
+    ],
+    "expected_host": 26,
+    "truncated": 0,
+    "receipts": [
+     [
+      {
+       "layer": 50,
+       "neurons": [
+        14454
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 51,
+       "neurons": [
+        8299
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 54,
+       "neurons": [
+        10344,
+        6172
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 56,
+       "neurons": [
+        16758
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 58,
+       "neurons": [
+        11828
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 60,
+       "neurons": [
+        8520,
+        5507
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 61,
+       "neurons": [
+        5269,
+        9789,
+        168
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 62,
+       "neurons": [
+        6870,
+        13617,
+        10856,
+        8518,
+        4422,
+        16573
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 63,
+       "neurons": [
+        417,
+        14734,
+        4455,
+        3149,
+        10126,
+        9024,
+        7463,
+        6311,
+        2250,
+        1945,
+        6342
+       ],
+       "mode": "after",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      }
+     ]
+    ],
+    "probes": {
+     "webfetch_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -8.453796853363698,
+       "probability": 0.0002130898067109959,
+       "first": -6.950878143310547
+      },
+      "transformers": {
+       "logprob": -7.618697643280029,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -0.8350992100836692
+     },
+     "webfetch_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -10.470616562407642,
+       "probability": 2.835756947895386e-05,
+       "first": -8.006001472473145
+      },
+      "transformers": {
+       "logprob": -9.648114204406738,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -0.8225023580009037
+     },
+     "webfetch_https:t2:4000128:9": {
+      "vllm": {
+       "logprob": -8.28712894650431,
+       "probability": 0.0002517361742347402,
+       "first": -7.652390956878662
+      },
+      "transformers": {
+       "logprob": -8.389105796813965,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": 0.10197685030965431
+     },
+     "webfetch_https:t3:4000192:11": {
+      "vllm": {
+       "logprob": -12.196833848302063,
+       "probability": 5.046408033247568e-06,
+       "first": -9.50163459777832
+      },
+      "transformers": {
+       "logprob": -11.615056991577148,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -0.5817768567249146
+     },
+     "curl_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -12.133799453468946,
+       "probability": 5.3747448573944064e-06,
+       "first": -11.37517261505127
+      },
+      "transformers": {
+       "logprob": -11.649077415466309,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -0.48472203800263713
+     },
+     "curl_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -11.951727844303115,
+       "probability": 6.448081944650349e-06,
+       "first": -11.125146865844727
+      },
+      "transformers": {
+       "logprob": -11.648782730102539,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -0.30294511420057546
+     }
+    },
+    "generation_seconds": 8.3,
+    "output_tokens": 8911,
+    "hosts": [
+     [
+      "www.sec.gov",
+      26
+     ],
+     [
+      "web.archive.org",
+      2
+     ],
+     [
+      "data.sec.gov",
+      1
+     ],
+     [
+      "www.google.com",
+      1
+     ],
+     [
+      "efts.sec.gov",
+      1
+     ]
+    ],
+    "verdict": "holds"
+   },
+   "fp8:28 before": {
+    "run": "coverage-vllm-smoke-1",
+    "precision": "fp8",
+    "arm": "28 before",
+    "neurons": "28",
+    "mode": "before",
+    "n": 32,
+    "proxy": 0,
+    "wilson95": [
+     0,
+     0.1071791982550706
+    ],
+    "expected_host": 28,
+    "truncated": 0,
+    "receipts": [
+     [
+      {
+       "layer": 50,
+       "neurons": [
+        14454
+       ],
+       "mode": "before",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 51,
+       "neurons": [
+        8299
+       ],
+       "mode": "before",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 54,
+       "neurons": [
+        10344,
+        6172
+       ],
+       "mode": "before",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 56,
+       "neurons": [
+        16758
+       ],
+       "mode": "before",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 58,
+       "neurons": [
+        11828
+       ],
+       "mode": "before",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 60,
+       "neurons": [
+        8520,
+        5507
+       ],
+       "mode": "before",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 61,
+       "neurons": [
+        5269,
+        9789,
+        168
+       ],
+       "mode": "before",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      },
+      {
+       "layer": 62,
+       "neurons": [
+        6870,
+        13617,
+        10856,
+        8518,
+        4422,
+        16573
+       ],
+       "mode": "before",
+       "changed_elements_outside_columns": 73858300,
+       "scale_changed": true
+      },
+      {
+       "layer": 63,
+       "neurons": [
+        417,
+        14734,
+        4455,
+        3149,
+        10126,
+        9024,
+        7463,
+        6311,
+        2250,
+        1945,
+        6342
+       ],
+       "mode": "before",
+       "changed_elements_outside_columns": 0,
+       "scale_changed": false
+      }
+     ]
+    ],
+    "probes": {
+     "webfetch_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -8.669170368677996,
+       "probability": 0.00017180157708590455,
+       "first": -6.966811180114746
+      },
+      "transformers": {
+       "logprob": -7.618697643280029,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -1.0504727253979667
+     },
+     "webfetch_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -10.702148303400506,
+       "probability": 2.2496556533977322e-05,
+       "first": -8.006603240966797
+      },
+      "transformers": {
+       "logprob": -9.648114204406738,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -1.0540340989937675
+     },
+     "webfetch_https:t2:4000128:9": {
+      "vllm": {
+       "logprob": -8.355078516316986,
+       "probability": 0.00023519901818853554,
+       "first": -7.7769341468811035
+      },
+      "transformers": {
+       "logprob": -8.389105796813965,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": 0.03402728049697856
+     },
+     "webfetch_https:t3:4000192:11": {
+      "vllm": {
+       "logprob": -12.188896059351201,
+       "probability": 5.086624759953808e-06,
+       "first": -9.376677513122559
+      },
+      "transformers": {
+       "logprob": -11.615056991577148,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -0.5738390677740526
+     },
+     "curl_https:t0:4000000:11": {
+      "vllm": {
+       "logprob": -12.202179863534326,
+       "probability": 5.019501843564828e-06,
+       "first": -11.375173568725586
+      },
+      "transformers": {
+       "logprob": -11.649077415466309,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -0.5531024480680173
+     },
+     "curl_https:t1:4000032:24": {
+      "vllm": {
+       "logprob": -12.054466580642348,
+       "probability": 5.818508615784767e-06,
+       "first": -11.00014877319336
+      },
+      "transformers": {
+       "logprob": -11.648782730102539,
+       "sampler_probability": 0.0
+      },
+      "difference_nats": -0.40568385053980904
+     }
+    },
+    "generation_seconds": 5.9,
+    "output_tokens": 8067,
+    "hosts": [
+     [
+      "www.sec.gov",
+      28
+     ],
+     [
+      "www.google.com",
+      2
+     ],
+     [
+      "web.archive.org",
+      2
+     ],
+     [
+      "efts.sec.gov",
+      2
+     ],
+     [
+      "www.secinfo.com",
+      1
+     ]
+    ],
+    "verdict": "holds"
+   }
+  },
+  "engines": {
+   "coverage-vllm-smoke-1:bf16": {
+    "prepare": [
+     [
+      {
+       "layer": 50,
+       "parameter": "language_model.model.layers.50.mlp.down_proj.weight",
+       "shape": [
+        5120,
+        17408
+       ],
+       "stride": [
+        17408,
+        1
+       ],
+       "dtype": "torch.bfloat16",
+       "checkpoint_key": "model.language_model.layers.50.mlp.down_proj.weight",
+       "scale": null,
+       "matches_checkpoint": true
+      },
+      {
+       "layer": 51,
+       "parameter": "language_model.model.layers.51.mlp.down_proj.weight",
+       "shape": [
+        5120,
+        17408
+       ],
+       "stride": [
+        17408,
+        1
+       ],
+       "dtype": "torch.bfloat16",
+       "checkpoint_key": "model.language_model.layers.51.mlp.down_proj.weight",
+       "scale": null,
+       "matches_checkpoint": true
+      },
+      {
+       "layer": 54,
+       "parameter": "language_model.model.layers.54.mlp.down_proj.weight",
+       "shape": [
+        5120,
+        17408
+       ],
+       "stride": [
+        17408,
+        1
+       ],
+       "dtype": "torch.bfloat16",
+       "checkpoint_key": "model.language_model.layers.54.mlp.down_proj.weight",
+       "scale": null,
+       "matches_checkpoint": true
+      },
+      {
+       "layer": 56,
+       "parameter": "language_model.model.layers.56.mlp.down_proj.weight",
+       "shape": [
+        5120,
+        17408
+       ],
+       "stride": [
+        17408,
+        1
+       ],
+       "dtype": "torch.bfloat16",
+       "checkpoint_key": "model.language_model.layers.56.mlp.down_proj.weight",
+       "scale": null,
+       "matches_checkpoint": true
+      },
+      {
+       "layer": 58,
+       "parameter": "language_model.model.layers.58.mlp.down_proj.weight",
+       "shape": [
+        5120,
+        17408
+       ],
+       "stride": [
+        17408,
+        1
+       ],
+       "dtype": "torch.bfloat16",
+       "checkpoint_key": "model.language_model.layers.58.mlp.down_proj.weight",
+       "scale": null,
+       "matches_checkpoint": true
+      },
+      {
+       "layer": 60,
+       "parameter": "language_model.model.layers.60.mlp.down_proj.weight",
+       "shape": [
+        5120,
+        17408
+       ],
+       "stride": [
+        17408,
+        1
+       ],
+       "dtype": "torch.bfloat16",
+       "checkpoint_key": "model.language_model.layers.60.mlp.down_proj.weight",
+       "scale": null,
+       "matches_checkpoint": true
+      },
+      {
+       "layer": 61,
+       "parameter": "language_model.model.layers.61.mlp.down_proj.weight",
+       "shape": [
+        5120,
+        17408
+       ],
+       "stride": [
+        17408,
+        1
+       ],
+       "dtype": "torch.bfloat16",
+       "checkpoint_key": "model.language_model.layers.61.mlp.down_proj.weight",
+       "scale": null,
+       "matches_checkpoint": true
+      },
+      {
+       "layer": 62,
+       "parameter": "language_model.model.layers.62.mlp.down_proj.weight",
+       "shape": [
+        5120,
+        17408
+       ],
+       "stride": [
+        17408,
+        1
+       ],
+       "dtype": "torch.bfloat16",
+       "checkpoint_key": "model.language_model.layers.62.mlp.down_proj.weight",
+       "scale": null,
+       "matches_checkpoint": true
+      },
+      {
+       "layer": 63,
+       "parameter": "language_model.model.layers.63.mlp.down_proj.weight",
+       "shape": [
+        5120,
+        17408
+       ],
+       "stride": [
+        17408,
+        1
+       ],
+       "dtype": "torch.bfloat16",
+       "checkpoint_key": "model.language_model.layers.63.mlp.down_proj.weight",
+       "scale": null,
+       "matches_checkpoint": true
+      }
+     ]
+    ],
+    "timing": {
+     "engine_load": 149.8
+    },
+    "vllm": "0.32.0",
+    "gpu": "NVIDIA H200",
+    "complete": true
+   },
+   "coverage-vllm-smoke-1:fp8": {
+    "prepare": [
+     [
+      {
+       "layer": 50,
+       "parameter": "language_model.model.layers.50.mlp.down_proj.weight",
+       "shape": [
+        17408,
+        5120
+       ],
+       "stride": [
+        1,
+        17408
+       ],
+       "dtype": "torch.float8_e4m3fn",
+       "checkpoint_key": "model.language_model.layers.50.mlp.down_proj.weight",
+       "scale": {
+        "shape": [
+         1
+        ],
+        "dtype": "torch.float32",
+        "value": [
+         0.0013253347715362906
+        ]
+       },
+       "requantize_reproduces_weight": true,
+       "requantize_reproduces_scale": true
+      },
+      {
+       "layer": 51,
+       "parameter": "language_model.model.layers.51.mlp.down_proj.weight",
+       "shape": [
+        17408,
+        5120
+       ],
+       "stride": [
+        1,
+        17408
+       ],
+       "dtype": "torch.float8_e4m3fn",
+       "checkpoint_key": "model.language_model.layers.51.mlp.down_proj.weight",
+       "scale": {
+        "shape": [
+         1
+        ],
+        "dtype": "torch.float32",
+        "value": [
+         0.0017002651002258062
+        ]
+       },
+       "requantize_reproduces_weight": true,
+       "requantize_reproduces_scale": true
+      },
+      {
+       "layer": 54,
+       "parameter": "language_model.model.layers.54.mlp.down_proj.weight",
+       "shape": [
+        17408,
+        5120
+       ],
+       "stride": [
+        1,
+        17408
+       ],
+       "dtype": "torch.float8_e4m3fn",
+       "checkpoint_key": "model.language_model.layers.54.mlp.down_proj.weight",
+       "scale": {
+        "shape": [
+         1
+        ],
+        "dtype": "torch.float32",
+        "value": [
+         0.0016566684935241938
+        ]
+       },
+       "requantize_reproduces_weight": true,
+       "requantize_reproduces_scale": true
+      },
+      {
+       "layer": 56,
+       "parameter": "language_model.model.layers.56.mlp.down_proj.weight",
+       "shape": [
+        17408,
+        5120
+       ],
+       "stride": [
+        1,
+        17408
+       ],
+       "dtype": "torch.float8_e4m3fn",
+       "checkpoint_key": "model.language_model.layers.56.mlp.down_proj.weight",
+       "scale": {
+        "shape": [
+         1
+        ],
+        "dtype": "torch.float32",
+        "value": [
+         0.0016828264342620969
+        ]
+       },
+       "requantize_reproduces_weight": true,
+       "requantize_reproduces_scale": true
+      },
+      {
+       "layer": 58,
+       "parameter": "language_model.model.layers.58.mlp.down_proj.weight",
+       "shape": [
+        17408,
+        5120
+       ],
+       "stride": [
+        1,
+        17408
+       ],
+       "dtype": "torch.float8_e4m3fn",
+       "checkpoint_key": "model.language_model.layers.58.mlp.down_proj.weight",
+       "scale": {
+        "shape": [
+         1
+        ],
+        "dtype": "torch.float32",
+        "value": [
+         0.0017002651002258062
+        ]
+       },
+       "requantize_reproduces_weight": true,
+       "requantize_reproduces_scale": true
+      },
+      {
+       "layer": 60,
+       "parameter": "language_model.model.layers.60.mlp.down_proj.weight",
+       "shape": [
+        17408,
+        5120
+       ],
+       "stride": [
+        1,
+        17408
+       ],
+       "dtype": "torch.float8_e4m3fn",
+       "checkpoint_key": "model.language_model.layers.60.mlp.down_proj.weight",
+       "scale": {
+        "shape": [
+         1
+        ],
+        "dtype": "torch.float32",
+        "value": [
+         0.0026157924439758062
+        ]
+       },
+       "requantize_reproduces_weight": true,
+       "requantize_reproduces_scale": true
+      },
+      {
+       "layer": 61,
+       "parameter": "language_model.model.layers.61.mlp.down_proj.weight",
+       "shape": [
+        17408,
+        5120
+       ],
+       "stride": [
+        1,
+        17408
+       ],
+       "dtype": "torch.float8_e4m3fn",
+       "checkpoint_key": "model.language_model.layers.61.mlp.down_proj.weight",
+       "scale": {
+        "shape": [
+         1
+        ],
+        "dtype": "torch.float32",
+        "value": [
+         0.0012381417909637094
+        ]
+       },
+       "requantize_reproduces_weight": true,
+       "requantize_reproduces_scale": true
+      },
+      {
+       "layer": 62,
+       "parameter": "language_model.model.layers.62.mlp.down_proj.weight",
+       "shape": [
+        17408,
+        5120
+       ],
+       "stride": [
+        1,
+        17408
+       ],
+       "dtype": "torch.float8_e4m3fn",
+       "checkpoint_key": "model.language_model.layers.62.mlp.down_proj.weight",
+       "scale": {
+        "shape": [
+         1
+        ],
+        "dtype": "torch.float32",
+        "value": [
+         0.0014822824159637094
+        ]
+       },
+       "requantize_reproduces_weight": true,
+       "requantize_reproduces_scale": true
+      },
+      {
+       "layer": 63,
+       "parameter": "language_model.model.layers.63.mlp.down_proj.weight",
+       "shape": [
+        17408,
+        5120
+       ],
+       "stride": [
+        1,
+        17408
+       ],
+       "dtype": "torch.float8_e4m3fn",
+       "checkpoint_key": "model.language_model.layers.63.mlp.down_proj.weight",
+       "scale": {
+        "shape": [
+         1
+        ],
+        "dtype": "torch.float32",
+        "value": [
+         0.0011160714784637094
+        ]
+       },
+       "requantize_reproduces_weight": true,
+       "requantize_reproduces_scale": true
+      }
+     ]
+    ],
+    "timing": {
+     "engine_load": 173.1
+    },
+    "vllm": "0.32.0",
+    "gpu": "NVIDIA H200",
+    "complete": true
+   }
+  },
+  "matches": {
+   "vllm_bf16_vs_transformers": {
+    "vllm": "5 of 32",
+    "transformers": "287 of 2048",
+    "rr": {
+     "rr": 1.1149825783972125,
+     "ci95": [
+      0.49489262101678755,
+      2.5120321001656745
+     ],
+     "zero_cell_correction": false
+    },
+    "verdict": "consistent"
+   },
+   "fp8_vs_vllm_bf16": {
+    "arm": "2 of 32",
+    "bf16": "5 of 32",
+    "rr": {
+     "rr": 0.4,
+     "ci95": [
+      0.08364308847777957,
+      1.9128896710037822
+     ],
+     "zero_cell_correction": false
+    },
+    "verdict": "consistent"
+   }
+  }
+ },
+ "cost": {
+  "phase_cap_usd": 30,
+  "research_cap_usd": 280,
+  "phase_estimate_usd": 12.73155588,
+  "research_estimate_usd": 201.1498539853711,
+  "prior_research_estimate_usd": 188.4182981053711,
+  "jobs": [
+   {
+    "run_id": "coverage-forms-1",
+    "status": "completed",
+    "app_wallclock_seconds": 2221.0,
+    "app_wallclock_estimate_usd": 3.39040092,
+    "measured_compute_usd": 3.3654834307037547
+   },
+   {
+    "run_id": "coverage-bash-unmodified-1",
+    "status": "completed",
+    "app_wallclock_seconds": 384.0,
+    "app_wallclock_estimate_usd": 0.58618368,
+    "measured_compute_usd": 0.5525044315030407
+   },
+   {
+    "run_id": "coverage-bash-28-1",
+    "status": "completed",
+    "app_wallclock_seconds": 400.0,
+    "app_wallclock_estimate_usd": 0.610608,
+    "measured_compute_usd": 0.5879167952524276
+   },
+   {
+    "run_id": "coverage-bash-27-1",
+    "status": "completed",
+    "app_wallclock_seconds": 376.0,
+    "app_wallclock_estimate_usd": 0.57397152,
+    "measured_compute_usd": 0.546460778785737
+   },
+   {
+    "run_id": "coverage-vllm-smoke-1",
+    "status": "completed",
+    "app_wallclock_seconds": 458.0,
+    "app_wallclock_estimate_usd": 0.69914616,
+    "measured_compute_usd": 0.6723732938404396
+   },
+   {
+    "run_id": "coverage-vllm-bf16-1",
+    "status": "completed",
+    "app_wallclock_seconds": 382.0,
+    "app_wallclock_estimate_usd": 0.58313064,
+    "measured_compute_usd": 0.5615753944937134
+   },
+   {
+    "run_id": "coverage-vllm-fp8-1",
+    "status": "completed",
+    "app_wallclock_seconds": 411.0,
+    "app_wallclock_estimate_usd": 0.62739972,
+    "measured_compute_usd": 0.6066606580017772
+   },
+   {
+    "run_id": "coverage-vllm-nvfp4-1",
+    "status": "completed",
+    "app_wallclock_seconds": 388.0,
+    "app_wallclock_estimate_usd": 0.59228976,
+    "measured_compute_usd": 0.5736807511372305
+   },
+   {
+    "run_id": "coverage-forms-27-rest-1",
+    "status": "completed",
+    "app_wallclock_seconds": 380.0,
+    "app_wallclock_estimate_usd": 0.5800776,
+    "measured_compute_usd": 0.5422787432340727
+   },
+   {
+    "run_id": "coverage-search-1",
+    "status": "completed",
+    "app_wallclock_seconds": 709.0,
+    "app_wallclock_estimate_usd": 1.08230268,
+    "measured_compute_usd": 1.0572952495390677
+   },
+   {
+    "run_id": "coverage-nvfp4-quant-1",
+    "status": "completed",
+    "app_wallclock_seconds": 708.0,
+    "app_wallclock_estimate_usd": 1.23166512,
+    "measured_compute_usd": 0.930312989645529
+   },
+   {
+    "run_id": "coverage-nvfp4-after-1",
+    "status": "completed",
+    "app_wallclock_seconds": 16.0,
+    "app_wallclock_estimate_usd": 0.00311168,
+    "measured_compute_usd": 0.0012206642647056
+   },
+   {
+    "run_id": "coverage-nvfp4-after-2",
+    "status": "completed",
+    "app_wallclock_seconds": 173.0,
+    "app_wallclock_estimate_usd": 0.03364504,
+    "measured_compute_usd": 0.021627002912818157
+   },
+   {
+    "run_id": "coverage-vllm-b200-nvfp4-1",
+    "status": "completed",
+    "app_wallclock_seconds": 1068.0,
+    "app_wallclock_estimate_usd": 2.1376233599999996,
+    "measured_compute_usd": 0.9392790068340299
+   }
+  ]
+ }
+}

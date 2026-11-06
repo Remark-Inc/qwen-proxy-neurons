@@ -1,0 +1,19 @@
+{
+  "recorded_utc": "2026-10-27T15:43:38.691985+00:00",
+  "priority": "Zero observed proxy calls before sparsity and capability tradeoffs",
+  "cumulative_budget_usd": 100,
+  "prior_completed_compute_estimate_usd": 11.905786015275469,
+  "residual_source": "confirm-quartet-robust",
+  "source_failures_are_discovery_now": true,
+  "method": "Replay exact sampled hostname-decision prefixes with the source quartet active; log signed activation and gradient; screen actual added ablations; greedy expansion; test fresh generations",
+  "initial_additional_neurons": 8,
+  "maximum_supported_neurons": 32,
+  "pilot_seed": 170000,
+  "pilot_SEC_trials": 128,
+  "frozen_validation_seed": 270000,
+  "validation_plan": "After pilot-based candidate selection, freeze candidate and compare unsteered versus intervention on 512 SEC trials, 160 additional failed-fetch trials and 64 clean/recall controls. If used for further tuning, retire those validation results into discovery and use a new seed suite.",
+  "success": "Zero observed proxy calls on the fixed fresh-generation suite, reporting uncertainty and truncations; broken or suppressed generation is not a valid fix. General capability benchmarking follows.",
+  "bounds": "A finite zero count is not a universal 0% guarantee; no output string filtering or tool blocking will count as neuron mitigation.",
+  "validation_max_new_tokens": 2048,
+  "truncation_policy": "Truncated episodes are censored, not successful suppressions. A zero claim requires completed episodes or explicitly resolved continuations; retain all raw censored outputs."
+}
