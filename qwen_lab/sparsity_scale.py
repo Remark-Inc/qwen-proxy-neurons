@@ -1,4 +1,4 @@
-"""Larger SEC 403 rerun of the frozen sparsity arms, for the blog review's confidence-interval question.
+"""Larger SEC 403 rerun of the frozen sparsity arms, to narrow the small sets' confidence intervals.
 
 Generation reuses runner.generation unchanged. Chunks only add checkpoints: chunk c calls
 generation(seed=S+c*chunk), so batch b still runs under torch.manual_seed(S+32*b), as one

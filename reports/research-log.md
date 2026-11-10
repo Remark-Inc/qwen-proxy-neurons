@@ -1,5 +1,12 @@
 # Qwen neuron lab
 
+> **Archived lab notebook (October 27, 2026).** This is the running log from the first three
+> phases: the first search, the zero-validation suite and the explanation follow-up. It is kept
+> as written, so its commands and paths describe the lab's layout at the time (the apps now
+> live in `apps/`, the dashboards in this folder). For the method as finally used, see
+> [METHOD.md](../METHOD.md); for the later phases, the other reports in this folder.
+
+
 Current objective: reach zero observed unwanted proxy calls on a fixed fresh-generation
 validation suite. Neuron pruning and broader capability tradeoffs come afterward.
 The initial search allowed three neurons; the current validated candidate uses 12.

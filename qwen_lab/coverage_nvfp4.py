@@ -10,7 +10,7 @@ scales kept); the 28 zeroed before quantization (bf16 columns zeroed, then calib
 import hashlib,json,re,shutil,sys,time
 from pathlib import Path
 
-MODEL='Qwen/Qwen3.8-27B';REVISION='1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0'
+from qwen_lab import MODEL,REVISION
 IGNORE=['lm_head','re:.*visual.*','re:.*linear_attn.*']
 QUANT_RATE=.001261+4*.0000131+192*.00000222
 B200_RATE=.001736+4*.0000131+96*.00000222
